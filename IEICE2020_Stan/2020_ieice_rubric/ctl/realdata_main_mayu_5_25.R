@@ -6,7 +6,7 @@ options(mc.cores = parallel::detectCores())
 
 dir <- "2020_ieice_rubric/"
 
-model = "mayu_5_2s5"
+model = "mayu"
 
 source("common/util_mayu_5_25.R")
 source("common/ctl_util.R")
