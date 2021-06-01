@@ -1,3 +1,5 @@
+Sys.setenv("http_proxy" = "http://proxy.uec.ac.jp:8080")
+Sys.setenv("https_proxy" = "https://proxy.uec.ac.jp:8080")
 library(rstan)
 library(loo)
 library(psych)
@@ -8,16 +10,19 @@ dir <- "2020_ieice_rubric/"
 
 model = "mayu"
 
-source("common/util_mayu_5_25.R")
+source("common/util_mayu.R")
 source("common/ctl_util.R")
+
 
 setting <- list(K = 5, n_person = 34, n_item = 4, n_rater = 34, n_time = 136)
 data <- read_data(setting, paste("data/peerassessment_20151224.csv", sep=""))
 
-datastan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
+data$ItemID = data$ItemID + 1
+
+stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
 fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3)
 
-source(paste(dir, "models/", model, ".R", sep=""))
+datasource(paste(dir, "models/", model, ".R", sep=""))
 est_param <- get_estimates(fit, setting)
 D <- get_result_statistics_common(fit, data, setting)
 write.csv(t(matrix(D, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, ".csv", sep=""))

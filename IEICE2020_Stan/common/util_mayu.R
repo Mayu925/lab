@@ -1,8 +1,8 @@
 read_data <- function(setting, filename){
   data <- read.table(filename, header=TRUE,sep=",")
-  colnames(data) <- c("ExamineeID", "ItemID", "RaterID", "TimeID", "Score")
+  colnames(data) <- c("ExamineeID", "ItemID", "RaterID", "Score", "TimeID")
   data_irt=list(
-    K=setting$K, J=setting$n_person, I=setting$n_item, R=setting$n_rater, T=setting$n_rubric, N=nrow(data), 
+    K=setting$K, J=setting$n_person, I=setting$n_item, R=setting$n_rater, T=setting$n_time, N=nrow(data), 
     ItemID=data$ItemID, ExamineeID=data$ExamineeID, RaterID=data$RaterID, TimeID=data$TimeID, X=data$Score)
   return(data_irt)
 }
