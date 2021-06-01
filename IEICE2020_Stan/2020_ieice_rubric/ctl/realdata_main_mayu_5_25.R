@@ -22,7 +22,7 @@ data$ItemID = data$ItemID + 1
 stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
 fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3)
 
-datasource(paste(dir, "models/", model, ".R", sep=""))
+source(paste(dir, "models/", model, ".R", sep=""))
 est_param <- get_estimates(fit, setting)
 D <- get_result_statistics_common(fit, data, setting)
 write.csv(t(matrix(D, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, ".csv", sep=""))
