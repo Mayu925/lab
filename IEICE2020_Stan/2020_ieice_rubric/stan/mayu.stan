@@ -30,7 +30,7 @@ parameters {
   //real<lower=0> tau_r [R-1];
   vector[K] alpha_rt[R,T];
   real<lower=0> pai_1r [R];
-  vector[R] pai_0r;
+  //vector[R] pai_0r;
   //vector[K] e_rt[R,T];
 }
 transformed parameters{
