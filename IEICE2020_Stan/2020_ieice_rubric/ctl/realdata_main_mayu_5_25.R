@@ -1,5 +1,3 @@
-Sys.setenv("http_proxy" = "http://proxy.uec.ac.jp:8080")
-Sys.setenv("https_proxy" = "https://proxy.uec.ac.jp:8080")
 library(rstan)
 library(loo)
 library(psych)
