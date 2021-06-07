@@ -29,7 +29,7 @@ parameters {
   //vector[K] beta_rt[R, T];
   //real<lower=0> tau_r [R-1];
   vector[K] alpha_rt[R,T];
-  vector[R] pai_1r;
+  real<lower=0> pai_1r [R];
   //vector[R] pai_0r;
   //vector[K] e_rt[R,T];
 }
@@ -75,7 +75,7 @@ model{
   //trans_beta_c ~ normal(0, 1.0);
   //trans_tau_r ~ lognormal(0.0, 0.5);
   theta ~ normal(0, 1);
-  //pai_1r ~ lognormal(0.0, 1.0);
+  pai_1r ~ lognormal(0.0, 1.0);
   //pai_0r ~ normal(0, 1);
   /*
   for (r in 1:R) {
@@ -95,7 +95,7 @@ model{
   for (n in 1:N){
     //X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(theta[ExamineeID[n]]-beta_rt[RaterID[n],TimeID[n]]-beta_rk[RaterID[n]]));
     //X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(theta[ExamineeID[n]]-severity[RaterID[n],TimeID[n]]-beta_rk[RaterID[n]]));
-    X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
+    X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-pai_1r[RaterID[n]]*alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
   }
 }
 
