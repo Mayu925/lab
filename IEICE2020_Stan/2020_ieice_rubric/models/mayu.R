@@ -2,13 +2,11 @@ source("common/gpcm_util.R")
 source("common/uirt_util.R")
 
 get_prm_list <- function(param, i, r, c){
-  return(list(alpha_r = param$alpha_r[r], pai_1r = param$pai_1r[r], pai_0r = param$pai_0r[r]))
+  return(list(alpha_r = param$alpha_r[r], pai_1r = param$pai_1r[r], pai_0r = param$pai_0r[r], category_prm = append(0, param$beta_ck[c,])))
 }
 
 logit <- function(param, category_prm, x){
-  return(param$alpha_r * param$alpha_r * param$alpha_c 
-         * ( x - param$beta_i - param$beta_r - param$beta_c
-             - param$tau_r * category_prm))
+  return(param$alpha_r * ( x - param$pai_0r - param$pai_1r * param$alpha_rt - category_prm))
 }
 
 fisher_information <-function(param, theta) {
