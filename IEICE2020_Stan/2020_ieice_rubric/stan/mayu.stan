@@ -28,7 +28,7 @@ parameters {
   vector[K-2] beta_rk [R];
   //vector[K] beta_rt[R, T];
   //real<lower=0> tau_r [R-1];
-  vector[K] alpha_rt[R,T];
+  matrix[R,T] alpha_rt;
   real<lower=0> pai_1r [R];
   vector[R] pai_0r;
   vector[K] e_rt[R,T];
@@ -87,10 +87,10 @@ model{
   
   for (r in 1:R){
     alpha_rt[r,1] ~ normal(0, 1);
-    e_rt[r,1] ~ normal(0, 1);
+    
     for (t in 2:T){
-      alpha_rt[r,t] ~ normal(0, 1);
-      e_rt[r,t] ~ normal(0, 1);
+      alpha_rt[r,t] ~ normal(alpha_rt[r,t-1], 1);
+      
     }
   }
   for (p in 1:R) category_est [p,] ~ normal(0, 1);
@@ -98,16 +98,16 @@ model{
   for (n in 1:N){
     //X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(theta[ExamineeID[n]]-beta_rt[RaterID[n],TimeID[n]]-beta_rk[RaterID[n]]));
     //X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(theta[ExamineeID[n]]-severity[RaterID[n],TimeID[n]]-beta_rk[RaterID[n]]));
-    X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*alpha_rt[RaterID[n],TimeID[n]]-e_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
+    X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
   }
 }
 
-/*
+
 generated quantities {
   vector[N] log_lik;
   for (n in 1:N){
     //log_lik[n] = categorical_logit_log(X[n], alpha_r[RaterID[n]]*(theta[ExamineeID[n]]-beta_rt[RaterID[n],TimeID[n]]-beta_rk[RaterID[n]]));
-    log_lik[n] = categorical_logit_log(X[n], alpha_r[RaterID[n]]*(theta[ExamineeID[n]]-severity[RaterID[n],TimeID[n]]-beta_rk[RaterID[n]]));
+    log_lik[n] = categorical_logit_log(X[n], alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
   }
 }
-*/
+
