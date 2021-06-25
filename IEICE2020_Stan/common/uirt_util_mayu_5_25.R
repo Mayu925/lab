@@ -4,19 +4,19 @@ get_theta_se_stat <- function(fit){
 }
 
 generate_data <- function(param, setting){
-  N <- setting$n_item * setting$n_person * setting$n_rater * setting$n_rubric
+  N <- setting$n_item * setting$n_person * setting$n_rater * setting$n_time
   U = matrix(0, nrow=N, ncol=5)
   row_idx = 1
   for (j in 1:setting$n_person){
     for (i in 1:setting$n_item){
       for (r in 1:setting$n_rater){
-        for (c in 1:setting$n_rubric){
+        for (t in 1:setting$n_time){
           prob <- c(1:setting$K)
           for (k in 1:(setting$K)){
-            prob[k] = prob(get_prm_list(param, i, r, c), k, param$theta[j])
+            prob[k] = prob(get_prm_list(param, i, r, t), k, param$theta[j])
           }
           score = grep(1, rmultinom(1, 1, prob))
-          U[row_idx,] <- c(j, i, r, c, score)
+          U[row_idx,] <- c(j, i, r, t, score)
           row_idx = row_idx + 1
         }
       }
@@ -24,8 +24,8 @@ generate_data <- function(param, setting){
   }
   colnames(U) <- c("ExamineeID", "ItemID","RaterID","TimeID","Score")
   data <- data.frame(U)
-  data=list(K=setting$K, J=setting$n_person, I=setting$n_item, R=setting$n_rater, C=setting$n_rubric, N=nrow(data), 
-            ItemID=data$ItemID, ExamineeID=data$ExamineeID, RaterID=data$RaterID, RubricID=data$RubricID, X=data$Score)
+  data=list(K=setting$K, J=setting$n_person, I=setting$n_item, R=setting$n_rater, T=setting$n_time, N=nrow(data), 
+            ItemID=data$ItemID, ExamineeID=data$ExamineeID, RaterID=data$RaterID, TimeID=data$TimeID, X=data$Score)
   return(data)
 }
 
@@ -41,10 +41,10 @@ get_eap <- function(X, data, param){
       LL = 0.0;
       for(i in 1:data$I){
         for(r in 1:data$R){
-          for(c in 1:data$C){
-            k <- X[j, i, r, c]
+          for(t in 1:data$T){
+            k <- X[j, i, r, t]
             if(is.na(k) == FALSE){
-              p <- prob(get_prm_list(param, i, r, c), k, Xh[h])              
+              p <- prob(get_prm_list(param, i, r, t), k, Xh[h])              
               LL = LL + log(p);
             }
           }
@@ -67,7 +67,7 @@ get_eap_each <- function(data, param){
     Z2 = 0.0;
     for(h in 1:length(Xh)){
       if(is.na(data$X[n]) == FALSE){
-        p <- prob(get_prm_list(param, data$ItemID[n], data$RaterID[n], data$RubricID[n]),
+        p <- prob(get_prm_list(param, data$ItemID[n], data$RaterID[n], data$TimeID[n]),
                 data$X[n], Xh[h])              
         Z1 = Z1 + exp(p)*AXh[h]*Xh[h];
         Z2 = Z2 + exp(p)*AXh[h];
@@ -84,10 +84,10 @@ get_likelihood <- function(data, param){
   for(j in 1:data$J){
     for(i in 1:data$I){
       for(r in 1:data$R){
-        for(c in 1:data$C){
-          k <- X[j, i, r, c]
+        for(t in 1:data$T){
+          k <- X[j, i, r, t]
           if(is.na(k) == FALSE){
-            p <- prob(get_prm_list(param, i, r, c), k, param$theta[j])              
+            p <- prob(get_prm_list(param, i, r, t), k, param$theta[j])              
             LL = LL + log(p) 
           }
         }

@@ -46,7 +46,7 @@ calc_error <- function(a, b){
 }
 
 to_wide_format <- function(data){
-  X = array(NA, dim = c(data$J, data$I, data$R, data$C))
+  X = array(NA, dim = c(data$J, data$I, data$R, data$T))
   for (n in 1:length(data$X)){
     X[data$ExamineeID[n], data$ItemID[n], data$RaterID[n],data$TimeID[n]] = data$X[n];
   }
@@ -62,10 +62,10 @@ to_long_format <- function(data, X){
 
 get_average_rubric <- function(data){
   X <- to_wide_format(data)
-  TH <- array(-1, dim = c(data$J, data$C))
+  TH <- array(-1, dim = c(data$J, data$T))
   for(j in 1:data$J){
-    for(c in 1:data$C){  
-      TH[j,c] <- mean(X[j, , , c])
+    for(t in 1:data$T){  
+      TH[j,t] <- mean(X[j, , , t])
     }
   }
   return(TH)
@@ -115,10 +115,10 @@ generate_constrained_alpha <- function(N){
 }
 
 get_eap_rubric <- function(data, param){
-  TH <- array(-1, dim = c(data$J, data$C))
-  for(c in 1:data$C){
+  TH <- array(-1, dim = c(data$J, data$T))
+  for(t in 1:data$T){
     X <- to_wide_format(data)
-    X[,,,c(1:data$C)[-c]] <- NA
+    X[,,,c(1:data$T)[-t]] <- NA
     TH[, c] = get_eap(X, data, param);
   }
   return(TH)
@@ -177,9 +177,9 @@ get_generalizability <- function(data){
   p  <- output[["ExamineeID"]]
   pr <- output[["ExamineeID:RaterID"]]
   pi <- output[["ExamineeID:ItemID"]]
-  pc <- output[["ExamineeID:RubricID"]]
+  pc <- output[["ExamineeID:TimeID"]]
   pri  <- output[["Residual"]]
-  denom <- p + pr / data$R + pi / data$I + pc / data$C + pri / (data$R * data$I * data$C)
+  denom <- p + pr / data$R + pi / data$I + pc / data$T + pri / (data$R * data$I * data$T)
   G  <- p / denom
   return(G)
 }

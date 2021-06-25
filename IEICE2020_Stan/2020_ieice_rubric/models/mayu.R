@@ -16,55 +16,58 @@ fisher_information <-function(param, theta) {
 }
 
 get_param_size <- function(data){
-  return(3* data$R + data$R * (data$K - 2) + data$C * 2  +data$I * 2 + data$J - (5 + data$C))
+  return(3* data$R + data$R * (data$K - 2) + data$T * 2  +data$I * 2 + data$J - (5 + data$T))
 }
 
-get_estimates <- function(fit, setting){
-  alpha_i <- get_alpha_estimates_with_restriction(summary(fit, par="alpha_i")$summary[,"mean"])
-  alpha_r <- summary(fit, par="alpha_r")$summary[,"mean"]
-  alpha_c <- get_alpha_estimates_with_restriction(summary(fit, par="alpha_c")$summary[,"mean"])
-  beta_i <- get_estimates_with_mean_restriction(summary(fit, par="beta_i")$summary[,"mean"])
-  beta_r <- summary(fit, par="beta_r")$summary[,"mean"]
-  beta_c <- get_estimates_with_mean_restriction(summary(fit, par="beta_c")$summary[,"mean"])
-  tau_r <- get_alpha_estimates_with_restriction(summary(fit, par="tau_r")$summary[,"mean"])
-  category_prm <- convert_category_estimates(summary(fit, par="beta_ck")$summary[,"mean"], setting$n_rubric, setting$K)
-  theta <- summary(fit, par="theta")$summary[,"mean"]
-  param = list(theta = theta, alpha_r = alpha_r, alpha_i = alpha_i, alpha_c = alpha_c,
-               beta_i = beta_i, beta_r = beta_r, beta_c = beta_c, 
-               tau_r = tau_r, beta_ck = category_prm)
+get_estimates <- function(fit1, setting){
+  #alpha_i <- get_alpha_estimates_with_restriction(summary(fit, par="alpha_i")$summary[,"mean"])
+  #alpha_c <- get_alpha_estimates_with_restriction(summary(fit, par="alpha_c")$summary[,"mean"])
+  #beta_i <- get_estimates_with_mean_restriction(summary(fit, par="beta_i")$summary[,"mean"])
+  #beta_r <- summary(fit, par="beta_r")$summary[,"mean"]
+  #beta_c <- get_estimates_with_mean_restriction(summary(fit, par="beta_c")$summary[,"mean"])
+  #tau_r <- get_alpha_estimates_with_restriction(summary(fit, par="tau_r")$summary[,"mean"])
+  
+  theta <- summary(fit1, par="theta")$summary[,"mean"]
+  alpha_r <- summary(fit1, par="alpha_r")$summary[,"mean"]
+  alpha_rt <- get_estimates_with_mean_restriction(summary(fit1, par="alpha_rt")$summary[,"mean"])
+  category_prm <- convert_category_estimates(summary(fit1, par="beta_rk")$summary[,"mean"], setting$n_time, setting$K)
+  pai_0r <- get_estimates_with_mean_restriction(summary(fit1, par="pai_0r")$summary[,"mean"])
+  pai_1r <- get_alpha_estimates_with_restriction(summary(fit1, par="pai_1r")$summary[,"mean"])
+  
+  param = list(theta = theta, alpha_r = alpha_r, alpha_rt = alpha_rt, beta_rk = category_prm, pai_0r = pai_0r, pai_1r = pai_1r)
   return(param)
 }
 
-get_Rhat_stat <- function(fit){
-  RhatData <- c( summary(fit, par="alpha_i")$summary[,"Rhat"],
-                 summary(fit, par="alpha_r")$summary[,"Rhat"],
-                 summary(fit, par="alpha_c")$summary[,"Rhat"],
-                 summary(fit, par="beta_i")$summary[,"Rhat"],
-                 summary(fit, par="beta_r")$summary[,"Rhat"],
-                 summary(fit, par="beta_c")$summary[,"Rhat"],
-                 summary(fit, par="tau_r")$summary[,"Rhat"],
-                 summary(fit, par="beta_ck")$summary[,"Rhat"],
-                 summary(fit, par="theta")$summary[,"Rhat"])
+get_Rhat_stat <- function(fit1){
+  RhatData <- c( 
+                 summary(fit1, par="alpha_r")$summary[,"Rhat"],
+                 summary(fit1, par="alpha_rt")$summary[,"Rhat"],
+                 summary(fit1, par="beta_rk")$summary[,"Rhat"],
+                 summary(fit1, par="pai_0r")$summary[,"Rhat"],
+                 summary(fit1, par="pai_1r")$summary[,"Rhat"],
+                 summary(fit1, par="theta")$summary[,"Rhat"])
   return(list(meanRhat = mean(RhatData), maxRhat = max(RhatData), countOver11 = sum(RhatData > 1.1)))
 }
 
 generate_true_param <- function(setting){
   theta <- rnorm(setting$n_person, 0, 1.0)
-  alpha_i <- generate_constrained_alpha(setting$n_item) 
+  #alpha_i <- generate_constrained_alpha(setting$n_item) 
   alpha_r <- generate_constrained_alpha(setting$n_rater)
-  alpha_c <- generate_constrained_alpha(setting$n_rubric)
-  beta_i <- rnorm(setting$n_item, 0, 1.0)
-  beta_r <- rnorm(setting$n_rater, 0, 1.0)
-  beta_c <- rnorm(setting$n_rubric, 0, 0.1)
-  tau_r <- generate_constrained_alpha(setting$n_rater) * 0.5 + 0.5
-  beta_ck <- gen_category_param(setting$n_rubric, setting$K)
+  #alpha_c <- generate_constrained_alpha(setting$n_rubric)
+  #beta_i <- rnorm(setting$n_item, 0, 1.0)
+  #beta_r <- rnorm(setting$n_rater, 0, 1.0)
+  #beta_c <- rnorm(setting$n_rubric, 0, 0.1)
+  #tau_r <- generate_constrained_alpha(setting$n_rater) * 0.5 + 0.5
+  alpha_rt <-
+  beta_rk <- gen_category_param(setting$n_rater, setting$K)
+  pai_0r <-
+  pai_1r <-
   theta = theta - mean(theta)
-  beta_i = beta_i - mean(beta_i)
-  beta_r = beta_r - mean(beta_r)
-  beta_c = beta_c - mean(beta_c)
-  param = list(theta = theta,  alpha_i = alpha_i, alpha_r = alpha_r, alpha_c = alpha_c,
-               beta_i = beta_i, beta_r = beta_r, beta_c = beta_c, 
-               tau_r = tau_r, beta_ck = beta_ck)
+  #beta_i = beta_i - mean(beta_i)
+  #beta_r = beta_r - mean(beta_r)
+  #beta_c = beta_c - mean(beta_c)
+  param = list(theta = theta, alpha_r = alpha_r, alpha_rt = alpha_rt,
+               beta_rk = beta_rk, pai_0r = pai_0r, pai_1r = pai_1r)
   return(param)
 }
 
