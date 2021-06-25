@@ -1,8 +1,8 @@
 source("common/gpcm_util.R")
-source("common/uirt_util.R")
+source("common/uirt_util_mayu_5_25.R")
 
-get_prm_list <- function(param, i, r, c){
-  return(list(alpha_r = param$alpha_r[r], pai_1r = param$pai_1r[r], pai_0r = param$pai_0r[r], category_prm = append(0, param$beta_ck[c,])))
+get_prm_list <- function(param, i, r, t){
+  return(list(alpha_r = param$alpha_r[r], pai_1r = param$pai_1r[r], pai_0r = param$pai_0r[r], category_prm = append(0, param$beta_rk[r,])))
 }
 
 logit <- function(param, category_prm, x){
