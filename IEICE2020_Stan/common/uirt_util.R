@@ -84,10 +84,10 @@ get_likelihood <- function(data, param){
   for(j in 1:data$J){
     for(i in 1:data$I){
       for(r in 1:data$R){
-        for(c in 1:data$C){
+        for(t in 1:data$T){
           k <- X[j, i, r, c]
           if(is.na(k) == FALSE){
-            p <- prob(get_prm_list(param, i, r, c), k, param$theta[j])              
+            p <- prob(get_prm_list(param, i, r, t), k, param$theta[j])              
             LL = LL + log(p) 
           }
         }
