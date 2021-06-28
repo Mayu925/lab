@@ -54,10 +54,9 @@ est_param4 <- get_estimates(fit4, setting)
 D4 <- get_result_statistics_common(fit4, data4, setting)
 write.csv(t(matrix(D4, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "4.csv", sep=""))
 
-SD <- summary(fit, par="theta")$summary[,c("sd", "se_mean")]
+SD <- summary(fit1, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)
-write.csv(SD, paste(dir, "output/realdata/SE/", model, ".csv", sep=""))
+write.csv(SD, paste(dir, "output/realdata/SE/", model, "1.csv", sep=""))
 
 sink(paste(dir, "output/realdata/parameters/", model, "_param.txt", sep=""))
-est_param
 sink()
