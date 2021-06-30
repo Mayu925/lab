@@ -8,6 +8,7 @@ options(mc.cores = parallel::detectCores())
 
 dir <- "2020_ieice_rubric/"
 
+#model = "mayu_new"
 model = "mayu"
 
 source("common/util_mayu.R")
@@ -37,14 +38,25 @@ fit3 <- sampling(stan, data=data3, iter=1000, warmup=500, chains=3)
 fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
 
 source(paste(dir, "models/", model, ".R", sep=""))
-est_param <- get_estimates(fit1, setting)
-D <- get_result_statistics_common(fit1, data1, setting)
-write.csv(t(matrix(D, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, ".csv", sep=""))
+est_param1 <- get_estimates(fit1, setting)
+D1 <- get_result_statistics_common(fit1, data1, setting)
+write.csv(t(matrix(D1, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "1.csv", sep=""))
 
-SD <- summary(fit, par="theta")$summary[,c("sd", "se_mean")]
+est_param2 <- get_estimates(fit2, setting)
+D2 <- get_result_statistics_common(fit2, data2, setting)
+write.csv(t(matrix(D2, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "2.csv", sep=""))
+
+est_param3 <- get_estimates(fit3, setting)
+D3 <- get_result_statistics_common(fit3, data3, setting)
+write.csv(t(matrix(D3, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "3.csv", sep=""))
+
+est_param4 <- get_estimates(fit4, setting)
+D4 <- get_result_statistics_common(fit4, data4, setting)
+write.csv(t(matrix(D4, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "4.csv", sep=""))
+
+SD <- summary(fit1, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)
-write.csv(SD, paste(dir, "output/realdata/SE/", model, ".csv", sep=""))
+write.csv(SD, paste(dir, "output/realdata/SE/", model, "1.csv", sep=""))
 
 sink(paste(dir, "output/realdata/parameters/", model, "_param.txt", sep=""))
-est_param
 sink()

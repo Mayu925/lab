@@ -1,6 +1,4 @@
-
 source("common/gpcm_util_mayu.R")
-
 source("common/uirt_util_mayu_5_25.R")
 
 get_prm_list <- function(param, i, r, t){
@@ -22,16 +20,10 @@ get_param_size <- function(data){
 }
 
 get_estimates <- function(fit1, setting){
-  #alpha_i <- get_alpha_estimates_with_restriction(summary(fit, par="alpha_i")$summary[,"mean"])
-  #alpha_c <- get_alpha_estimates_with_restriction(summary(fit, par="alpha_c")$summary[,"mean"])
-  #beta_i <- get_estimates_with_mean_restriction(summary(fit, par="beta_i")$summary[,"mean"])
-  #beta_r <- summary(fit, par="beta_r")$summary[,"mean"]
-  #beta_c <- get_estimates_with_mean_restriction(summary(fit, par="beta_c")$summary[,"mean"])
-  #tau_r <- get_alpha_estimates_with_restriction(summary(fit, par="tau_r")$summary[,"mean"])
-  
+
   theta <- summary(fit1, par="theta")$summary[,"mean"]
   alpha_r <- summary(fit1, par="alpha_r")$summary[,"mean"]
-  alpha_rt <- summary(fit1, par="alpha_rt")$summary[,"mean"]
+  alpha_rt <- get_estimates_with_mean_restriction(summary(fit1, par="alpha_rt")$summary[,"mean"])
   category_prm <- convert_category_estimates(summary(fit1, par="beta_rk")$summary[,"mean"], setting$n_time, setting$K)
   pai_0r <- get_estimates_with_mean_restriction(summary(fit1, par="pai_0r")$summary[,"mean"])
   pai_1r <- get_alpha_estimates_with_restriction(summary(fit1, par="pai_1r")$summary[,"mean"])
