@@ -87,7 +87,7 @@ model{
   for (p in 1:R) category_est [p,] ~ normal(0, 1);
   
   for (n in 1:N){
-    X[n] ~ categorical_logit(alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
+    X[n] ~ categorical_logit(c*(theta[ExamineeID[n]])-pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]);
   }
 }
 
