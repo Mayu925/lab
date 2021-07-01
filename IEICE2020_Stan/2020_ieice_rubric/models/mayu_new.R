@@ -23,10 +23,10 @@ get_estimates <- function(fit1, setting){
 
   theta <- summary(fit1, par="theta")$summary[,"mean"]
   alpha_r <- summary(fit1, par="alpha_r")$summary[,"mean"]
-  alpha_rt <- get_estimates_with_mean_restriction(summary(fit1, par="alpha_rt")$summary[,"mean"])
+  alpha_rt <- convert_alpha_rt(summary(fit1, par="alpha_rt")$summary[,"mean"])
   category_prm <- convert_category_estimates(summary(fit1, par="beta_rk")$summary[,"mean"], setting$n_time, setting$K)
-  pai_0r <- get_estimates_with_mean_restriction(summary(fit1, par="pai_0r")$summary[,"mean"])
-  pai_1r <- get_alpha_estimates_with_restriction(summary(fit1, par="pai_1r")$summary[,"mean"])
+  pai_0r <- summary(fit1, par="pai_0r")$summary[,"mean"]
+  pai_1r <- summary(fit1, par="pai_1r")$summary[,"mean"]
   
   param = list(theta = theta, alpha_r = alpha_r, alpha_rt = alpha_rt, beta_rk = category_prm, pai_0r = pai_0r, pai_1r = pai_1r)
   return(param)

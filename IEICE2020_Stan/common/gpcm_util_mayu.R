@@ -11,6 +11,21 @@ convert_category_estimates <- function(category_prm, N, K){
   return(mat)
 }
 
+convert_alpha_rt <- function(alpha_rt){
+  for(r in 1:setting$n_rater){
+    for(t in 1:setting$n_time){
+      alrt=list()
+      alrt = t(alpha_rt[ ,t])
+    }
+    if(t == 1){
+      mat = t(data.frame(alrt))
+    }else{
+      mat = rbind(mat, t(data.frame(alrt)))
+    }
+  }
+  return(mat)
+}
+
 prob <-function(param, k, x){
   all_sum <- 0
   tmp <- 0

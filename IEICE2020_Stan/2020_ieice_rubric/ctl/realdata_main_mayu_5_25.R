@@ -1,5 +1,5 @@
-Sys.setenv("http_proxy" = "http://proxy.uec.ac.jp:8080")
-Sys.setenv("https_proxy" = "https://proxy.uec.ac.jp:8080")
+#Sys.setenv("http_proxy" = "http://proxy.uec.ac.jp:8080")
+#Sys.setenv("https_proxy" = "https://proxy.uec.ac.jp:8080")
 library(rstan)
 library(loo)
 library(psych)
@@ -8,8 +8,8 @@ options(mc.cores = parallel::detectCores())
 
 dir <- "2020_ieice_rubric/"
 
-#model = "mayu_new"
-model = "mayu"
+model = "mayu_new"
+#model = "mayu"
 
 source("common/util_mayu.R")
 source("common/ctl_util.R")
@@ -40,7 +40,7 @@ fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
 source(paste(dir, "models/", model, ".R", sep=""))
 est_param1 <- get_estimates(fit1, setting)
 D1 <- get_result_statistics_common(fit1, data1, setting)
-write.csv(t(matrix(D1, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "1.csv", sep=""))
+write.csv(t(matrix(D1, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "1_2.csv", sep=""))
 
 est_param2 <- get_estimates(fit2, setting)
 D2 <- get_result_statistics_common(fit2, data2, setting)
@@ -60,3 +60,4 @@ write.csv(SD, paste(dir, "output/realdata/SE/", model, "1.csv", sep=""))
 
 sink(paste(dir, "output/realdata/parameters/", model, "_param.txt", sep=""))
 sink()
+
