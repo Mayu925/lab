@@ -40,7 +40,7 @@ fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
 source(paste(dir, "models/", model, ".R", sep=""))
 est_param1 <- get_estimates(fit1, setting)
 D1 <- get_result_statistics_common(fit1, data1, setting)
-write.csv(t(matrix(D1, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "1_2.csv", sep=""))
+write.csv(t(matrix(D1, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "1_2-5.csv", sep=""))
 
 est_param2 <- get_estimates(fit2, setting)
 D2 <- get_result_statistics_common(fit2, data2, setting)

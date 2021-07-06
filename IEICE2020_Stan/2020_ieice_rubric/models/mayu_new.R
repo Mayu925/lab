@@ -23,7 +23,7 @@ get_estimates <- function(fit1, setting){
 
   theta <- summary(fit1, par="theta")$summary[,"mean"]
   alpha_r <- summary(fit1, par="alpha_r")$summary[,"mean"]
-  alpha_rt <- convert_alpha_rt(summary(fit1, par="alpha_rt")$summary[,"mean"])
+  alpha_rt <- summary(fit1, par="alpha_rt")$summary[,"mean"]
   category_prm <- convert_category_estimates(summary(fit1, par="beta_rk")$summary[,"mean"], setting$n_time, setting$K)
   pai_0r <- summary(fit1, par="pai_0r")$summary[,"mean"]
   pai_1r <- summary(fit1, par="pai_1r")$summary[,"mean"]
