@@ -25,10 +25,9 @@ get_estimates <- function(fit1, setting){
   alpha_r <- summary(fit1, par="alpha_r")$summary[,"mean"]
   alpha_rt <- convert_alpha_rt(summary(fit1, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
   category_prm <- summary(fit1, par="beta_rk")$summary[,"mean"]
-  pai_0r <- summary(fit1, par="pai_0r")$summary[,"mean"]
-  pai_1r <- summary(fit1, par="pai_1r")$summary[,"mean"]
+
   
-  param = list(theta = theta, alpha_r = alpha_r, alpha_rt = alpha_rt, beta_rk = category_prm, pai_0r = pai_0r, pai_1r = pai_1r)
+  param = list(theta = theta, alpha_r = alpha_r, alpha_rt = alpha_rt, beta_rk = category_prm)
   return(param)
 }
 
@@ -37,8 +36,7 @@ get_Rhat_stat <- function(fit1){
                  summary(fit1, par="alpha_r")$summary[,"Rhat"],
                  summary(fit1, par="alpha_rt")$summary[,"Rhat"],
                  summary(fit1, par="beta_rk")$summary[,"Rhat"],
-                 summary(fit1, par="pai_0r")$summary[,"Rhat"],
-                 summary(fit1, par="pai_1r")$summary[,"Rhat"],
+              
                  summary(fit1, par="theta")$summary[,"Rhat"])
   return(list(meanRhat = mean(RhatData), maxRhat = max(RhatData), countOver11 = sum(RhatData > 1.1)))
 }
