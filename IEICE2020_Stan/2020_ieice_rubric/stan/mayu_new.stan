@@ -19,9 +19,7 @@ parameters {
   real<lower=0> alpha_r [R];
   vector[K-2] beta_rk;
   matrix[R,T] alpha_rt;
-  real<lower=0> pai_1r [R];
-  vector[R] pai_0r;
-  vector[K] e_rt[R,T];
+
 }
 transformed parameters{
   vector[K-1] category_est;
@@ -36,8 +34,7 @@ transformed parameters{
 model{
   alpha_r ~ lognormal(0.0, 1.0);
   theta ~ normal(0, 1);
-  pai_1r ~ lognormal(0.0, 1.0);
-  pai_0r ~ normal(0, 1);
+
   
   for (r in 1:R){
     alpha_rt[r,1] ~ normal(0, 1);

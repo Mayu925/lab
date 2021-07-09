@@ -2,7 +2,7 @@ source("common/gpcm_util_mayu.R")
 source("common/uirt_util_mayu_5_25.R")
 
 get_prm_list <- function(param, i, r, t){
-  return(list(alpha_r = param$alpha_r[r], pai_1r = param$pai_1r[r], pai_0r = param$pai_0r[r], category_prm = append(0, param$beta_rk[r,])))
+  return(list(alpha_r = param$alpha_r[r], alpha_rt = param$alpha_rt[r,t], category_prm = append(0, param$beta_rk)))
 }
 
 logit <- function(param, category_prm, x){
@@ -23,8 +23,8 @@ get_estimates <- function(fit1, setting){
 
   theta <- summary(fit1, par="theta")$summary[,"mean"]
   alpha_r <- summary(fit1, par="alpha_r")$summary[,"mean"]
-  alpha_rt <- summary(fit1, par="alpha_rt")$summary[,"mean"]
-  category_prm <- convert_category_estimates(summary(fit1, par="beta_rk")$summary[,"mean"], setting$n_time, setting$K)
+  alpha_rt <- convert_alpha_rt(summary(fit1, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
+  category_prm <- summary(fit1, par="beta_rk")$summary[,"mean"]
   pai_0r <- summary(fit1, par="pai_0r")$summary[,"mean"]
   pai_1r <- summary(fit1, par="pai_1r")$summary[,"mean"]
   

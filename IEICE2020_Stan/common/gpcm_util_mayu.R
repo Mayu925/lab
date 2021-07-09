@@ -11,9 +11,9 @@ convert_category_estimates <- function(category_prm, N, K){
   return(mat)
 }
 
-convert_alpha_rt <- function(alpha_rt){
-  for(r in 1:setting$n_rater){
-    alrt = c(alpha_rt[r,1],alpha_rt[r,2],alpha_rt[r,3],alpha_rt[r,4],alpha_rt[r,5],alpha_rt[r,6])
+convert_alpha_rt <- function(alpha_rt, T, R){
+  for(r in 1:R){
+    alrt = alpha_rt[((r-1)*T+1):((r-1)*T+T)]
     if(r == 1){
       mat = t(data.frame(alrt))
     }else{
@@ -26,14 +26,14 @@ convert_alpha_rt <- function(alpha_rt){
 prob <-function(param, k, x){
   all_sum <- 0
   tmp <- 0
-  for (m in 1:length(param$category_prm)) {
-    tmp <- tmp + 1.7 * logit(param, param$category_prm[m], x)
-    if(m == k) {
+ 
+    tmp <- tmp + 1.7 * logit(param, param$category_prm, x)
+   
       target <- exp(tmp)
       all_sum <- all_sum + exp(tmp)
+
+    
   
-    }
-  }
   return(target/all_sum)
 }
 
