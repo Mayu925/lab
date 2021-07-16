@@ -26,14 +26,9 @@ convert_alpha_rt <- function(alpha_rt, T, R){
 prob <-function(param, k, x){
   all_sum <- 0
   tmp <- 0
- 
     tmp <- tmp + 1.7 * logit(param, param$category_prm, x)
-   
       target <- exp(tmp)
       all_sum <- all_sum + exp(tmp)
-
-    
-  
   return(target/all_sum)
 }
 

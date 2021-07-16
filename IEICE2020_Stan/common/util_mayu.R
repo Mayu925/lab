@@ -114,6 +114,11 @@ generate_constrained_alpha <- function(N){
   return(const_alpha)
 }
 
+generate_alpha_rt_param <- function(R,T){
+  const_alpha_rt <- 
+  return(const_alpha_rt)
+}
+
 get_eap_rubric <- function(data, param){
   TH <- array(-1, dim = c(data$J, data$T))
   for(t in 1:data$T){
