@@ -35,7 +35,7 @@ for(loop in 28:30){
                             d$theta$BIAS, 
                             d$alpha_r$BIAS, 
                             mean(d$alpha_rt$BIAS),
-                            mean(d$beta_ck$BIAS),
+                            mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
           }
         }
