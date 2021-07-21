@@ -46,9 +46,9 @@ for(loop in 28:30){
 }
 
 TH[1,]
-TH <-as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", 1, ".csv", sep="")))
-for(loop in 2:30){
-  TH <-TH + as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", 1, ".csv", sep="")))
+TH <-as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", 28, ".csv", sep="")))
+for(loop in 29:30){
+  TH <-TH + as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
 }
 TH <- TH / 30
 write.csv(TH, paste(dir, "output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
