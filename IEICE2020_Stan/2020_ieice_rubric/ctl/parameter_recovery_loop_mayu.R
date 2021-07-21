@@ -7,7 +7,7 @@ dir <- "2020_ieice_rubric/"
 
 source("common/util_mayu.R")
 
-model = "mayu_new"
+model = "mayu_new_2"
 
 source(paste(dir, "models/", model, ".R", sep=""))
 stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
@@ -50,7 +50,7 @@ TH <-as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/l
 for(loop in 29:30){
   TH <-TH + as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
 }
-TH <- TH / 30
+TH <- TH / 3
 write.csv(TH, paste(dir, "output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
 
 
