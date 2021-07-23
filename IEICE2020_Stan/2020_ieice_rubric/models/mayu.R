@@ -4,7 +4,7 @@ source("common/gpcm_util_mayu.R")
 source("common/uirt_util_mayu_5_25.R")
 
 get_prm_list <- function(param, i, r, t){
-  return(list(pai_1r = param$pai_1r[r], pai_0r = param$pai_0r[r], category_prm = append(0, param$beta_rk[r,])))
+  return(list(pai_1r = param$pai_1r[r], pai_0r = param$pai_0r[r], alpha_rt = param$alpha_rt, category_prm = append(0, param$beta_rk[r,])))
 }
 
 logit <- function(param, category_prm, x){
@@ -45,34 +45,25 @@ get_Rhat_stat <- function(fit1){
 
 generate_true_param <- function(setting){
   theta <- rnorm(setting$n_person, 0, 1.0)
-
-  alpha_r <- generate_constrained_alpha(setting$n_rater)
- 
-  alpha_rt <-
+  alpha_rt <- rnorm(setting$n_rater*setting$n_time)
   beta_rk <- gen_category_param(setting$n_rater, setting$K)
-  pai_0r <-
-  pai_1r <-
+  pai_0r <- rnorm(setting$n_rater, 0, 1.0)
+  pai_1r <- rnorm(setting$n_rater, 0, 1.0)
   theta = theta - mean(theta)
  
-  param = list(theta = theta, alpha_r = alpha_r, alpha_rt = alpha_rt,
+  param = list(theta = theta,  alpha_rt = alpha_rt,
                beta_rk = beta_rk, pai_0r = pai_0r, pai_1r = pai_1r)
   return(param)
 }
 
 get_error <- function(true_param, est_param){
-  error_alpha_i <- calc_error(true_param$alpha_i, est_param$alpha_i)
-  error_alpha_r <- calc_error(true_param$alpha_r, est_param$alpha_r)
-  error_alpha_c <- calc_error(true_param$alpha_c, est_param$alpha_c)
-  error_beta_i <- calc_error(true_param$beta_i, est_param$beta_i)
-  error_beta_r <- calc_error(true_param$beta_r, est_param$beta_r)
-  error_beta_c <- calc_error(true_param$beta_c, est_param$beta_c)
-  error_tau_r <- calc_error(true_param$tau_r, est_param$tau_r)
+  error_alpha_rt <- calc_error(true_param$alpha_rt, est_param$alpha_rt)
+  error_pai_0r <- calc_error(true_param$pai_0r, est_param$pai_0r)
+  error_pai_1r <- calc_error(true_param$pai_1r, est_param$pai_1r)
   error_category <- list(RMSE = sqrt(apply((true_param$beta_ck - est_param$beta_ck)^2, 2, mean)), 
                          BIAS = apply((true_param$beta_ck - est_param$beta_ck), 2, mean));
   error_theta <- calc_error(true_param$theta, est_param$theta)
-  rmse <- list(theta = error_theta, alpha_i = error_alpha_i, alpha_r = error_alpha_r, alpha_c = error_alpha_c,
-               beta_i = error_beta_i, beta_r = error_beta_r, beta_c = error_beta_c, 
-               tau_r = error_tau_r, beta_ck = error_category)  
+  rmse <- list(theta = error_theta, alpha_rt = error_alpha_rt, pai_0r = error_pai_0r, pai_1r = error_pai_1r, beta_ck = error_category)  
   return(rmse)
 }
 

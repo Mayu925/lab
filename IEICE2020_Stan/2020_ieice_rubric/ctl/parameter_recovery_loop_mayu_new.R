@@ -7,7 +7,7 @@ dir <- "2020_ieice_rubric/"
 
 source("common/util_mayu.R")
 
-model = "mayu"
+model = "mayu_new"
 
 source(paste(dir, "models/", model, ".R", sep=""))
 stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
@@ -29,13 +29,11 @@ for(loop in 28:30){
             Rhat <- get_Rhat_stat(fit)
             TH <- rbind(TH, c(j, i, r, t, k, 
                             d$theta$RMSE, 
-                            d$pai_0r$RMSE,
-                            d$pai_1r$RMSE,
+                            d$alpha_r$RMSE, 
                             mean(d$alpha_rt$RMSE), 
                             mean(d$beta_rk$RMSE),  
                             d$theta$BIAS, 
-                            d$pai_0r$BIAS,
-                            d$pai_1r$BIAS,
+                            d$alpha_r$BIAS, 
                             mean(d$alpha_rt$BIAS),
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
