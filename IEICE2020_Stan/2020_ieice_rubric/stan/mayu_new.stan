@@ -41,7 +41,7 @@ model{
   for (r in 1:R){
     alpha_rt[r,1] ~ normal(0, 1);
     for (t in 2:T){
-      alpha_rt[r,t] ~ normal(alpha_rt[r,t-1], 0.1);
+      alpha_rt[r,t] ~ normal(alpha_rt[r,t-1], 1);
     }
   }
   for (p in 1:R) category_est [p,] ~ normal(0, 1);
