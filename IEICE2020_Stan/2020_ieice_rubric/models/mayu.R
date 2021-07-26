@@ -60,8 +60,8 @@ get_error <- function(true_param, est_param){
   error_alpha_rt <- calc_error(true_param$alpha_rt, est_param$alpha_rt)
   error_pai_0r <- calc_error(true_param$pai_0r, est_param$pai_0r)
   error_pai_1r <- calc_error(true_param$pai_1r, est_param$pai_1r)
-  error_category <- list(RMSE = sqrt(apply((true_param$beta_ck - est_param$beta_ck)^2, 2, mean)), 
-                         BIAS = apply((true_param$beta_ck - est_param$beta_ck), 2, mean));
+  error_category <- list(RMSE = sqrt(apply((true_param$beta_rk - est_param$beta_rk)^2, 2, mean)), 
+                         BIAS = apply((true_param$beta_rk - est_param$beta_rk), 2, mean));
   error_theta <- calc_error(true_param$theta, est_param$theta)
   rmse <- list(theta = error_theta, alpha_rt = error_alpha_rt, pai_0r = error_pai_0r, pai_1r = error_pai_1r, beta_ck = error_category)  
   return(rmse)
