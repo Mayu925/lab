@@ -2,7 +2,7 @@ source("common/gpcm_util_mayu.R")
 source("common/uirt_util_mayu_5_25.R")
 
 get_prm_list <- function(param, i, r, t){
-  return(list(alpha_r = param$alpha_r[r], alpha_rt = param$alpha_rt[r], category_prm = append(0, param$beta_rk[r,])))
+  return(list(alpha_r = param$alpha_r[r], alpha_rt = param$alpha_rt[r,t], category_prm = append(0, param$beta_rk)))
 }
 
 logit <- function(param, category_prm, x){
