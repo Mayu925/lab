@@ -114,8 +114,13 @@ generate_constrained_alpha <- function(N){
   return(const_alpha)
 }
 
-generate_alpha_rt_param <- function(R,T){
-  const_alpha_rt <- 
+generate_alpha_rt <- function(R,T){
+  for (r in 1:R){
+    const_alpha_rt[r,1] <- rnorm(1);
+    for (t in 2:T){
+      const_alpha_rt[r,t] <- rnorm(1, alpha_rt[r,t-1], 1);
+    }
+  }
   return(const_alpha_rt)
 }
 
