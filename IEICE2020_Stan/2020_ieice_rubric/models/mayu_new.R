@@ -47,7 +47,7 @@ get_Rhat_stat <- function(fit1){
 generate_true_param <- function(setting){
   theta <- rnorm(setting$n_person, 0, 1.0)
   alpha_r <- generate_constrained_alpha(setting$n_rater)
-  #alpha_rt <- rnorm(setting$n_rater*setting$n_time)
+  #alpha_rt <- generate_alpha_rt(setting$n_rater, setting$n_time)
   beta_rk <- gen_category_param(setting$n_rater, setting$K)
   theta = theta - mean(theta)
   param = list(theta = theta, alpha_r = alpha_r, 
