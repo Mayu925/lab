@@ -165,20 +165,22 @@ get_ml <- function(fit){
   return(-2*(1/sum(1/theta)*length(theta)))
 }
 generate_data <- function(param, setting){
-  N <- setting$n_item * setting$n_person * setting$n_rater * setting$n_time
+  N <- setting$n_item * setting$n_person * setting$n_rater
   U = matrix(0, nrow=N, ncol=5)
   row_idx = 1
   for (j in 1:setting$n_person){
     for (i in 1:setting$n_item){
       for (r in 1:setting$n_rater){
         for (t in 1:setting$n_time){
-          prob <- c(1:setting$K)
-          for (k in 1:(setting$K)){
-            prob[k] = prob(get_prm_list(param, i, r, t), k, param$theta[j])
+          if(j==t){
+            prob <- c(1:setting$K)
+            for (k in 1:(setting$K)){
+              prob[k] = prob(get_prm_list(param, i, r, t), k, param$theta[j])
+            }
+            score = grep(1, rmultinom(1, 1, prob))
+            U[row_idx,] <- c(j, i, r, t, score)
+            row_idx = row_idx + 1
           }
-          score = grep(1, rmultinom(1, 1, prob))
-          U[row_idx,] <- c(j, i, r, t, score)
-          row_idx = row_idx + 1
         }
       }
     }

@@ -1,5 +1,3 @@
-source("common/ctl_util.R")
-
 get_prm_list <- function(param, i, r, t){
   return(list(alpha_r = param$alpha_r[r], 
               #alpha_rt = param$alpha_rt[r,t], 
