@@ -1,8 +1,3 @@
-get_theta_se_stat <- function(fit){
-  SE <- summary(fit, par="theta")$summary[,"sd"]
-  return(list(mean_se = mean(SE), sd_se = sd(SE)))
-}
-
 generate_data <- function(param, setting){
   N <- setting$n_item * setting$n_person * setting$n_rater * setting$n_time
   U = matrix(0, nrow=N, ncol=5)
@@ -56,26 +51,6 @@ get_eap <- function(X, data, param){
     theta_eap[j] = (Z1 / Z2);
   }  
   return(theta_eap)
-}
-
-get_eap_each <- function(data, param){
-  dat <- data
-  Xh <- seq(-3, 3, length=150)
-  AXh <- dnorm(Xh, 0, 1)
-  for(n in 1:data$N){
-    Z1 = 0.0;
-    Z2 = 0.0;
-    for(h in 1:length(Xh)){
-      if(is.na(data$X[n]) == FALSE){
-        p <- prob(get_prm_list(param, data$ItemID[n], data$RaterID[n], data$TimeID[n]),
-                data$X[n], Xh[h])              
-        Z1 = Z1 + exp(p)*AXh[h]*Xh[h];
-        Z2 = Z2 + exp(p)*AXh[h];
-      }
-    }
-    dat$X[n] = (Z1 / Z2);
-  }
-  return(dat)
 }
 
 get_likelihood <- function(data, param){
