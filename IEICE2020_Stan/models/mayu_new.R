@@ -1,10 +1,9 @@
-source("common/gpcm_util_mayu.R")
-source("common/uirt_util_mayu_5_25.R")
+source("common/ctl_util.R")
 
 get_prm_list <- function(param, i, r, t){
   return(list(alpha_r = param$alpha_r[r], 
               #alpha_rt = param$alpha_rt[r,t], 
-              category_prm = append(0, param$beta_rk)))
+              category_prm = append(0, param$beta_rk[r,])))
 }
 
 logit <- function(param, category_prm, x){
@@ -24,11 +23,10 @@ get_param_size <- function(data){
 }
 
 get_estimates <- function(fit1, setting){
-
   theta <- summary(fit1, par="theta")$summary[,"mean"]
-  alpha_r <- summary(fit1, par="alpha_r")$summary[,"mean"]
+  alpha_r <- get_alpha_estimates_with_restriction(summary(fit1, par="alpha_r")$summary[,"mean"])
   #alpha_rt <- convert_alpha_rt(summary(fit1, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
-  category_prm <- summary(fit1, par="beta_rk")$summary[,"mean"]
+  category_prm <- convert_category_estimates(summary(fit1, par="beta_rk")$summary[,"mean"],setting$n_rater, setting$K)
   param = list(theta = theta, alpha_r = alpha_r, 
                #alpha_rt = alpha_rt, 
                beta_rk = category_prm)

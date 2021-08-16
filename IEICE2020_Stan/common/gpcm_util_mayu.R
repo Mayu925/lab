@@ -26,9 +26,11 @@ convert_alpha_rt <- function(alpha_rt, T, R){
 prob <-function(param, k, x){
   all_sum <- 0
   tmp <- 0
-    tmp <- tmp + 1.7 * logit(param, param$category_prm, x)
-      target <- exp(tmp)
+  for(m in 1:length(param$category_prm)){
+    tmp <- tmp + 1.7 * logit(param, param$category_prm[m], x)
+      if(m==k) target <- exp(tmp)
       all_sum <- all_sum + exp(tmp)
+  }
   return(target/all_sum)
 }
 
@@ -38,25 +40,12 @@ gen_category_param <- function(N, K){
     category[,k] <- rnorm(N, 0, 1)
   }
   for (i in 1:N){
-#    category[i,] = sort(category[i,])
+    category[i,] = sort(category[i,])
     category[i,] = category[i,] - mean(category[i,])
   } 
   return(category)
 }
 
-fisher_information_no_alpha_multiplication <- function(param, K, theta) {
-  for (k in 0:(K-1)) {
-    z <- prob(param, k+1, theta)
-    if(k == 0){
-      f1 <- k^2 * z
-      f2 <- k * z
-    } else {
-      f1 = f1 + k^2 * z
-      f2 = f2 + k * z
-    }
-  }
-  return(f1 -  f2 ^ 2)
-}
 
 draw_icc <- function(param, K, def){
   x<- seq(-def$xlim, def$xlim, length=(10))
