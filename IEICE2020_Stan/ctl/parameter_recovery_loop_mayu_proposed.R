@@ -5,7 +5,7 @@ options(mc.cores = parallel::detectCores())
 
 dir <- ""
 
-source("common/util_mayu.R")
+source("models/ctl_util.R")
 
 model = "mayu_new"
 
