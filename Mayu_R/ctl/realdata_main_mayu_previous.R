@@ -6,9 +6,9 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-dir <- "2020_ieice_rubric/"
+dir <- ""
 
-model = "mayu"
+model = "mayu_previous"
 
 source("common/util_mayu.R")
 source("common/ctl_util.R")

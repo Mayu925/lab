@@ -10,12 +10,6 @@ logit <- function(param, category_prm, x){
                              category_prm))
 }
 
-fisher_information <-function(param, theta) {
-  Z <- fisher_information_no_alpha_multiplication(param, length(param$category_prm), theta)
-  inf <- Z * param$alpha_i^2 * param$alpha_r^2  * param$alpha_c^2  * 1.7^2 
-  return(inf)
-}
-
 get_param_size <- function(data){
   return(3* data$R + data$R * (data$K - 2) + data$T * 2  +data$I * 2 + data$J - (5 + data$T))
 }

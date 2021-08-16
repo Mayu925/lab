@@ -7,7 +7,7 @@ dir <- ""
 
 source("models/ctl_util.R")
 
-model = "mayu_new"
+model = "mayu_previous"
 
 source(paste(dir, "models/", model, ".R", sep=""))
 stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
@@ -19,7 +19,7 @@ r=5
 for(loop in 1:2){
   TH <- c()
   for(j in c(30, 50)){
-      for(r in c(5, 10)){
+    for(r in c(5, 10)){
             print(paste(loop, j, 1, r, j, k, sep=","))
             setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = j)
             true_param <-generate_true_param(setting)
@@ -28,17 +28,19 @@ for(loop in 1:2){
             est_param <- get_estimates(fit, setting)
             d <-  get_error(true_param, est_param)
             Rhat <- get_Rhat_stat(fit)
-            TH <- rbind(TH, c(j, r, k,
+            TH <- rbind(TH, c(j, i, r, t, k, 
                             d$theta$RMSE, 
-                            d$alpha_r$RMSE, 
-                            #mean(d$alpha_rt$RMSE), 
+                            d$pai_0r$RMSE,
+                            d$pai_1r$RMSE,
+                            mean(d$alpha_rt$RMSE), 
                             mean(d$beta_rk$RMSE),  
                             d$theta$BIAS, 
-                            d$alpha_r$BIAS, 
-                            #mean(d$alpha_rt$BIAS),
+                            d$pai_0r$BIAS,
+                            d$pai_1r$BIAS,
+                            mean(d$alpha_rt$BIAS),
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
-      }
+    }
   }    
   write.csv(TH, paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep=""), row.names = FALSE)
 }
