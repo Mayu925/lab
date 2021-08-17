@@ -26,7 +26,18 @@ convert_category_estimates <- function(category_prm, N, K){
   }  
   return(mat)
 }
-
+convert_category_estimates_previous <- function(category_prm, K){
+  for(n in 1:N){
+    prm = category_prm[((n-1)*(K-2)+1):((n-1)*(K-2)+(K-2))]
+    prm = append(prm, -1*sum(prm))
+    if(n == 1){
+      mat = t(data.frame(prm))
+    } else {
+      mat = rbind(mat, t(data.frame(prm)))
+    }
+  }
+  return(mat)
+}
 convert_alpha_rt <- function(alpha_rt, T, R){
   for(r in 1:R){
     alrt = alpha_rt[((r-1)*T+1):((r-1)*T+T)]
@@ -61,6 +72,15 @@ gen_category_param <- function(N, K){
   } 
   return(category)
 }
+
+gen_category_param_previous <- function(K){
+  category <- matrix(0, nrow=1, ncol=(K-1))
+  for (k in 1:(K-1)){
+    category <- rnorm(K, 0, 1)
+  }
+  return(category)
+}
+
 
 read_data <- function(setting, filename){
   data <- read.table(filename, header=TRUE,sep=",")
