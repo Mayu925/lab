@@ -62,27 +62,6 @@ gen_category_param <- function(N, K){
   return(category)
 }
 
-
-draw_icc <- function(param, K, def){
-  x<- seq(-def$xlim, def$xlim, length=(10))
-  curve(prob(param, 1, x), 
-        from=-def$xlim, to=def$xlim, ylim=c(0,def$ylim), xlab=def$xlab, ylab=def$ylab, main=def$title, 
-        col=def$color[1],lty=def$style[1], cex.lab=def$lcex, lwd=def$llwd, cex.axis=def$axcx, cex.main=def$maincx, yaxt= "n")
-  par(new=T)
-  plot(x, prob(param, 1, x), xlim=c(-def$xlim, def$xlim), ylim=c(0,def$ylim), xlab="", ylab="",
-       col=def$color[1],lty=def$style[1], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE, pch=def$pchs[1], cex=1.5,  yaxt= "n")
-  for(k in 2:K){
-    par(new=T)
-    curve(prob(param, k, x), 
-          from=-def$xlim, to=def$xlim, ylim=c(0,def$ylim), xlab="", ylab="",  
-          col=def$color[k],lty=def$style[k], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE,  yaxt= "n")
-    par(new=T)
-    plot(x, prob(param, k, x), xlim=c(-def$xlim, def$xlim), ylim=c(0,def$ylim), xlab="", ylab="",
-         col=def$color[k],lty=def$style[k], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE, pch=def$pchs[k], cex=1.5,  yaxt= "n")
-  }
-  axis(2, cex.axis = def$caxcx)
-}
-
 read_data <- function(setting, filename){
   data <- read.table(filename, header=TRUE,sep=",")
   colnames(data) <- c("ExamineeID", "ItemID", "RaterID", "Score", "TimeID")
@@ -141,7 +120,6 @@ to_long_format <- function(data, X){
   return(data)
 }
 
-
 generate_constrained_alpha <- function(N){
   const_alpha <- log_normal_generator(N, mean=1, sd=0.4)
   const_alpha[2:N] = exp(log(const_alpha[2:N]) - mean(log(const_alpha[2:N])))
@@ -164,6 +142,7 @@ get_ml <- function(fit){
   theta <- apply(ms$log_lik, 1, sum)
   return(-2*(1/sum(1/theta)*length(theta)))
 }
+
 generate_data <- function(param, setting){
   N <- setting$n_item * setting$n_person * setting$n_rater
   U = matrix(0, nrow=N, ncol=5)
@@ -238,4 +217,9 @@ get_likelihood <- function(data, param){
     }
   }
   return (LL)       
+}
+
+get_theta_se_stat <- function(fit){
+  SE <- summary(fit, par="theta")$summary[,"sd"]
+  return(list(mean_se = mean(SE), sd_se = sd(SE)))
 }

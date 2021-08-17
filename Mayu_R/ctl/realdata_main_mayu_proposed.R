@@ -1,14 +1,14 @@
-Sys.setenv("http_proxy" = "http://proxy.uec.ac.jp:8080")
-Sys.setenv("https_proxy" = "https://proxy.uec.ac.jp:8080")
+#Sys.setenv("http_proxy" = "http://proxy.uec.ac.jp:8080")
+#Sys.setenv("https_proxy" = "https://proxy.uec.ac.jp:8080")
 library(rstan)
 library(loo)
 library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-dir <- "2020_ieice_rubric/"
+dir <- ""
 
-model = "mayu_new"
+model = "mayu_proposed"
 
 source("common/util_mayu.R")
 source("common/ctl_util.R")
