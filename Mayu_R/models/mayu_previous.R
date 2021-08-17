@@ -20,7 +20,6 @@ get_estimates <- function(fit1, setting){
   category_prm <- summary(fit1, par="beta_rk")$summary[,"mean"]
   pai_0r <- summary(fit1, par="pai_0r")$summary[,"mean"]
   pai_1r <- summary(fit1, par="pai_1r")$summary[,"mean"]
-  
   param = list(theta = theta, 
                #alpha_rt = alpha_rt, 
                beta_rk = category_prm, pai_0r = pai_0r, pai_1r = pai_1r)
@@ -40,7 +39,7 @@ get_Rhat_stat <- function(fit1){
 generate_true_param <- function(setting){
   theta <- rnorm(setting$n_person, 0, 1.0)
   #alpha_rt <- generate_alpha_rt(setting$n_rater, setting$n_time)
-  beta_rk <- gen_category_param(setting$K)
+  beta_rk <- gen_category_param_previous(setting$K)
   pai_0r <- rnorm(setting$n_rater, 0, 1.0)
   pai_1r <- rlnorm(setting$n_rater, 0, 1.0)
   theta = theta - mean(theta)

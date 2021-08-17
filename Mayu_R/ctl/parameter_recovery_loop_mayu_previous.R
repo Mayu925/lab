@@ -20,6 +20,7 @@ for(loop in 1:2){
   TH <- c()
   for(j in c(30, 50)){
     for(r in c(5, 10)){
+  
             print(paste(loop, j, 1, r, j, k, sep=","))
             setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = j)
             true_param <-generate_true_param(setting)
