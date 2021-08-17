@@ -31,11 +31,11 @@ for(loop in 1:2){
             TH <- rbind(TH, c(j, r, k,
                             d$theta$RMSE, 
                             d$alpha_r$RMSE, 
-                            #mean(d$alpha_rt$RMSE), 
+                            mean(d$alpha_rt$RMSE), 
                             mean(d$beta_rk$RMSE),  
                             d$theta$BIAS, 
                             d$alpha_r$BIAS, 
-                            #mean(d$alpha_rt$BIAS),
+                            mean(d$alpha_rt$BIAS),
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
       }
