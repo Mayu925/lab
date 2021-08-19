@@ -27,15 +27,9 @@ convert_category_estimates <- function(category_prm, N, K){
   return(mat)
 }
 convert_category_estimates_previous <- function(category_prm, K){
-  for(n in 1:N){
-    prm = category_prm[((n-1)*(K-2)+1):((n-1)*(K-2)+(K-2))]
+    prm = category_prm[1:K-1] 
     prm = append(prm, -1*sum(prm))
-    if(n == 1){
-      mat = t(data.frame(prm))
-    } else {
-      mat = rbind(mat, t(data.frame(prm)))
-    }
-  }
+    mat = t(data.frame(prm))
   return(mat)
 }
 convert_alpha_rt <- function(alpha_rt, T, R){

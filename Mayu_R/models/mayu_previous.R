@@ -17,7 +17,7 @@ get_param_size <- function(data){
 get_estimates <- function(fit1, setting){
   theta <- summary(fit1, par="theta")$summary[,"mean"]
   #alpha_rt <- convert_alpha_rt(summary(fit1, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
-  category_prm <- summary(fit1, par="beta_rk")$summary[,"mean"]
+  category_prm <- convert_category_estimates_previous(summary(fit1, par="beta_rk")$summary[,"mean"],setting$K)
   pai_0r <- summary(fit1, par="pai_0r")$summary[,"mean"]
   pai_1r <- summary(fit1, par="pai_1r")$summary[,"mean"]
   param = list(theta = theta, 
