@@ -27,7 +27,7 @@ convert_category_estimates <- function(category_prm, N, K){
   return(mat)
 }
 convert_category_estimates_previous <- function(category_prm, K){
-    prm = category_prm[1:K-1] 
+    prm = category_prm[1:K-1]
     prm = append(prm, -1*sum(prm))
     mat = t(data.frame(prm))
   return(mat)
