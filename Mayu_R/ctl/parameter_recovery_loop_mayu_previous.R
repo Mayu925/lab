@@ -20,7 +20,6 @@ for(loop in 1:2){
   TH <- c()
   for(j in c(30, 50)){
     for(r in c(5, 10)){
-  
             print(paste(loop, j, 1, r, j, k, sep=","))
             setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = j)
             true_param <-generate_true_param(setting)
@@ -34,12 +33,12 @@ for(loop in 1:2){
                             d$pai_0r$RMSE,
                             d$pai_1r$RMSE,
                             #mean(d$alpha_rt$RMSE), 
-                            mean(d$beta_rk$RMSE),  
+                            mean(d$category_prm$RMSE),  
                             d$theta$BIAS, 
                             d$pai_0r$BIAS,
                             d$pai_1r$BIAS,
                             #mean(d$alpha_rt$BIAS),
-                            mean(d$beta_rk$BIAS),
+                            mean(d$category_prm$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
     }
   }    
