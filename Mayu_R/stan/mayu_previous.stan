@@ -29,6 +29,7 @@ transformed parameters{
     category_est[1:(K-2)] = beta_rk;
     category_est[K-1] = -1*sum(beta_rk);
     category_prm = cumulative_sum(append_row(0, category_est));
+    
 }
 
 model{
