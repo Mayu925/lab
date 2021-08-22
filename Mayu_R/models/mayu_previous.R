@@ -14,25 +14,25 @@ get_param_size <- function(data){
   return(3* data$R + data$R * (data$K - 2) + data$T * 2  +data$I * 2 + data$J - (5 + data$T))
 }
 
-get_estimates <- function(fit1, setting){
-  theta <- summary(fit1, par="theta")$summary[,"mean"]
-  #alpha_rt <- convert_alpha_rt(summary(fit1, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
-  category_prm <- convert_category_estimates_previous(summary(fit1, par="category_prm")$summary[,"mean"],setting$K)
-  pai_0r <- summary(fit1, par="pai_0r")$summary[,"mean"]
-  pai_1r <- summary(fit1, par="pai_1r")$summary[,"mean"]
+get_estimates <- function(fit, setting){
+  theta <- summary(fit, par="theta")$summary[,"mean"]
+  #alpha_rt <- convert_alpha_rt(summary(fit, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
+  category_prm <- convert_category_estimates_previous(summary(fit, par="category_prm")$summary[,"mean"],setting$K)
+  pai_0r <- summary(fit, par="pai_0r")$summary[,"mean"]
+  pai_1r <- summary(fit, par="pai_1r")$summary[,"mean"]
   param = list(theta = theta, 
                #alpha_rt = alpha_rt, 
                category_prm = category_prm, pai_0r = pai_0r, pai_1r = pai_1r)
   return(param)
 }
 
-get_Rhat_stat <- function(fit1){
+get_Rhat_stat <- function(fit){
   RhatData <- c( 
-                 #summary(fit1, par="alpha_rt")$summary[,"Rhat"],
-                 summary(fit1, par="category_prm")$summary[,"Rhat"],
-                 summary(fit1, par="pai_0r")$summary[,"Rhat"],
-                 summary(fit1, par="pai_1r")$summary[,"Rhat"],
-                 summary(fit1, par="theta")$summary[,"Rhat"])
+                 #summary(fit, par="alpha_rt")$summary[,"Rhat"],
+                 summary(fit, par="beta_rk")$summary[,"Rhat"],
+                 summary(fit, par="pai_0r")$summary[,"Rhat"],
+                 summary(fit, par="pai_1r")$summary[,"Rhat"],
+                 summary(fit, par="theta")$summary[,"Rhat"])
   return(list(meanRhat = mean(RhatData), maxRhat = max(RhatData), countOver11 = sum(RhatData > 1.1)))
 }
 
