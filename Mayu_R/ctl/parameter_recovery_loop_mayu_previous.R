@@ -32,12 +32,12 @@ for(loop in 1:3){
                             d$theta$RMSE, 
                             d$pai_0r$RMSE,
                             d$pai_1r$RMSE,
-                            #mean(d$alpha_rt$RMSE), 
+                            mean(d$alpha_rt$RMSE), 
                             mean(d$category_prm$RMSE),  
                             d$theta$BIAS, 
                             d$pai_0r$BIAS,
                             d$pai_1r$BIAS,
-                            #mean(d$alpha_rt$BIAS),
+                            mean(d$alpha_rt$BIAS),
                             mean(d$category_prm$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
     }

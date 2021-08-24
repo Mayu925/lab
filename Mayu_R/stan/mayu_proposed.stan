@@ -42,15 +42,13 @@ model{
   for (r in 1:R){
     alpha_rt[r,1] ~ normal(0, 1);
     for (t in 2:T){
-      alpha_rt[r,t] ~ normal(alpha_rt[r,t-1], 1);
+      alpha_rt[r,t] ~ normal(alpha_rt[r,t-1], 0.1);
     }
   }
   for (p in 1:R) category_est [p,] ~ normal(0, 1);
   
   for (n in 1:N){
-    X[n] ~ categorical_logit(1.7*trans_alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-
-    //alpha_rt[RaterID[n],TimeID[n]]-
-    category_prm[RaterID[n]]));
+    X[n] ~ categorical_logit(1.7*trans_alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
   }
 }
 
@@ -58,8 +56,6 @@ model{
 generated quantities {
   vector[N] log_lik;
   for (n in 1:N){
-    log_lik[n] = categorical_logit_log(X[n], 1.7*trans_alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-
-    //alpha_rt[RaterID[n],TimeID[n]]-
-    category_prm[RaterID[n]]));
+    log_lik[n] = categorical_logit_log(X[n], 1.7*trans_alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]])-alpha_rt[RaterID[n],TimeID[n]]-category_prm[RaterID[n]]));
   }
 }
