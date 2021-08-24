@@ -14,7 +14,7 @@ source("common/util_mayu.R")
 source("common/ctl_util.R")
 
 
-setting <- list(K = 5, n_person = 34, n_item = 4, n_rater = 34, n_time = 34)
+setting <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 34)
 data1 <- read_data(setting, paste("data/mayu_data_0.csv", sep=""))
 data2 <-read_data(setting, paste("data/mayu_data_1.csv", sep=""))
 data3 <-read_data(setting, paste("data/mayu_data_2.csv", sep=""))
@@ -61,3 +61,11 @@ write.csv(SD, paste(dir, "output/realdata/SE/", model, "1.csv", sep=""))
 sink(paste(dir, "output/realdata/parameters/", model, "_param.txt", sep=""))
 sink()
 
+# 結果描画用
+plot(est_param_new_1_1$theta)
+plot(est_param_new_1_1$alpha_r)
+est_param_new_1_1$category_prm
+for(r in 1:34){
+  plot(est_param_new_1_1$alpha_rt[r,], type="l", ylim=c(-1,1), col=r)
+  par(new=T)
+}
