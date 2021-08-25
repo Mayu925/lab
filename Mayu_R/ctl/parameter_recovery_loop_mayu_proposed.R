@@ -30,11 +30,11 @@ for(loop in 1:2){
                             d$theta$RMSE, 
                             d$alpha_r$RMSE, 
                             mean(d$alpha_rt$RMSE), 
-                            mean(d$category_prm$RMSE),  
+                            mean(d$beta_rk$RMSE),  
                             d$theta$BIAS, 
                             d$alpha_r$BIAS, 
                             mean(d$alpha_rt$BIAS),
-                            mean(d$category_prm$BIAS),
+                            mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
       }
   }    

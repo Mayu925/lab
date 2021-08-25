@@ -1,0 +1,36 @@
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = X$vec ~ as.factor(X$name))
+
+$`as.factor(X$name)`
+                                            diff           lwr          upr     p adj
+gpcm_rubric_uto_r-gpcm_rater_uto_r  -0.014711585 -0.0194513108 -0.009971860 0.0000000
+grm_rater_uto_r-gpcm_rater_uto_r     0.002708245 -0.0020314802  0.007447971 0.5240888
+mgrm_rubric_uni_r-gpcm_rater_uto_r   0.007717500  0.0029777742  0.012457225 0.0000871
+raw_r-gpcm_rater_uto_r              -0.012957905 -0.0176976309 -0.008218180 0.0000000
+grm_rater_uto_r-gpcm_rubric_uto_r    0.017419831  0.0126801051  0.022159556 0.0000000
+mgrm_rubric_uni_r-gpcm_rubric_uto_r  0.022429085  0.0176893595  0.027168811 0.0000000
+raw_r-gpcm_rubric_uto_r              0.001753680 -0.0029860456  0.006493405 0.8512082
+mgrm_rubric_uni_r-grm_rater_uto_r    0.005009254  0.0002695289  0.009748980 0.0321944
+raw_r-grm_rater_uto_r               -0.015666151 -0.0204058762 -0.010926425 0.0000000
+raw_r-mgrm_rubric_uni_r             -0.020675405 -0.0254151307 -0.015935680 0.0000000
+
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = X2$vec ~ as.factor(X2$name))
+
+$`as.factor(X2$name)`
+                                             diff          lwr         upr     p adj
+gpcm_rubric_uto_r-gpcm_rater_uto_r  -0.0077719747 -0.027664190 0.012120240 0.8220372
+grm_rater_uto_r-gpcm_rater_uto_r     0.0016932132 -0.018199002 0.021585428 0.9993459
+mgrm_rubric_uni_r-gpcm_rater_uto_r   0.0051343985 -0.014757817 0.025026613 0.9549480
+raw_r-gpcm_rater_uto_r              -0.0075067123 -0.027398927 0.012385503 0.8399051
+grm_rater_uto_r-gpcm_rubric_uto_r    0.0094651879 -0.010427027 0.029357403 0.6896493
+mgrm_rubric_uni_r-gpcm_rubric_uto_r  0.0129063732 -0.006985842 0.032798588 0.3885732
+raw_r-gpcm_rubric_uto_r              0.0002652624 -0.019626953 0.020157477 0.9999996
+mgrm_rubric_uni_r-grm_rater_uto_r    0.0034411852 -0.016451030 0.023333400 0.9896904
+raw_r-grm_rater_uto_r               -0.0091999256 -0.029092141 0.010692289 0.7120892
+raw_r-mgrm_rubric_uni_r             -0.0126411108 -0.032533326 0.007251104 0.4104450
+

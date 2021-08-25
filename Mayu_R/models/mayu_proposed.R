@@ -1,7 +1,7 @@
 get_prm_list <- function(param, i, r, t){
   return(list(alpha_r = param$alpha_r[r], 
               alpha_rt = param$alpha_rt[r,t], 
-              category_prm = append(0, param$category_prm[r,])))
+              category_prm = append(0, param$beta_rk[r,])))
 }
 
 logit <- function(param, category_prm, x){
@@ -15,7 +15,7 @@ get_estimates <- function(fit, setting){
   category_prm <- convert_category_estimates(summary(fit, par="beta_rk")$summary[,"mean"],setting$n_rater, setting$K)
   param = list(theta = theta, alpha_r = alpha_r, 
                alpha_rt = alpha_rt, 
-               category_prm = category_prm)
+               beta_rk = category_prm)
   return(param)
 }
 
@@ -31,22 +31,22 @@ generate_true_param <- function(setting){
   theta <- rnorm(setting$n_person, 0, 1.0)
   alpha_r <- generate_constrained_alpha(setting$n_rater)
   alpha_rt <- generate_alpha_rt(setting$n_rater, setting$n_time)
-  category_prm <- gen_category_param(setting$n_rater, setting$K)
+  beta_rk <- gen_category_param(setting$n_rater, setting$K)
   theta = theta - mean(theta)
   param = list(theta = theta, alpha_r = alpha_r, 
                alpha_rt = alpha_rt,
-               category_prm = category_prm)
+               beta_rk = beta_rk)
   return(param)
 }
 
 get_error <- function(true_param, est_param){
   error_alpha_r <- calc_error(true_param$alpha_r, est_param$alpha_r)
   error_alpha_rt <- calc_error(true_param$alpha_rt, est_param$alpha_rt)
-  error_category <- list(RMSE = sqrt(apply((true_param$category_prm - est_param$category_prm)^2, 2, mean)), 
-                         BIAS = apply((true_param$category_prm - est_param$category_prm), 2, mean));
+  error_category <- list(RMSE = sqrt(apply((true_param$beta_rk - est_param$beta_rk)^2, 2, mean)), 
+                         BIAS = apply((true_param$beta_rk - est_param$beta_rk), 2, mean));
   error_theta <- calc_error(true_param$theta, est_param$theta)
   rmse <- list(theta = error_theta, alpha_r = error_alpha_r, 
                alpha_rt = error_alpha_rt,
-               category_prm = error_category)
+               beta_rk = error_category)
   return(rmse)
 }

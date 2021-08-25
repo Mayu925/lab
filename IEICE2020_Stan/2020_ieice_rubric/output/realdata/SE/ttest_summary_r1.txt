@@ -1,0 +1,49 @@
+
+	 Simultaneous Tests for General Linear Hypotheses
+
+Multiple Comparisons of Means: Dunnett Contrasts
+
+
+Fit: aov(formula = X$vec ~ fx)
+
+Linear Hypotheses:
+                                         Estimate Std. Error t value Pr(>|t|)    
+gpcm_rater_uto_mode_r - a_proposed == 0  0.041407   0.001634  25.342   <0.001 ***
+gpcm_rater_uto_r - a_proposed == 0       0.002932   0.001634   1.794    0.288    
+grm_rater_uto_mode_r - a_proposed == 0   0.078850   0.001634  48.257   <0.001 ***
+grm_rater_uto_r - a_proposed == 0        0.015346   0.001634   9.392   <0.001 ***
+mgrm_rubric_uni_mode_r - a_proposed == 0 0.034434   0.001634  21.074   <0.001 ***
+mgrm_rubric_uni_r - a_proposed == 0      0.003713   0.001634   2.272    0.108    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+(Adjusted p values reported -- single-step method)
+
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = X$vec ~ as.factor(X$name))
+
+$`as.factor(X$name)`
+                                                      diff          lwr          upr     p adj
+gpcm_rater_uto_mode_r-a_proposed              0.0414071239  0.036546896  0.046267352 0.0000000
+gpcm_rater_uto_r-a_proposed                   0.0029317092 -0.001928519  0.007791937 0.5533091
+grm_rater_uto_mode_r-a_proposed               0.0788499872  0.073989759  0.083710215 0.0000000
+grm_rater_uto_r-a_proposed                    0.0153464028  0.010486175  0.020206631 0.0000000
+mgrm_rubric_uni_mode_r-a_proposed             0.0344337470  0.029573519  0.039293975 0.0000000
+mgrm_rubric_uni_r-a_proposed                  0.0037126285 -0.001147599  0.008572856 0.2620934
+gpcm_rater_uto_r-gpcm_rater_uto_mode_r       -0.0384754147 -0.043335643 -0.033615187 0.0000000
+grm_rater_uto_mode_r-gpcm_rater_uto_mode_r    0.0374428633  0.032582635  0.042303091 0.0000000
+grm_rater_uto_r-gpcm_rater_uto_mode_r        -0.0260607211 -0.030920949 -0.021200493 0.0000000
+mgrm_rubric_uni_mode_r-gpcm_rater_uto_mode_r -0.0069733769 -0.011833605 -0.002113149 0.0005678
+mgrm_rubric_uni_r-gpcm_rater_uto_mode_r      -0.0376944954 -0.042554723 -0.032834268 0.0000000
+grm_rater_uto_mode_r-gpcm_rater_uto_r         0.0759182780  0.071058050  0.080778506 0.0000000
+grm_rater_uto_r-gpcm_rater_uto_r              0.0124146936  0.007554466  0.017274921 0.0000000
+mgrm_rubric_uni_mode_r-gpcm_rater_uto_r       0.0315020378  0.026641810  0.036362266 0.0000000
+mgrm_rubric_uni_r-gpcm_rater_uto_r            0.0007809193 -0.004079309  0.005641147 0.9991013
+grm_rater_uto_r-grm_rater_uto_mode_r         -0.0635035843 -0.068363812 -0.058643357 0.0000000
+mgrm_rubric_uni_mode_r-grm_rater_uto_mode_r  -0.0444162402 -0.049276468 -0.039556012 0.0000000
+mgrm_rubric_uni_r-grm_rater_uto_mode_r       -0.0751373587 -0.079997586 -0.070277131 0.0000000
+mgrm_rubric_uni_mode_r-grm_rater_uto_r        0.0190873441  0.014227116  0.023947572 0.0000000
+mgrm_rubric_uni_r-grm_rater_uto_r            -0.0116337744 -0.016494002 -0.006773547 0.0000000
+mgrm_rubric_uni_r-mgrm_rubric_uni_mode_r     -0.0307211185 -0.035581346 -0.025860891 0.0000000
+

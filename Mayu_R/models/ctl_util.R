@@ -25,7 +25,7 @@ convert_category_estimates <- function(category_prm, N, K){
 }
 
 convert_category_estimates_previous <- function(category_prm, K){
-    prm = category_prm[1:K-1]
+    prm = category_prm[1:(K-2)]
     prm = append(prm, -1*sum(prm))
     mat = t(data.frame(prm))
   return(mat)
@@ -68,8 +68,10 @@ gen_category_param <- function(N, K){
 
 gen_category_param_previous <- function(K){
   category <- matrix(0, nrow=1, ncol=(K-1))
-  category <- rnorm(K-1, 0, 1)
-  category <- append(category,-1*sum(category))
+  for (k in 1:(k-1)){
+    category[k] <- rnorm(1, 0, 1)
+  }
+  category <- category - mean(category)
   return(category)
 }
 
