@@ -18,7 +18,7 @@ get_estimates <- function(fit, setting){
   theta <- summary(fit, par="theta")$summary[,"mean"]
   alpha_r <- get_alpha_estimates_with_restriction(summary(fit, par="alpha_r")$summary[,"mean"])
   alpha_rt <- convert_alpha_rt(summary(fit, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
-  category_prm <- convert_category_estimates(summary(fit, par="category_prm")$summary[,"mean"],setting$n_rater, setting$K)
+  category_prm <- convert_category_estimates(summary(fit, par="beta_rk")$summary[,"mean"],setting$n_rater, setting$K)
   param = list(theta = theta, alpha_r = alpha_r, 
                alpha_rt = alpha_rt, 
                category_prm = category_prm)
