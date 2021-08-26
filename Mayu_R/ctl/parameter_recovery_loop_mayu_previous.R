@@ -11,12 +11,13 @@ model = "mayu_previous"
 
 source(paste(dir, "models/", model, ".R", sep=""))
 stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
-k=5
 loop=1
 j=20
+i=1
 r=5
-
-for(loop in 1:3){
+t=j
+k=5
+for(loop in 1:5){
   TH <- c()
   for(j in c(30, 50)){
     for(r in c(5, 10)){
@@ -53,4 +54,22 @@ for(loop in 1:3){
 TH <- TH / 4
 write.csv(TH, paste(dir, "output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
 
+# 結果のプロット用関数群
+plot(true_param$theta, est_param$theta, main="theta")
+abline(coef = c(0,1))
 
+plot(true_param$pai_0r, est_param$pai_0r, main="pai_0r")
+abline(coef = c(0,1))
+
+plot(true_param$pai_1r, est_param$pai_1r, main="pai_1r")
+abline(coef = c(0,1))
+
+plot_alpha_rt <- function(r){
+  ylim <- c(min(true_param$alpha_rt[r,])-0.5, max(true_param$alpha_rt[r,])+0.5)
+  plot(true_param$alpha_rt[r,], type="l", ylim=ylim, ylab="", main=paste("alpha_rt(r = ", r, ")", sep=""))
+  par(new=T)
+  plot(est_param$alpha_rt[r,], type="l", ylim=ylim, lty=2, ylab="")
+}
+
+plot(true_param$beta_rk, est_param$beta_rk, main="beta_rk")
+abline(coef = c(0,1))
