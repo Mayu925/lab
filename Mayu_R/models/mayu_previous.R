@@ -39,7 +39,7 @@ generate_true_param <- function(setting){
   alpha_rt <- generate_alpha_rt(setting$n_rater, setting$n_time)
   beta_rk <- gen_category_param_previous(setting$K)
   pai_0r <- rnorm(setting$n_rater, 0, 1.0)
-  pai_1r <- rlnorm(setting$n_rater, 0, 1.0)
+  pai_1r <- generate_constrained_alpha(setting$n_rater)
   theta = theta - mean(theta)
   param = list(theta = theta,  
                alpha_rt = alpha_rt,

@@ -3,21 +3,19 @@ library(loo)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-dir <- ""
-
 source("models/ctl_util.R")
 
 model = "mayu_previous"
 
-source(paste(dir, "models/", model, ".R", sep=""))
-stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
+source(paste("models/", model, ".R", sep=""))
+stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 loop=1
 j=20
 i=1
 r=5
 t=j
 k=5
-for(loop in 1:5){
+for(loop in 1:3){
   TH <- c()
   for(j in c(30, 50)){
     for(r in c(5, 10)){
@@ -43,16 +41,16 @@ for(loop in 1:5){
                             Rhat$meanRhat, Rhat$maxRhat))
     }
   }    
-  write.csv(TH, paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep=""), row.names = FALSE)
+  write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep=""), row.names = FALSE)
 }
 
 TH[1,]
-#TH <-as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", 28, ".csv", sep="")))
-for(loop in 1:3){
-  TH <-TH + as.matrix(read.csv(paste(dir, "output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
+TH <-as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
+for(loop in 1:4){
+  TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
 }
-TH <- TH / 4
-write.csv(TH, paste(dir, "output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
+TH <- TH / 5
+write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
 
 # 結果のプロット用関数群
 plot(true_param$theta, est_param$theta, main="theta")
@@ -69,6 +67,9 @@ plot_alpha_rt <- function(r){
   plot(true_param$alpha_rt[r,], type="l", ylim=ylim, ylab="", main=paste("alpha_rt(r = ", r, ")", sep=""))
   par(new=T)
   plot(est_param$alpha_rt[r,], type="l", ylim=ylim, lty=2, ylab="")
+}
+for(r in 1:10){
+  plot_alpha_rt(r)
 }
 
 plot(true_param$beta_rk, est_param$beta_rk, main="beta_rk")
