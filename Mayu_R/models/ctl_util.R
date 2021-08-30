@@ -71,6 +71,7 @@ gen_category_param_previous <- function(K){
   for (k in 1:(k-1)){
     category[k] <- rnorm(1, 0, 1)
   }
+  category = sort(category)
   category <- category - mean(category)
   return(category)
 }
@@ -132,6 +133,7 @@ generate_alpha_rt_previous <- function(R,T){
   const_alpha_rt <- matrix(0, nrow=R, ncol=T)
   for (r in 1:R){
     const_alpha_rt[r,] <- rnorm(T, 0, 1);
+    const_alpha_rt[r,] = const_alpha_rt[r,] - mean(const_alpha_rt[r,]);
   }
   return(const_alpha_rt)
 }

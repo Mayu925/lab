@@ -41,7 +41,8 @@ generate_true_param <- function(setting){
 
 get_error <- function(true_param, est_param){
   error_alpha_r <- calc_error(true_param$alpha_r, est_param$alpha_r)
-  error_alpha_rt <- calc_error(true_param$alpha_rt, est_param$alpha_rt)
+  error_alpha_rt <- list(RMSE = sqrt(apply((true_param$alpha_rt-est_param$alpha_rt)^2, 2, mean)),
+                         BIAS = apply((true_param$alpha_rt - est_param$alpha_rt), 2, mean));
   error_category <- list(RMSE = sqrt(apply((true_param$beta_rk - est_param$beta_rk)^2, 2, mean)), 
                          BIAS = apply((true_param$beta_rk - est_param$beta_rk), 2, mean));
   error_theta <- calc_error(true_param$theta, est_param$theta)
