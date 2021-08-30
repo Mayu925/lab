@@ -128,6 +128,14 @@ generate_alpha_rt <- function(R,T){
   return(const_alpha_rt)
 }
 
+generate_alpha_rt_previous <- function(R,T){
+  const_alpha_rt <- matrix(0, nrow=R, ncol=T)
+  for (r in 1:R){
+    const_alpha_rt[r,] <- rnorm(T, 0, 1);
+  }
+  return(const_alpha_rt)
+}
+
 generate_data <- function(param, setting){
   N <- setting$n_item * setting$n_person * setting$n_rater
   U = matrix(0, nrow=N, ncol=5)

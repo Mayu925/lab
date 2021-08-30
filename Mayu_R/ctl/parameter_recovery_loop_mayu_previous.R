@@ -15,6 +15,7 @@ i=1
 r=5
 t=j
 k=5
+
 for(loop in 1:3){
   TH <- c()
   for(j in c(30, 50)){
@@ -46,10 +47,10 @@ for(loop in 1:3){
 
 TH[1,]
 TH <-as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
-for(loop in 1:4){
+for(loop in 1:3){
   TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
 }
-TH <- TH / 5
+TH <- TH / 4
 write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
 
 # 結果のプロット用関数群

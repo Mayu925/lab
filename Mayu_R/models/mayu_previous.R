@@ -15,7 +15,7 @@ get_estimates <- function(fit, setting){
   alpha_rt <- convert_alpha_rt(summary(fit, par="alpha_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
   category_prm <- convert_category_estimates_previous(summary(fit, par="beta_rk")$summary[,"mean"],setting$K)
   pai_0r <- summary(fit, par="pai_0r")$summary[,"mean"]
-  pai_1r <- summary(fit, par="pai_1r")$summary[,"mean"]
+  pai_1r <- get_alpha_estimates_with_restriction(summary(fit, par="pai_1r")$summary[,"mean"])
   param = list(theta = theta, 
                alpha_rt = alpha_rt, 
                beta_rk = category_prm, 
@@ -27,7 +27,7 @@ get_estimates <- function(fit, setting){
 get_Rhat_stat <- function(fit){
   RhatData <- c( 
                  summary(fit, par="alpha_rt")$summary[,"Rhat"],
-                 summary(fit, par="beta_rk")$summary[,"Rhat"],#category_prmじゃなくて？
+                 summary(fit, par="beta_rk")$summary[,"Rhat"],
                  summary(fit, par="pai_0r")$summary[,"Rhat"],
                  summary(fit, par="pai_1r")$summary[,"Rhat"],
                  summary(fit, par="theta")$summary[,"Rhat"])
@@ -36,7 +36,7 @@ get_Rhat_stat <- function(fit){
 
 generate_true_param <- function(setting){
   theta <- rnorm(setting$n_person, 0, 1.0)
-  alpha_rt <- generate_alpha_rt(setting$n_rater, setting$n_time)
+  alpha_rt <- generate_alpha_rt_previous(setting$n_rater, setting$n_time)
   beta_rk <- gen_category_param_previous(setting$K)
   pai_0r <- rnorm(setting$n_rater, 0, 1.0)
   pai_1r <- generate_constrained_alpha(setting$n_rater)
