@@ -41,6 +41,7 @@ generate_true_param <- function(setting){
   pai_0r <- rnorm(setting$n_rater, 0, 1.0)
   pai_1r <- generate_constrained_alpha(setting$n_rater)
   theta = theta - mean(theta)
+  pai_0r = pai_0r - mean(pai_0r)
   param = list(theta = theta,  
                alpha_rt = alpha_rt,
                beta_rk = beta_rk, 
@@ -50,7 +51,8 @@ generate_true_param <- function(setting){
 }
 
 get_error <- function(true_param, est_param){
-  error_alpha_rt <- calc_error(true_param$alpha_rt, est_param$alpha_rt)
+  error_alpha_rt <- list(RMSE = sqrt(apply((true_param$alpha_rt-est_param$alpha_rt)^2, 2, mean)),
+                         BIAS = apply((true_param$alpha_rt - est_param$alpha_rt), 2, mean));
   error_pai_0r <- calc_error(true_param$pai_0r, est_param$pai_0r)
   error_pai_1r <- calc_error(true_param$pai_1r, est_param$pai_1r)
   error_category <- list(RMSE = sqrt(apply((true_param$beta_rk - est_param$beta_rk)^2, 2, mean)), 

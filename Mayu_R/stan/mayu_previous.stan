@@ -14,6 +14,7 @@ data{
 transformed data{
   vector[K] c = cumulative_sum(rep_vector(1, K)) - 1;
 }
+
 parameters {
   vector[J] theta;
   vector[K-2] beta_rk;
@@ -32,14 +33,13 @@ transformed parameters{
   category_est[1:(K-2)] = beta_rk;
   category_est[K-1] = -1*sum(beta_rk);
   category_prm = cumulative_sum(append_row(0, category_est));
-    
+
 }
 
 model{
   theta ~ normal(0, 1);
   trans_pai_1r ~ lognormal(0.0, 1.0);
   pai_0r ~ normal(0, 1);
-  
   for (r in 1:R){
     alpha_rt[r,] ~ normal(0, 1);
   }
