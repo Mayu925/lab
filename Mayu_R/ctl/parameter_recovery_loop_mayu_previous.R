@@ -10,9 +10,9 @@ model = "mayu_previous"
 source(paste("models/", model, ".R", sep=""))
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 loop=1
-j=20
+j=30
 i=1
-r=5
+r=10
 t=j
 k=5
 

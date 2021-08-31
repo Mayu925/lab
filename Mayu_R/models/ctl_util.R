@@ -131,9 +131,23 @@ generate_alpha_rt <- function(R,T){
 
 generate_alpha_rt_previous <- function(R,T){
   const_alpha_rt <- matrix(0, nrow=R, ncol=T)
-  for (r in 1:R){
-    const_alpha_rt[r,] <- rnorm(T, 0, 1);
-    const_alpha_rt[r,] = const_alpha_rt[r,] - mean(const_alpha_rt[r,]);
+  for (r in 1:3){
+    const_alpha_rt[r,1] <- rnorm(1, 0, 1);
+    const_alpha_rt[r,2:15] <- const_alpha_rt[r,1];
+    const_alpha_rt[r,16] <-const_alpha_rt[r,1]+rnorm(1,0,0.2);
+    const_alpha_rt[r,17:T] <- const_alpha_rt[r,16];
+  }
+  for (r in 4:6){
+    const_alpha_rt[r,1] <- rnorm(1, 0, 1);
+    for(t in 2:T){
+      const_alpha_rt[r,t] <- rnorm(1, 0, 0.05) + const_alpha_rt[r,1];
+    }
+  }
+  for (r in 7:10){
+    const_alpha_rt[r,1] <- rnorm(1, 0, 1);
+    for(t in 2:T){
+    const_alpha_rt[r,t] <- 1.01 * const_alpha_rt[r,(t-1)];
+    }
   }
   return(const_alpha_rt)
 }

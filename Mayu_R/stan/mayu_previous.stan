@@ -29,7 +29,6 @@ transformed parameters{
   real<lower=0> trans_pai_1r[R];
   trans_pai_1r[1] = 1.0 / prod(pai_1r);
   trans_pai_1r[2:R] = pai_1r;
-  
   category_est[1:(K-2)] = beta_rk;
   category_est[K-1] = -1*sum(beta_rk);
   category_prm = cumulative_sum(append_row(0, category_est));
