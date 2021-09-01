@@ -12,7 +12,7 @@ stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 k=5
 loop=1
 j=30
-r=5
+r=15
 
 for(loop in 1:2){
   TH <- c()
