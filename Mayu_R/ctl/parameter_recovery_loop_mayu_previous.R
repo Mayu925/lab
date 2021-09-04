@@ -32,12 +32,12 @@ for(loop in 1:3){
                             d$theta$RMSE, 
                             d$pai_0r$RMSE,
                             d$pai_1r$RMSE,
-                            mean(d$alpha_rt$RMSE), 
+                            mean(d$beta_rt$RMSE), 
                             mean(d$beta_rk$RMSE),  
                             d$theta$BIAS, 
                             d$pai_0r$BIAS,
                             d$pai_1r$BIAS,
-                            mean(d$alpha_rt$BIAS),
+                            mean(d$beta_rt$BIAS),
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
     }
@@ -63,14 +63,14 @@ abline(coef = c(0,1))
 plot(true_param$pai_1r, est_param$pai_1r, main="pai_1r")
 abline(coef = c(0,1))
 
-plot_alpha_rt <- function(r){
-  ylim <- c(min(true_param$alpha_rt[r,])-0.5, max(true_param$alpha_rt[r,])+0.5)
-  plot(true_param$alpha_rt[r,], type="l", ylim=ylim, ylab="", main=paste("alpha_rt(r = ", r, ")", sep=""))
+plot_beta_rt <- function(r){
+  ylim <- c(min(true_param$beta_rt[r,])-0.5, max(true_param$beta_rt[r,])+0.5)
+  plot(true_param$beta_rt[r,], type="l", ylim=ylim, ylab="", main=paste("beta_rt(r = ", r, ")", sep=""))
   par(new=T)
-  plot(est_param$alpha_rt[r,], type="l", ylim=ylim, lty=2, ylab="")
+  plot(est_param$beta_rt[r,], type="l", ylim=ylim, lty=2, ylab="")
 }
 for(r in 1:10){
-  plot_alpha_rt(r)
+  plot_beta_rt(r)
 }
 
 plot(true_param$beta_rk, est_param$beta_rk, main="beta_rk")
