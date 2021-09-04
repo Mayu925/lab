@@ -31,15 +31,9 @@ convert_category_estimates_previous <- function(category_prm, K){
   return(mat)
 }
 
-<<<<<<< HEAD
-convert_alpha_rt <- function(alpha_rt, T, R){
-  for(r in 1:R){
-    alrt = alpha_rt[((r-1)*T+1):((r-1)*T+T)]
-=======
 convert_beta_rt <- function(beta_rt, T, R){
   for(r in 1:R){
     alrt = beta_rt[((r-1)*T+1):((r-1)*T+T)]
->>>>>>> origin/master
     if(r == 1){
       mat = t(data.frame(alrt))
     }else{
@@ -124,40 +118,6 @@ generate_constrained_alpha <- function(N){
   return(const_alpha)
 }
 
-<<<<<<< HEAD
-generate_alpha_rt <- function(R,T){
-  const_alpha_rt <- matrix(0, nrow=R, ncol=T)
-  for (r in 1:R){
-    const_alpha_rt[r,1] <- rnorm(1);
-    for (t in 2:T){
-      const_alpha_rt[r,t] <- rnorm(1, const_alpha_rt[r,t-1], 0.1);
-    }
-  }
-  return(const_alpha_rt)
-}
-
-generate_alpha_rt_previous <- function(R,T){
-  const_alpha_rt <- matrix(0, nrow=R, ncol=T)
-  for (r in 1:3){
-    const_alpha_rt[r,1] <- rnorm(1, 0, 1);
-    const_alpha_rt[r,2:15] <- const_alpha_rt[r,1];
-    const_alpha_rt[r,16] <-const_alpha_rt[r,1]+rnorm(1,0,0.2);
-    const_alpha_rt[r,17:T] <- const_alpha_rt[r,16];
-  }
-  for (r in 4:6){
-    const_alpha_rt[r,1] <- rnorm(1, 0, 1);
-    for(t in 2:T){
-      const_alpha_rt[r,t] <- rnorm(1, 0, 0.05) + const_alpha_rt[r,1];
-    }
-  }
-  for (r in 7:10){
-    const_alpha_rt[r,1] <- rnorm(1, 0, 1);
-    for(t in 2:T){
-    const_alpha_rt[r,t] <- 1.01 * const_alpha_rt[r,(t-1)];
-    }
-  }
-  return(const_alpha_rt)
-=======
 generate_beta_rt <- function(R,T){
   const_beta_rt <- matrix(0, nrow=R, ncol=T)
   for (r in 1:R){
@@ -192,7 +152,6 @@ generate_beta_rt_self <- function(R,T){
     }
   }
   return(const_beta_rt)
->>>>>>> origin/master
 }
 
 generate_data <- function(param, setting){
