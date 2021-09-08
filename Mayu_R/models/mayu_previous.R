@@ -12,7 +12,7 @@ get_param_size <- function(data){
 
 get_estimates <- function(fit, setting){
   theta <- summary(fit, par="theta")$summary[,"mean"]
-  beta_rt <- convert_beta_rt(summary(fit, par="beta_rt")$summary[,"mean"] ,setting$n_time, setting$n_rater)
+  beta_rt <- convert_beta_rt(summary(fit, par="beta_rt")$summary[,"mean"] , setting$n_time, setting$n_rater)
   category_prm <- convert_category_estimates_previous(summary(fit, par="beta_rk")$summary[,"mean"],setting$K)
   pai_0r <- summary(fit, par="pai_0r")$summary[,"mean"]
   pai_1r <- get_alpha_estimates_with_restriction(summary(fit, par="pai_1r")$summary[,"mean"])

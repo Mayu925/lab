@@ -12,25 +12,24 @@ stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 k=5
 loop=1
 j=30
-
+t=30
 r=15
 
 
 for(loop in 1:2){
   TH <- c()
   for(j in c(30, 50)){
-
+    for (t in c(30,50)){
       for(r in c(15, 10)){
-
-            print(paste(loop, j, 1, r, j, k, sep=","))
-            setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = j)
+            print(paste(loop, j, 1, r, t, k, sep=","))
+            setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = t)
             true_param <-generate_true_param(setting)
             data <- generate_data(true_param, setting)
             fit <- sampling(stan, data=data, iter=3000, warmup=2000, chains=3, seed=1)
             est_param <- get_estimates(fit, setting)
             d <-  get_error(true_param, est_param)
             Rhat <- get_Rhat_stat(fit)
-            TH <- rbind(TH, c(j, r, k,
+            TH <- rbind(TH, c(j, r, k, t,
                             d$theta$RMSE, 
                             d$alpha_r$RMSE, 
                             mean(d$beta_rt$RMSE), 
@@ -41,8 +40,9 @@ for(loop in 1:2){
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
       }
-  }    
-  write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/loop_", 1, ".csv", sep=""), row.names = FALSE)
+    }    
+  }
+  write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep=""), row.names = FALSE)
 }
 
 TH[1,]

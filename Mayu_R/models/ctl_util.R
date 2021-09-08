@@ -135,20 +135,25 @@ generate_beta_rt_self <- function(R,T){
   r3 = r2 * 2;
   for (r in 1:r2){
     const_beta_rt[r,1] <- rnorm(1, 0, 1);
-    const_beta_rt[r,2:15] <- const_beta_rt[r,1];
-    const_beta_rt[r,16] <-const_beta_rt[r,1]+rnorm(1,0,0.2);
-    const_beta_rt[r,17:T] <- const_beta_rt[r,16];
+    const_beta_rt[r,2:(T/2)] <- const_beta_rt[r,1];
+    const_beta_rt[r,((T/2)+1)] <-const_beta_rt[r,1]+rnorm(1,0,0.2);
+    const_beta_rt[r,((T/2)+1):T] <- const_beta_rt[r,(T/2)+1];
   }
   for (r in (r2+1):r3){
     const_beta_rt[r,1] <- rnorm(1, 0, 1);
     for(t in 2:T){
-      const_beta_rt[r,t] <- rnorm(1, 0, 0.05) + const_beta_rt[r,1];
+      const_beta_rt[r,t] <- rnorm(1, 0, 0.01) + const_beta_rt[r,1];
     }
   }
   for (r in (r3+1):R){
     const_beta_rt[r,1] <- rnorm(1, 0, 1);
     for(t in 2:T){
     const_beta_rt[r,t] <- 1.01 * const_beta_rt[r,(t-1)];
+    }
+  }
+  for(r in 1:R){
+    for(n in 1:(T/5)){
+      const_beta_rt[r,(5*(n-1)+1):(5*n)]=const_beta_rt[r,(5*(n-1)+1)]
     }
   }
   return(const_beta_rt)

@@ -16,12 +16,13 @@ r=10
 t=j
 k=5
 
-for(loop in 1:3){
+for(loop in 1:2){
   TH <- c()
   for(j in c(30, 50)){
+    for (t in c(30,50)){
     for(r in c(5, 10)){
-            print(paste(loop, j, 1, r, j, k, sep=","))
-            setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = j)
+            print(paste(loop, j, 1, r, t, k, sep=","))
+            setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = t)
             true_param <-generate_true_param(setting)
             data <- generate_data(true_param, setting)
             fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3, seed=1)
@@ -41,7 +42,8 @@ for(loop in 1:3){
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
     }
-  }    
+    }    
+  }
   write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep=""), row.names = FALSE)
 }
 
