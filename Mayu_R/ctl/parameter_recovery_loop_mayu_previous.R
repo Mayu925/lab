@@ -74,6 +74,5 @@ plot_beta_rt <- function(r){
 for(r in 1:10){
   plot_beta_rt(r)
 }
-
 plot(true_param$beta_rk, est_param$beta_rk, main="beta_rk")
 abline(coef = c(0,1))
