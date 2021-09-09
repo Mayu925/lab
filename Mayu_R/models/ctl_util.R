@@ -133,11 +133,12 @@ generate_beta_rt_self <- function(R,T){
   const_beta_rt <- matrix(0, nrow=R, ncol=T);
   r2 = trunc(R/3);
   r3 = r2 * 2;
+  t2 = trunc(T/2)
   for (r in 1:r2){
     const_beta_rt[r,1] <- rnorm(1, 0, 1);
-    const_beta_rt[r,2:(T/2)] <- const_beta_rt[r,1];
-    const_beta_rt[r,((T/2)+1)] <-const_beta_rt[r,1]+rnorm(1,0,0.2);
-    const_beta_rt[r,((T/2)+1):T] <- const_beta_rt[r,(T/2)+1];
+    const_beta_rt[r,2:t2] <- const_beta_rt[r,1];
+    const_beta_rt[r,(t2+1)] <-const_beta_rt[r,1]+rnorm(1,0,0.2);
+    const_beta_rt[r,(t2+1):T] <- const_beta_rt[r,(t2+1)];
   }
   for (r in (r2+1):r3){
     const_beta_rt[r,1] <- rnorm(1, 0, 1);
@@ -148,7 +149,7 @@ generate_beta_rt_self <- function(R,T){
   for (r in (r3+1):R){
     const_beta_rt[r,1] <- rnorm(1, 0, 1);
     for(t in 2:T){
-    const_beta_rt[r,t] <- 1.01 * const_beta_rt[r,(t-1)];
+    const_beta_rt[r,t] <- 1.1 * const_beta_rt[r,(t-1)];
     }
   }
   return(const_beta_rt)
@@ -158,9 +159,11 @@ generate_data <- function(param, setting){
   N <- setting$n_item * setting$n_person * setting$n_rater
   U = matrix(0, nrow=N, ncol=5)
   tsub = setting$n_person/setting$n_time
+  tsub2 = 0
+  tsub3 = 0
   row_idx = 1
   for(t in 1:setting$n_time){
-    tsub2 = tsub * t - setting$n_time 
+    tsub2 = tsub * t - (tsub - 1)
     tsub3 = tsub * t
       for (j in tsub2:tsub3){
         for (i in 1:setting$n_item){
@@ -187,4 +190,24 @@ generate_data <- function(param, setting){
 get_theta_se_stat <- function(fit){
   SE <- summary(fit, par="theta")$summary[,"sd"]
   return(list(mean_se = mean(SE), sd_se = sd(SE)))
+}
+
+draw_icc <- function(param, K, def){
+  x<- seq(-def$xlim, def$xlim, length=(10))
+  curve(prob(param, 1, x), 
+        from=-def$xlim, to=def$xlim, ylim=c(0,def$ylim), xlab=def$xlab, ylab=def$ylab, main=def$title, 
+        col=def$color[1],lty=def$style[1], cex.lab=def$lcex, lwd=def$llwd, cex.axis=def$axcx, cex.main=def$maincx, yaxt= "n")
+  par(new=T)
+  plot(x, prob(param, 1, x), xlim=c(-def$xlim, def$xlim), ylim=c(0,def$ylim), xlab="", ylab="",
+       col=def$color[1],lty=def$style[1], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE, pch=def$pchs[1], cex=1.5,  yaxt= "n")
+  for(k in 2:K){
+    par(new=T)
+    curve(prob(param, k, x), 
+          from=-def$xlim, to=def$xlim, ylim=c(0,def$ylim), xlab="", ylab="",  
+          col=def$color[k],lty=def$style[k], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE,  yaxt= "n")
+    par(new=T)
+    plot(x, prob(param, k, x), xlim=c(-def$xlim, def$xlim), ylim=c(0,def$ylim), xlab="", ylab="",
+         col=def$color[k],lty=def$style[k], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE, pch=def$pchs[k], cex=1.5,  yaxt= "n")
+  }
+  axis(2, cex.axis = def$caxcx)
 }

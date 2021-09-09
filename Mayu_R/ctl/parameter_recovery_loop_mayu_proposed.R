@@ -16,9 +16,9 @@ t=5
 r=15
 i=1
 
-for(loop in 1:2){
+for(loop in 1:5){
   TH <- c()
-  for(j in c(30, 50)){
+  for(j in c(30, 60)){
     for (t in c(3,5)){
       for(r in c(15, 10)){
             print(paste(loop, j, 1, r, t, k, sep=","))
@@ -83,5 +83,4 @@ plot_beta_rt <- function(r){
 }
 for(r in 1:15){
   plot_beta_rt(r)
-
 }
