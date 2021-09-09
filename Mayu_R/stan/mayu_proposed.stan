@@ -46,6 +46,7 @@ model{
     X[n] ~ categorical_logit(1.7*trans_alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]]-beta_rt[RaterID[n],TimeID[n]])-category_prm[RaterID[n]]));
   }
 }
+
 generated quantities {
   vector[N] log_lik;
   for (n in 1:N){

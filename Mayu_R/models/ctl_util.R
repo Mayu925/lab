@@ -155,7 +155,7 @@ generate_beta_rt_self <- function(R,T){
 }
 
 generate_data <- function(param, setting){
-  N <- setting$n_item * setting$n_person * setting$n_rater *setting$n_time
+  N <- setting$n_item * setting$n_person * setting$n_rater
   U = matrix(0, nrow=N, ncol=5)
   tsub = setting$n_person/setting$n_time
   row_idx = 1
