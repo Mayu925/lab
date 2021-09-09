@@ -12,14 +12,14 @@ stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 k=5
 loop=1
 j=30
-t=30
+t=5
 r=15
-
+i=1
 
 for(loop in 1:2){
   TH <- c()
   for(j in c(30, 50)){
-    for (t in c(30,50)){
+    for (t in c(3,5)){
       for(r in c(15, 10)){
             print(paste(loop, j, 1, r, t, k, sep=","))
             setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = t)
@@ -81,7 +81,7 @@ plot_beta_rt <- function(r){
   par(new=T)
   plot(est_param$beta_rt[r,], type="l", ylim=ylim, lty=2, ylab="")
 }
-for(r in 1:10){
+for(r in 1:15){
   plot_beta_rt(r)
 
 }

@@ -151,39 +151,30 @@ generate_beta_rt_self <- function(R,T){
     const_beta_rt[r,t] <- 1.01 * const_beta_rt[r,(t-1)];
     }
   }
-  for(r in 1:R){
-    for(n in 1:(T/5)){
-      const_beta_rt[r,(5*(n-1)+1):(5*n)]=const_beta_rt[r,(5*(n-1)+1)]
-    }
-  }
   return(const_beta_rt)
 }
 
 generate_data <- function(param, setting){
-  N <- setting$n_item * setting$n_person * setting$n_rater
+  N <- setting$n_item * setting$n_person * setting$n_rater *setting$n_time
   U = matrix(0, nrow=N, ncol=5)
+  tsub = setting$n_person/setting$n_time
   row_idx = 1
-  for (j in 1:setting$n_person){
-    for (i in 1:setting$n_item){
-      for (r in 1:setting$n_rater){
-        for (t in 1:setting$n_time){
-          if(j==t){
-            for(m in 1:setting$n_time){
-              if(t<=m*5){
-                t = m;
-                break;
+  for(t in 1:setting$n_time){
+    tsub2 = tsub * t - setting$n_time 
+    tsub3 = tsub * t
+      for (j in tsub2:tsub3){
+        for (i in 1:setting$n_item){
+          for (r in 1:setting$n_rater){
+              prob <- c(1:setting$K)
+              for (k in 1:(setting$K)){
+                prob[k] = prob(get_prm_list(param, i, r, t), k, param$theta[j])
               }
-            }
-            prob <- c(1:setting$K)
-            for (k in 1:(setting$K)){
-              prob[k] = prob(get_prm_list(param, i, r, t), k, param$theta[j])
-            }
-            score = grep(1, rmultinom(1, 1, prob))
-            U[row_idx,] <- c(j, i, r, t, score)
-            row_idx = row_idx + 1
+              score = grep(1, rmultinom(1, 1, prob))
+              U[row_idx,] <- c(j, i, r, t, score)
+              row_idx = row_idx + 1
           }
         }
-      }
+      
     }
   }
   colnames(U) <- c("ExamineeID", "ItemID","RaterID","TimeID","Score")
