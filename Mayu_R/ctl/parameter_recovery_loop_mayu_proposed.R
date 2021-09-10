@@ -48,11 +48,11 @@ for(loop in 1:5){
 TH[1,]
 TH <-as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", 1, ".csv", sep="")))
 
-for(loop in 1:2){
+for(loop in 1:5){
 
   TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
 }
-TH <- TH / 3
+TH <- TH / 6
 write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
 
 # 結果のプロット用関数群
