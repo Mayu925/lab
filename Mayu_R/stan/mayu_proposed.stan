@@ -19,6 +19,7 @@ parameters {
   real<lower=0> alpha_r [R-1];
   matrix[R,T] beta_rt;
   vector[K-2] beta_rk[R];
+  real<lower=0> sigma_beta_rt;
 }
 transformed parameters{
   vector[K-1] category_est[R];
@@ -34,11 +35,12 @@ transformed parameters{
 }
 model{
   theta ~ normal(0, 1);
-  trans_alpha_r ~ lognormal(0.0, 1.0);
+  trans_alpha_r ~ lognormal(0.0, 0.4);
+  sigma_beta_rt ~ lognormal(-3, 1);
   for (r in 1:R){
     beta_rt[r,1] ~ normal(0, 1);
     for (t in 2:T){
-      beta_rt[r,t] ~ normal(beta_rt[r,t-1], 0.1);
+      beta_rt[r,t] ~ normal(beta_rt[r,t-1], sigma_beta_rt);
     }
   }
   for (p in 1:R) category_est [p,] ~ normal(0, 1);

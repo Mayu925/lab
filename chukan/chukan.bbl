@@ -1,0 +1,200 @@
+\begin{thebibliography}{10}
+
+\bibitem{IRTtext}
+豊田秀樹，
+項目反応理論:入門編，
+朝倉書店，
+Reading, Massachusetts，2007．
+
+\bibitem{IRTLord}
+F.M. Lord,
+``Applications of item response theory to practical testing problems,''
+Routledge,
+pp.\textbullet\textbullet--\textbullet\textbullet, 1980.
+
+\bibitem{rash}
+G. Rasch,
+``Probabilistic models for some intelligence and attainment tests,''
+ERIC,
+pp.\textbullet\textbullet--\textbullet\textbullet, 1993.
+
+\bibitem{raterRash}
+J.M. Linacre,
+``Many-faceted rasch measurement,'' \textbullet\textbullet,
+pp.\textbullet\textbullet--\textbullet\textbullet, 1990.
+
+\bibitem{rater2}
+Y.K. L.T.~DeCarlo and M.S. Johnson,
+``A hierarchical rater model for constructed responses,with a signal detection
+  rater model,''
+Journal of Educational Measurement,
+vol.48, no.3, pp.333--356, 2011.
+
+\bibitem{rater3}
+Y. Lu and X. Wang,
+``A hierarchical bayesian framework for item response theory models with
+  applications in ideal point estimation,''
+The society for political methodology, Saint Louis, Missouri,
+pp.\textbullet\textbullet--\textbullet\textbullet, 2006.
+
+\bibitem{raterGPCM}
+R.J. Patz and B.W. Junker,
+``Applications and extensions of mcmc in irt: Multiple item types,missing data,
+  and rated responses,''
+Journal of educational and behavioral statistics,
+vol.24, no.4, pp.342--366, 1999.
+
+\bibitem{raterdrift}
+T.M. McNAUGHTON,
+``Rater stability in a high-stakes performance assessment: A longitudinal
+  investigation,'' \textbullet\textbullet,
+pp.\textbullet\textbullet--\textbullet\textbullet, 2018.
+
+\bibitem{IRTUtoUeno}
+M. Uto and M. Ueno,
+``Item response theory for peer assessment,''
+IEEE Transactions on LearningTechnologies,
+vol.9, no.2, pp.157--170, 2016.
+
+\bibitem{IRTMatteucci}
+M. Matteucci and L. Stracqualursi,
+``Student assessment via graded response model,''
+Statistica,
+vol.66, no.4, p.435^^e2^^80^^93447, 2006.
+
+\bibitem{IRTDeCarlo}
+L.T. DeCarlo,
+``A model of rater behavior in essay grading based on signal detection
+  theory,''
+Journal of Educational Measurement,
+vol.42, no.1, pp.53--76, 2005.
+
+\bibitem{rashbenefit}
+村木英治，
+項目反応理論，
+朝倉書店，2011．
+
+\bibitem{rashloss}
+豊田秀樹，
+項目反応理論: 中級編，
+朝倉書店，2013．
+
+\bibitem{PCM}
+G.N. Masters,
+``A rasch model for partial credit scoring,''
+Psychometrika,
+vol.47, no.2, pp.149--174, 1982.
+
+\bibitem{GPCM}
+E. Muraki,
+``A generalized partial credit model,''
+Handbook of modern item response theory,
+pp.153--164, 1997.
+
+\bibitem{RSM}
+D. Andrich,
+``A rating formulation for ordered response categories,''
+Psychometrika,
+vol.43, no.4, pp.561--573, 1978.
+
+\bibitem{Myford}
+C.M. Myford and E.W. Wolfe,
+``Detecting and measuring rater effects using many-facet rasch measurement:
+  Part i,''
+Journal of applied measurement,
+vol.4, no.4, pp.386--422, 2003.
+
+\bibitem{RashUsami}
+宇佐美慧，
+``論述式テストの運用における測定論的問題とその対処，\<''
+日本テスト学会誌，
+vol.9，no.1，pp.145--164，2013．
+
+\bibitem{norm}
+J.-P. Fox,
+``Bayesian item response modeling: Theory and applications,''
+Springer Science and BusinessMedia,
+pp.\textbullet\textbullet--\textbullet\textbullet, 2010.
+
+\bibitem{Patz}
+R.J. Patz and B.W. Junker,
+``Applications and extensions of mcmc in irt: Multiple item types, missing
+  data, and rated responses,''
+Journal of educational and behavioral statistics,
+vol.24, no.4, pp.342--366, 1999.
+
+\bibitem{BiasUsami}
+宇佐美慧，
+``採点者側と受験者側のバイアス要因の影響を同時に評価する多値型項目反応モデル，\<''
+教育心理学研究，
+vol.58，no.2，pp.163--175，2010．
+
+\bibitem{Hoffman}
+M.D. Hoffman and A. Gelman,
+``The no-u-turn sampler: adaptively setting path lengths in hamiltonian monte
+  carlo.,''
+J.\ Mach.\ Learn.\ Res,
+vol.15, no.1, pp.1593--1623, 2014.
+
+\bibitem{Giroami}
+M. Girolami and B. Calderhead,
+``Riemann manifold langevin and hamiltonian monte carlo meth- ods,''
+Journal of the Royal Statistical Society: Series B (Statistical Methodology),
+vol.73, pp.123--214, 2011.
+
+\bibitem{Rosenthal}
+A.G.G.J. J.~Rosenthal, S.~Brooks and X. Meng,
+``Handbook of markov chain monte carlo,''
+vol.2000,
+chapter Optimal Proposal Distributions and Adaptive, pp.93--112,
+CRC Press,
+Boca Raton, FL, 2011.
+
+\bibitem{Neal}
+e.a. R.M.~Neal,
+``Mcmc using hamiltonian dynamics,''
+Handbook of markov chain monte carlo,
+vol.2, no.11, p.2, 2011.
+
+\bibitem{stan}
+M.H.D.L.B.G.M.B.M.B.J.P.L. B.~Carpenter, A.~Gelman and A. Riddell,
+``Stan: A probabilistic programming language,''
+Journal of statisticalsoftware,
+vol.76, no.1, pp.1--32, 2017.
+
+\bibitem{Luo}
+Y. Luo and H. Jiao,
+``Using the stan program for bayesian item response theory,''
+Educational and psychological measurement,
+vol.78, pp.384--408, 2018.
+
+\bibitem{Jiang}
+Z. Jiang and R. Carter,
+``Using hamiltonian monte carlo to estimate the log-linear cognitive diagnosis
+  model via stan,''
+Behavior research methods,
+vol.51, no.2, pp.651--662, 2019.
+
+\bibitem{Matsura}
+松浦健太郎，
+Stan と R でベイズ統計モデリング: Wonderful R 2，
+第2巻，
+共立出版，2017．
+
+\bibitem{rstan}
+e.a. S.D.~Team,
+``Rstan: the r interface to stan. r package version 2.17. 3,'' 2018.
+
+\bibitem{RhatRubin}
+e.a. A.~Gelman, D.B.~Rubin,
+``Inference from iterative simulation using multiple sequences,''
+Statistical science,
+vol.7, no.4, pp.457--472, 1992.
+
+\bibitem{RhatCarlin}
+H.S.D.D.A.V. A.~Gelman, J.B.~Carlin and D.B. Rubin,
+``Bayesian data analysis,''
+CRC press,
+pp.\textbullet\textbullet--\textbullet\textbullet, 2013.
+
+\end{thebibliography}

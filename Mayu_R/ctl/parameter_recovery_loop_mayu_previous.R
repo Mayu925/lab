@@ -18,9 +18,9 @@ k=5
 
 for(loop in 1:2){
   TH <- c()
-  for(j in c(30, 50)){
-    for (t in c(30,50)){
-    for(r in c(5, 10)){
+  for(j in c(60, 90)){
+    for (t in c(3,5,10)){
+    for(r in c(15, 10)){
             print(paste(loop, j, 1, r, t, k, sep=","))
             setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = t)
             true_param <-generate_true_param(setting)
@@ -49,10 +49,10 @@ for(loop in 1:2){
 
 TH[1,]
 TH <-as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
-for(loop in 1:3){
+for(loop in 1:2){
   TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
 }
-TH <- TH / 4
+TH <- TH / 3
 write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
 
 # 結果のプロット用関数群

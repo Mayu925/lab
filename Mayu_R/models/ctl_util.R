@@ -80,7 +80,7 @@ read_data <- function(setting, filename){
   data <- read.table(filename, header=TRUE,sep=",")
   colnames(data) <- c("ExamineeID", "ItemID", "RaterID", "Score", "TimeID")
   data_irt=list(
-    K=setting$K, J=setting$n_person, I=setting$n_item, R=setting$n_rater, T=setting$n_time/5, N=nrow(data), 
+    K=setting$K, J=setting$n_person, I=setting$n_item, R=setting$n_rater, T=setting$n_time, N=nrow(data), 
     ItemID=data$ItemID, ExamineeID=data$ExamineeID, RaterID=data$RaterID, TimeID=data$TimeID, X=data$Score)
   return(data_irt)
 }
@@ -159,12 +159,21 @@ generate_data <- function(param, setting){
   N <- setting$n_item * setting$n_person * setting$n_rater
   U = matrix(0, nrow=N, ncol=5)
   tsub = setting$n_person/setting$n_time
+  if(setting$n_person%%setting$n_time != 0){
+    tsub = trunc(setting$n_person/setting$n_time)
+  }
   tsub2 = 0
   tsub3 = 0
   row_idx = 1
   for(t in 1:setting$n_time){
     tsub2 = tsub * t - (tsub - 1)
     tsub3 = tsub * t
+    if(tsub3 > setting$n_person){
+      tsub3 = setting$n_person
+    }
+    if(t == setting$n_time && tsub3 < setting$n_person){
+      tsub3 = setting$n_person
+    }
       for (j in tsub2:tsub3){
         for (i in 1:setting$n_item){
           for (r in 1:setting$n_rater){
@@ -204,7 +213,7 @@ draw_icc <- function(param, K, def){
     par(new=T)
     curve(prob(param, k, x), 
           from=-def$xlim, to=def$xlim, ylim=c(0,def$ylim), xlab="", ylab="",  
-          col=def$color[k],lty=def$style[k], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE,  yaxt= "n")
+          col=def$color[k],lty=def$style[k], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE,  yaxt= "n" )
     par(new=T)
     plot(x, prob(param, k, x), xlim=c(-def$xlim, def$xlim), ylim=c(0,def$ylim), xlab="", ylab="",
          col=def$color[k],lty=def$style[k], cex.lab=def$lcex, lwd=def$llwd, axes=FALSE, pch=def$pchs[k], cex=1.5,  yaxt= "n")
