@@ -8,7 +8,7 @@ options(mc.cores = parallel::detectCores())
 
 source("models/ctl_util.R")
 
-model = "mayu_previous"
+model = "mayu_previous_WBIC"
 
 
 setting1 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 3)

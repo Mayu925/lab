@@ -40,9 +40,9 @@ model{
   trans_pai_1r ~ lognormal(0.0, 1.0);
   pai_0r ~ normal(0, 1);
   for (r in 1:R){
-    beta_rt[r,] ~ normal(0, 1);
+    beta_rt[r,] ~ normal(0, 1.0);
   }
-  category_est  ~ normal(0, 1);
+  category_est  ~ normal(0, 1.0);
   
   for (n in 1:N){
     target += 1/log(n)*categorical_logit_log(X[n],1.7*(c*(theta[ExamineeID[n]]-pai_0r[RaterID[n]]-trans_pai_1r[RaterID[n]]*beta_rt[RaterID[n],TimeID[n]])-category_prm));

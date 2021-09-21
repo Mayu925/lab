@@ -45,6 +45,7 @@ model{
   }
   for (p in 1:R) category_est [p,] ~ normal(0, 1);
   for (n in 1:N){
+    target += 1/log(n)*categorical_logit_log(X[n],1.7*trans_alpha_r[RaterID[n]]*(c*(theta[ExamineeID[n]]-beta_rt[RaterID[n],TimeID[n]])-category_prm[RaterID[n]]));
   }
 }
 
