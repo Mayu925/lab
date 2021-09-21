@@ -88,7 +88,7 @@ for(r in 1:15){
 def <- list(xlim = 2, xlab = expression(paste("Ability ", theta)),
             ylim = 1.2, ylab = expression(paste("Probability ", P[irk])),
             title = "", SeYlim = 4, legendNcol = 5, legendPosition =
-              "topleft", maincx = 1.3 , lcex = 1.3 , axcx = 1.3 , llwd = 3,
+              "topleft", maincx = 1.3 , lcex = 1.3 , axcx = 1.2 , llwd = 3,
             style = c(1, 1, 1, 1, 1), 
             color = c(1, 2, 3, 4, 5),
             pchs = c(0, 1, 2, 3, 4, 5), 
@@ -97,11 +97,45 @@ def <- list(xlim = 2, xlab = expression(paste("Ability ", theta)),
 par(mfrow=c(1,1))
 par(mar = c(3, 4.0, 2.1, 0.5))
 par(mgp = c(2.2, 0.8, 0))
-param <- list(alpha_r = 1.0, 
+param1 <- list(alpha_r = 1.0, 
+              beta_rt = 0.0, 
+              category_prm = c(0,-1.0,0.0,0.5,1.0))
+param2 <- list(alpha_r = 1.0, 
+              beta_rt = 0.5, 
+              category_prm = c(0,-1.0,0.0,0.5,1.0))
+param3 <- list(alpha_r = 1.0, 
+              beta_rt = -0.5, 
+              category_prm = c(0,-1.0,0.0,0.5,1.0))
+param4 <- list(alpha_r = 1.0, 
               beta_rt = 0.0, 
               category_prm = c(0,-1.0,0.0,0.2,1.0))
-draw_icc(param, 5, def)
-
+param5 <- list(alpha_r = 2.0, 
+              beta_rt = 0.0, 
+              category_prm = c(0,-1.0,0.0,0.5,1.0))
+param6 <- list(alpha_r = 0.5, 
+              beta_rt = 0.0, 
+              category_prm = c(0,-1.0,0.0,0.5,1.0))
+draw_icc(param1, 5, def)
+legend(def$legendPosition, cex = def$axcx, lwd=def$llwd,
+       legend=def$legends, col=def$color, lty=def$style, bg = "white", ncol =
+         def$legendNcol, pch=def$pchs)
+draw_icc(param2, 5, def)
+legend(def$legendPosition, cex = def$axcx, lwd=def$llwd,
+       legend=def$legends, col=def$color, lty=def$style, bg = "white", ncol =
+         def$legendNcol, pch=def$pchs)
+draw_icc(param3, 5, def)
+legend(def$legendPosition, cex = def$axcx, lwd=def$llwd,
+       legend=def$legends, col=def$color, lty=def$style, bg = "white", ncol =
+         def$legendNcol, pch=def$pchs)
+draw_icc(param4, 5, def)
+legend(def$legendPosition, cex = def$axcx, lwd=def$llwd,
+       legend=def$legends, col=def$color, lty=def$style, bg = "white", ncol =
+         def$legendNcol, pch=def$pchs)
+draw_icc(param5, 5, def)
+legend(def$legendPosition, cex = def$axcx, lwd=def$llwd,
+       legend=def$legends, col=def$color, lty=def$style, bg = "white", ncol =
+         def$legendNcol, pch=def$pchs)
+draw_icc(param6, 5, def)
 legend(def$legendPosition, cex = def$axcx, lwd=def$llwd,
        legend=def$legends, col=def$color, lty=def$style, bg = "white", ncol =
          def$legendNcol, pch=def$pchs)

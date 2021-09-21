@@ -8,23 +8,18 @@ Reading, Massachusetts，2007．
 
 \bibitem{IRTLord}
 F.M. Lord,
-``Applications of item response theory to practical testing problems,''
-Routledge,
-pp.\textbullet\textbullet--\textbullet\textbullet, 1980.
+``Applications of item response theory to practical testing problems,'' 1980.
 
 \bibitem{rash}
 G. Rasch,
-``Probabilistic models for some intelligence and attainment tests,''
-ERIC,
-pp.\textbullet\textbullet--\textbullet\textbullet, 1993.
+``Probabilistic models for some intelligence and attainment tests,'' 1993.
 
 \bibitem{raterRash}
 J.M. Linacre,
-``Many-faceted rasch measurement,'' \textbullet\textbullet,
-pp.\textbullet\textbullet--\textbullet\textbullet, 1990.
+``Many-faceted rasch measurement,'' 1990.
 
 \bibitem{rater2}
-Y.K. L.T.~DeCarlo and M.S. Johnson,
+L.T. DeCarlo, Y. Kim, and M.S. Johnson,
 ``A hierarchical rater model for constructed responses,with a signal detection
   rater model,''
 Journal of Educational Measurement,
@@ -33,9 +28,7 @@ vol.48, no.3, pp.333--356, 2011.
 \bibitem{rater3}
 Y. Lu and X. Wang,
 ``A hierarchical bayesian framework for item response theory models with
-  applications in ideal point estimation,''
-The society for political methodology, Saint Louis, Missouri,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2006.
+  applications in ideal point estimation,'' 2006.
 
 \bibitem{raterGPCM}
 R.J. Patz and B.W. Junker,
@@ -45,10 +38,9 @@ Journal of educational and behavioral statistics,
 vol.24, no.4, pp.342--366, 1999.
 
 \bibitem{raterdrift}
-T.M. McNAUGHTON,
+T.M. McNaughton,
 ``Rater stability in a high-stakes performance assessment: A longitudinal
-  investigation,'' \textbullet\textbullet,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2018.
+  investigation,'' 2018.
 
 \bibitem{IRTUtoUeno}
 M. Uto and M. Ueno,
@@ -60,7 +52,7 @@ vol.9, no.2, pp.157--170, 2016.
 M. Matteucci and L. Stracqualursi,
 ``Student assessment via graded response model,''
 Statistica,
-vol.66, no.4, p.435^^e2^^80^^93447, 2006.
+vol.66, no.4, pp.435--447, 2006.
 
 \bibitem{IRTDeCarlo}
 L.T. DeCarlo,
@@ -106,15 +98,30 @@ vol.4, no.4, pp.386--422, 2003.
 
 \bibitem{RashUsami}
 宇佐美慧，
-``論述式テストの運用における測定論的問題とその対処，\<''
+``論述式テストの運用における測定論的問題とその対処,''
 日本テスト学会誌，
 vol.9，no.1，pp.145--164，2013．
 
+\bibitem{g-MFRM}
+ M.Uto and  M.Ueno,
+``A multidimensional generalized many‐facet rasch model for rubric‐based
+  performance assessment,'' 2021．
+
+\bibitem{Wolfe}
+E.W. Wolfe, B.C. Moulder, and C. Myford,
+Detecting differential rater functioning over time (DRIFT) using a Rasch
+  multi-faceted rating scale model,
+Journal of Applied Measurement, 2001.
+
+\bibitem{Raudenbush}
+S.W. Raudenbush and A.S. Bryk,
+Hierarchical linear models: Applications and data analysis methods,
+vol.1,
+Sage Publications, 2002.
+
 \bibitem{norm}
 J.-P. Fox,
-``Bayesian item response modeling: Theory and applications,''
-Springer Science and BusinessMedia,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2010.
+``Bayesian item response modeling: Theory and applications,'' 2010.
 
 \bibitem{Patz}
 R.J. Patz and B.W. Junker,
@@ -125,7 +132,7 @@ vol.24, no.4, pp.342--366, 1999.
 
 \bibitem{BiasUsami}
 宇佐美慧，
-``採点者側と受験者側のバイアス要因の影響を同時に評価する多値型項目反応モデル，\<''
+``採点者側と受験者側のバイアス要因の影響を同時に評価する多値型項目反応モデル,''
 教育心理学研究，
 vol.58，no.2，pp.163--175，2010．
 
@@ -143,7 +150,7 @@ Journal of the Royal Statistical Society: Series B (Statistical Methodology),
 vol.73, pp.123--214, 2011.
 
 \bibitem{Rosenthal}
-A.G.G.J. J.~Rosenthal, S.~Brooks and X. Meng,
+J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng,
 ``Handbook of markov chain monte carlo,''
 vol.2000,
 chapter Optimal Proposal Distributions and Adaptive, pp.93--112,
@@ -157,7 +164,7 @@ Handbook of markov chain monte carlo,
 vol.2, no.11, p.2, 2011.
 
 \bibitem{stan}
-M.H.D.L.B.G.M.B.M.B.J.P.L. B.~Carpenter, A.~Gelman and A. Riddell,
+B.C.A.G.M.H.D.L.B.G.M.B.M.B.J.P. Li and A. Riddell,
 ``Stan: A probabilistic programming language,''
 Journal of statisticalsoftware,
 vol.76, no.1, pp.1--32, 2017.
@@ -186,15 +193,13 @@ e.a. S.D.~Team,
 ``Rstan: the r interface to stan. r package version 2.17. 3,'' 2018.
 
 \bibitem{RhatRubin}
-e.a. A.~Gelman, D.B.~Rubin,
+A. Gelman and e.a. D.B.~Rubin,
 ``Inference from iterative simulation using multiple sequences,''
 Statistical science,
 vol.7, no.4, pp.457--472, 1992.
 
 \bibitem{RhatCarlin}
-H.S.D.D.A.V. A.~Gelman, J.B.~Carlin and D.B. Rubin,
-``Bayesian data analysis,''
-CRC press,
-pp.\textbullet\textbullet--\textbullet\textbullet, 2013.
+A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin,
+``Bayesian data analysis,'' 2013.
 
 \end{thebibliography}

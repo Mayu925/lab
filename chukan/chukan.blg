@@ -5,152 +5,45 @@ The style file: chukan.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: chukan.bib
-Warning--empty journal in raterRash
-Name 1 in "L.T. DeCarlo, Y. Kim, and M.S. Johnson" has a comma at the end for entry rater2
-while executing---line 2077 of file chukan.bst
-Name 1 in "L.T. DeCarlo, Y. Kim, and M.S. Johnson" has a comma at the end for entry rater2
-while executing---line 2077 of file chukan.bst
-Name 1 in "L.T. DeCarlo, Y. Kim, and M.S. Johnson" has a comma at the end for entry rater2
-while executing---line 2077 of file chukan.bst
-Name 1 in "L.T. DeCarlo, Y. Kim, and M.S. Johnson" has a comma at the end for entry rater2
-while executing---line 2077 of file chukan.bst
-Warning--empty journal in raterdrift
-Name 1 in "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" has a comma at the end for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Name 1 in "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" has a comma at the end for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Name 1 in "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" has a comma at the end for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Name 1 in "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" has a comma at the end for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "J. Rosenthal, S. Brooks, A. Gelman, G. Jones, and X. Meng" for entry Rosenthal
-while executing---line 2077 of file chukan.bst
-Name 1 in "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" has a comma at the end for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Name 1 in "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" has a comma at the end for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Name 1 in "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" has a comma at the end for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Name 1 in "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" has a comma at the end for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. Brubaker, J.Guo, P. Li, and A. Riddell" for entry stan
-while executing---line 2077 of file chukan.bst
-Name 1 in "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" has a comma at the end for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Name 1 in "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" has a comma at the end for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Name 1 in "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" has a comma at the end for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Name 1 in "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" has a comma at the end for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-Too many commas in name 1 of "A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin" for entry RhatCarlin
-while executing---line 2077 of file chukan.bst
-You've used 32 entries,
+You've used 35 entries,
             4010 wiz_defined-function locations,
-            1022 strings with 9253 characters,
-and the built_in function-call counts, 40742 in all, are:
-= -- 4780
-> -- 174
+            1039 strings with 9669 characters,
+and the built_in function-call counts, 42323 in all, are:
+= -- 4970
+> -- 225
 < -- 1
-+ -- 94
-- -- 46
-* -- 1998
-:= -- 4500
-add.period$ -- 32
-call.type$ -- 32
-change.case$ -- 28
++ -- 113
+- -- 62
+* -- 2019
+:= -- 4769
+add.period$ -- 35
+call.type$ -- 35
+change.case$ -- 29
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 702
-empty$ -- 3565
-format.name$ -- 182
-if$ -- 10599
+cite$ -- 35
+duplicate$ -- 720
+empty$ -- 3785
+format.name$ -- 246
+if$ -- 10969
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 36
-newline$ -- 191
-num.names$ -- 32
-pop$ -- 269
+int.to.str$ -- 35
+missing$ -- 33
+newline$ -- 194
+num.names$ -- 35
+pop$ -- 398
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1954
+skip$ -- 2106
 stack$ -- 0
-substring$ -- 8858
-swap$ -- 178
+substring$ -- 8913
+swap$ -- 158
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 218
-width$ -- 34
-write$ -- 286
-is.kanji.str$ -- 1883
-(There were 52 error messages)
+warning$ -- 0
+while$ -- 266
+width$ -- 37
+write$ -- 298
+is.kanji.str$ -- 1835

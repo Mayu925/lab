@@ -43,6 +43,14 @@ convert_beta_rt <- function(beta_rt, T, R){
   return(mat)
 }
 
+
+convert_beta_rt2 <- function(beta_rt,T){
+  for(t in 1:T){
+    beta_rt[t] = T
+  }
+  return(beta_rt)
+}
+
 prob <-function(param, k, x){
   all_sum <- 0
   tmp <- 0

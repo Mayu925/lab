@@ -390,33 +390,33 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT ./img/r_1_t_1.png
-INPUT ./img/r_1_t_1.png
-INPUT img/r_1_t_1.png
-INPUT extractbb -B cropbox -O img/r_1_t_1.png
+INPUT ./img/icc1.png
+INPUT ./img/icc1.png
+INPUT img/icc1.png
+INPUT extractbb -B cropbox -O img/icc1.png
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
-INPUT ./img/r_1_t_2.png
-INPUT ./img/r_1_t_2.png
-INPUT img/r_1_t_2.png
-INPUT extractbb -B cropbox -O img/r_1_t_2.png
-INPUT ./img/r_1_t_3.png
-INPUT ./img/r_1_t_3.png
-INPUT img/r_1_t_3.png
-INPUT extractbb -B cropbox -O img/r_1_t_3.png
-INPUT ./img/r_2_t_1.png
-INPUT ./img/r_2_t_1.png
-INPUT img/r_2_t_1.png
-INPUT extractbb -B cropbox -O img/r_2_t_1.png
-INPUT ./img/r_3_t_1.png
-INPUT ./img/r_3_t_1.png
-INPUT img/r_3_t_1.png
-INPUT extractbb -B cropbox -O img/r_3_t_1.png
-INPUT ./img/r_4_t_1.png
-INPUT ./img/r_4_t_1.png
-INPUT img/r_4_t_1.png
-INPUT extractbb -B cropbox -O img/r_4_t_1.png
+INPUT ./img/icc2.png
+INPUT ./img/icc2.png
+INPUT img/icc2.png
+INPUT extractbb -B cropbox -O img/icc2.png
+INPUT ./img/icc3.png
+INPUT ./img/icc3.png
+INPUT img/icc3.png
+INPUT extractbb -B cropbox -O img/icc3.png
+INPUT ./img/icc4.png
+INPUT ./img/icc4.png
+INPUT img/icc4.png
+INPUT extractbb -B cropbox -O img/icc4.png
+INPUT ./img/icc5.png
+INPUT ./img/icc5.png
+INPUT img/icc5.png
+INPUT extractbb -B cropbox -O img/icc5.png
+INPUT ./img/icc6.png
+INPUT ./img/icc6.png
+INPUT img/icc6.png
+INPUT extractbb -B cropbox -O img/icc6.png
 INPUT ./img/beta_rt_1.png
 INPUT ./img/beta_rt_1.png
 INPUT img/beta_rt_1.png

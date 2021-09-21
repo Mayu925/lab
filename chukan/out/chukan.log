@@ -1,0 +1,49 @@
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.18)  18 SEP 2021 20:27
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/hayashimayu/Desktop/lab/chukan/chukan.tex
+(/Users/hayashimayu/Desktop/lab/chukan/chukan.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-08-27> (/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+
+/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls:14: LaTeX Error: This file needs format `pLaTeX2e'
+               but this is `LaTeX2e'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \NeedsTeXFormat{pLaTeX2e}
+                              
+The current input file will not be processed further,
+because it was written for some other flavor of TeX.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+
+! LaTeX Error: File `amsmath，amssymb.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+
+Enter file name: 
+/Users/hayashimayu/Desktop/lab/chukan/chukan.tex:5: Emergency stop.
+<read *> 
+         
+l.5 \usepackage
+               {bm}^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 37 strings out of 476493
+ 874 string characters out of 5817125
+ 299592 words of memory out of 5000000
+ 20565 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 27i,0n,38p,132b,17s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

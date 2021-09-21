@@ -23,14 +23,14 @@ data2$ItemID = data2$ItemID + 1
 data3$ItemID = data3$ItemID + 1
 
 
-stan <- stan_model(file=paste(dir, "stan/", model, ".stan", sep=""))
+stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit1 <- sampling(stan, data=data1, iter=1000, warmup=500, chains=3)
 summary(fit1)$summary[,"mean"]
 fit2 <- sampling(stan, data=data2, iter=1000, warmup=500, chains=3)
 fit3 <- sampling(stan, data=data3, iter=1000, warmup=500, chains=3)
-fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
+#fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
 
-source(paste(dir, "models/", model, ".R", sep=""))
+source(paste(dir, "models/", "mayu_previous", ".R", sep=""))
 est_param1 <- get_estimates(fit1, setting1)
 D1 <- get_result_statistics_common(fit1, data1, setting1)
 write.csv(t(matrix(D1, nrow=2)), paste(dir, "output/realdata/MCMC_mayu/previous/", model, "t_3.csv", sep=""))
@@ -45,6 +45,10 @@ est_param3 <- get_estimates(fit3, setting3)
 D3 <- get_result_statistics_common(fit3, data3, setting3)
 write.csv(t(matrix(D3, nrow=2)), paste(dir, "output/realdata/MCMC_mayu/previous/", model, "t_10.csv", sep=""))
 write.csv(t(matrix(est_param1$theta, nrow=34)), paste(dir, "output/realdata/parameters/mayu/previous", model, "t_10.csv", sep=""))
+
+wbic3 <- -mean(rowSums(extract(fit1)$log_lik))
+wbic5 <- -mean(rowSums(extract(fit2)$log_lik))
+wbic10 <- -mean(rowSums(extract(fit3)$log_lik))
 
 SD <- summary(fit1, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)

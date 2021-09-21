@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex chukan"] 1631895969 "chukan.aux" "chukan.bbl" "chukan" 1631895976
+["bibtex chukan"] 1632203954 "chukan.aux" "chukan.bbl" "chukan" 1632204204
   "./chukan.bst" 1631535780 40776 7800bda83f5ba6daac2c7311600f8290 ""
-  "chukan.aux" 1631895974 8372 d0ba1375d9ff47d7898876b7dca17234 "latex"
-  "chukan.bib" 1631894638 7498 dcbf7097c5d6af8d18b723a167c4e5a8 ""
+  "chukan.aux" 1632204202 8248 38240ad7d39a7adc4bd1d11cfef79b5b "latex"
+  "chukan.bib" 1632203831 8599 72eb9eea5cee50fef2cf07b49adec6d9 ""
   (generated)
   "chukan.bbl"
   "chukan.blg"
-["dvipdf"] 1631895974 "chukan.dvi" "chukan.pdf" "chukan" 1631895976
-  "chukan.dvi" 1631895974 98152 5dbede99afce45024d76a113f0809780 "latex"
+["dvipdf"] 1632204202 "chukan.dvi" "chukan.pdf" "chukan" 1632204204
+  "chukan.dvi" 1632204202 103012 00cb14a20272aed1b4f90dd4d99205c5 "latex"
   (generated)
   "chukan.pdf"
-["latex"] 1631895972 "chukan.tex" "chukan.dvi" "chukan" 1631895976
+["latex"] 1632204199 "chukan.tex" "chukan.dvi" "chukan" 1632204204
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -85,26 +85,26 @@
   "/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls" 1625175385 63487 f75dd8a88adb893244d3b322b8a21e41 ""
   "/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jslogo.sty" 1601931076 5585 8e4615c54073c390d14154b29cee89cb ""
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
-  "/usr/local/texlive/2021/texmf-var/web2c/eptex/platex.fmt" 1631893715 2754444 606c4405093f1f18dbf708741bacaf99 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/eptex/platex.fmt" 1631967250 2754448 ebe1a893e0db4c0d6d57b858fefb7e59 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "chukan.aux" 1631895974 8372 d0ba1375d9ff47d7898876b7dca17234 "latex"
-  "chukan.bbl" 1631895969 5580 9959a3113db163bd9a3c9883940b0765 "bibtex chukan"
-  "chukan.tex" 1631895956 61385 3d81b19f190509c523645eee599b3be2 ""
-  "chukan.toc" 1631895974 2093 446cf0d48332609105fa55f073c9195a "latex"
+  "chukan.aux" 1632204202 8248 38240ad7d39a7adc4bd1d11cfef79b5b "latex"
+  "chukan.bbl" 1632203954 5571 562e03c3bac1fee4296fbe7cdd1eccfb "bibtex chukan"
+  "chukan.tex" 1632204107 64834 dcb8884eaef9ef676b148b414f3a039e ""
+  "chukan.toc" 1632204202 1966 9aa2b71c71c40b6b60af3326a20c9d36 "latex"
   "img/beta_rt_1.png" 1631780665 21179 d6450a7a1a3401bfcb33d6a39b69831e ""
   "img/beta_rt_2.png" 1631780680 20603 dfe0aa6ab1851fa9d1547bb1bd6d3b4c ""
   "img/beta_rt_3.png" 1631782721 22938 5e5d01a44db4149ef09f4e6639cd7438 ""
   "img/beta_rt_r_2.png" 1631784473 25341 9969351870d0c6f1a02b823223f75d97 ""
   "img/beta_rt_r_3.png" 1631784484 25812 db35999a9e82a265a73f9678f17ce94a ""
-  "img/r_1_t_1.png" 1631893890 63303 d8f1e06b1ae9de6c1140cab54cd300ac ""
-  "img/r_1_t_2.png" 1631893892 62677 4406fff6df628fbc8dda259073d7cd5f ""
-  "img/r_1_t_3.png" 1631893893 61014 c0418b9b715f15cdca8ae4dbce8b1f29 ""
-  "img/r_2_t_1.png" 1631893895 62818 086b6f6b5759c1c6f9d552c4c238af26 ""
-  "img/r_3_t_1.png" 1631893897 65588 e3b3a3ed71d6a6e1f0919e0363fd973a ""
-  "img/r_4_t_1.png" 1631893898 58968 eed0ab699e2dfbef4c8337765361a74d ""
+  "img/icc1.png" 1632055463 65347 2b61f55195503970bee553917dd92baf ""
+  "img/icc2.png" 1632055468 64544 7b2e39b4989306cdc6f48fca3c6cf286 ""
+  "img/icc3.png" 1632055472 64598 910107d2b42c9890c574479e807b61db ""
+  "img/icc4.png" 1632055476 65149 f31c028dc54a62b4b42a0b8adc2cc7d4 ""
+  "img/icc5.png" 1632055480 67959 1fefc196e835820c38071ddf946e4780 ""
+  "img/icc6.png" 1632055484 61052 ad7ff388cd128564407fe51c14c729e2 ""
   "img/timeid.png" 1631521323 144499 f477fff93c08701827fbb07be481af4d ""
   (generated)
   "chukan.toc"
-  "chukan.dvi"
   "chukan.log"
   "chukan.aux"
+  "chukan.dvi"

@@ -6,7 +6,7 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-model = "mayu_proposed"
+model = "mayu_proposed_WBIC"
 
 source("models/ctl_util.R")
 
@@ -31,7 +31,7 @@ fit2 <- sampling(stan, data=data2, iter=1000, warmup=500, chains=3)
 fit3 <- sampling(stan, data=data3, iter=1000, warmup=500, chains=3)
 #fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
 
-source(paste("models/", model, ".R", sep=""))
+source(paste("models/", "mayu_proposed", ".R", sep=""))
 est_param1 <- get_estimates(fit1, setting1)
 D1 <- get_result_statistics_common(fit1, data1, setting1)
 write.csv(t(matrix(D1, nrow=2)), paste( "output/realdata/MCMC_mayu/proposed/", model, "t_3.csv", sep=""))
@@ -61,6 +61,10 @@ write.csv(t(matrix(est_param3$beta_rk, nrow=34)), paste( "output/realdata/parame
 #est_param4 <- get_estimates(fit4, setting)
 #D4 <- get_result_statistics_common(fit4, data4, setting)
 #write.csv(t(matrix(D4, nrow=2)), paste(dir, "output/realdata/MCMC_statistics/", model, "4.csv", sep=""))
+
+wbic3 <- -mean(rowSums(extract(fit1)$log_lik))
+wbic5 <- -mean(rowSums(extract(fit2)$log_lik))
+wbic10 <- -mean(rowSums(extract(fit3)$log_lik))
 
 SD <- summary(fit1, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)
