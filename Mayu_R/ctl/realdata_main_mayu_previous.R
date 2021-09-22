@@ -10,7 +10,6 @@ source("models/ctl_util.R")
 
 model = "mayu_previous_WBIC"
 
-
 setting1 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 3)
 setting2 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 5)
 setting3 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 10)
@@ -21,7 +20,6 @@ data3 <-read_data(setting3, paste("data/mayu_data_0_t=10.csv", sep=""))
 data1$ItemID = data1$ItemID + 1
 data2$ItemID = data2$ItemID + 1
 data3$ItemID = data3$ItemID + 1
-
 
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit1 <- sampling(stan, data=data1, iter=1000, warmup=500, chains=3)

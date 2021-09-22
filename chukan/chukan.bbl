@@ -158,13 +158,14 @@ CRC Press,
 Boca Raton, FL, 2011.
 
 \bibitem{Neal}
-e.a. R.M.~Neal,
+R.M. Neal, et~al.,
 ``Mcmc using hamiltonian dynamics,''
 Handbook of markov chain monte carlo,
 vol.2, no.11, p.2, 2011.
 
 \bibitem{stan}
-B.C.A.G.M.H.D.L.B.G.M.B.M.B.J.P. Li and A. Riddell,
+B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M.
+  Brubaker,  J.Guo, P. Li, and A. Riddell,
 ``Stan: A probabilistic programming language,''
 Journal of statisticalsoftware,
 vol.76, no.1, pp.1--32, 2017.
@@ -189,11 +190,11 @@ Stan と R でベイズ統計モデリング: Wonderful R 2，
 共立出版，2017．
 
 \bibitem{rstan}
-e.a. S.D.~Team,
+S.D. Team, et~al.,
 ``Rstan: the r interface to stan. r package version 2.17. 3,'' 2018.
 
 \bibitem{RhatRubin}
-A. Gelman and e.a. D.B.~Rubin,
+A. Gelman, D.B. Rubin, et~al.,
 ``Inference from iterative simulation using multiple sequences,''
 Statistical science,
 vol.7, no.4, pp.457--472, 1992.

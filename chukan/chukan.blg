@@ -7,43 +7,43 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: chukan.bib
 You've used 35 entries,
             4010 wiz_defined-function locations,
-            1039 strings with 9669 characters,
-and the built_in function-call counts, 42323 in all, are:
-= -- 4970
-> -- 225
+            1039 strings with 9710 characters,
+and the built_in function-call counts, 42084 in all, are:
+= -- 4895
+> -- 258
 < -- 1
-+ -- 113
-- -- 62
-* -- 2019
-:= -- 4769
++ -- 124
+- -- 73
+* -- 2028
+:= -- 4773
 add.period$ -- 35
 call.type$ -- 35
 change.case$ -- 29
 chr.to.int$ -- 0
 cite$ -- 35
 duplicate$ -- 720
-empty$ -- 3785
-format.name$ -- 246
-if$ -- 10969
+empty$ -- 3768
+format.name$ -- 290
+if$ -- 10903
 int.to.chr$ -- 0
 int.to.str$ -- 35
 missing$ -- 33
 newline$ -- 194
 num.names$ -- 35
-pop$ -- 398
+pop$ -- 386
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 2106
 stack$ -- 0
-substring$ -- 8913
+substring$ -- 8704
 swap$ -- 158
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 266
+while$ -- 299
 width$ -- 37
 write$ -- 298
-is.kanji.str$ -- 1835
+is.kanji.str$ -- 1830

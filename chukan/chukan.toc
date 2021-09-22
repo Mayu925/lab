@@ -10,11 +10,11 @@
 \contentsline {section}{\numberline {3.3}一般化多相ラッシュモデル}{7}{}%
 \contentsline {chapter}{\numberline {第4章}評価者ドリフトを考慮した項目反応モデル}{8}{}%
 \contentsline {section}{\numberline {4.1}時間パラメータについて}{8}{}%
-\contentsline {section}{\numberline {4.2}評価者ドリフトを考慮したIRT}{8}{}%
+\contentsline {section}{\numberline {4.2}評価者ドリフトを考慮したIRT}{9}{}%
 \contentsline {section}{\numberline {4.3}既存モデルの課題}{9}{}%
 \contentsline {chapter}{\numberline {第5章}提案モデル}{10}{}%
 \contentsline {section}{\numberline {5.1}パラメータの解釈}{10}{}%
-\contentsline {section}{\numberline {5.2}パラメータ推定手法}{12}{}%
+\contentsline {section}{\numberline {5.2}パラメータ推定手法}{11}{}%
 \contentsline {chapter}{\numberline {第6章}シミュレーション実験}{14}{}%
 \contentsline {section}{\numberline {6.1}パラメータ真値}{14}{}%
 \contentsline {section}{\numberline {6.2}実験結果}{14}{}%
