@@ -274,6 +274,26 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
@@ -455,6 +475,8 @@ INPUT ./img/beta_rt_r_3.png
 INPUT ./img/beta_rt_r_3.png
 INPUT img/beta_rt_r_3.png
 INPUT extractbb -B cropbox -O img/beta_rt_r_3.png
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT ./chukan.bbl
 INPUT chukan.bbl
 INPUT ./chukan.bbl

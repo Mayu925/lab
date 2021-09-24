@@ -7,11 +7,11 @@ source("models/ctl_util.R")
 
 model = "mayu_proposed"
 
-source(paste("models/", model, ".R", sep=""))
+source(paste("models/", "mayu_proposed", ".R", sep=""))
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 k=5
 loop=1
-j=30
+j=100
 t=5
 r=15
 i=1
@@ -26,6 +26,7 @@ for(loop in 1:5){
             true_param <-generate_true_param(setting)
             data <- generate_data(true_param, setting)
             fit <- sampling(stan, data=data, iter=3000, warmup=2000, chains=3, seed=1)
+            #wbic <- -mean(rowSums(extract(fit)$log_lik))
             est_param <- get_estimates(fit, setting)
             d <-  get_error(true_param, est_param)
             Rhat <- get_Rhat_stat(fit)

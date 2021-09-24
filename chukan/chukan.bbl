@@ -27,13 +27,13 @@ vol.48, no.3, pp.333--356, 2011.
 
 \bibitem{rater3}
 Y. Lu and X. Wang,
-``A hierarchical bayesian framework for item response theory models with
+``A hierarchical {B}ayesian framework for item response theory models with
   applications in ideal point estimation,'' 2006.
 
-\bibitem{raterGPCM}
+\bibitem{Patz}
 R.J. Patz and B.W. Junker,
-``Applications and extensions of mcmc in irt: Multiple item types,missing data,
-  and rated responses,''
+``Applications and extensions of {MCMC} in {IRT}: Multiple item types, missing
+  data, and rated responses,''
 Journal of educational and behavioral statistics,
 vol.24, no.4, pp.342--366, 1999.
 
@@ -121,14 +121,7 @@ Sage Publications, 2002.
 
 \bibitem{norm}
 J.-P. Fox,
-``Bayesian item response modeling: Theory and applications,'' 2010.
-
-\bibitem{Patz}
-R.J. Patz and B.W. Junker,
-``Applications and extensions of mcmc in irt: Multiple item types, missing
-  data, and rated responses,''
-Journal of educational and behavioral statistics,
-vol.24, no.4, pp.342--366, 1999.
+``{B}ayesian item response modeling: Theory and applications,'' 2010.
 
 \bibitem{BiasUsami}
 宇佐美慧，
@@ -159,7 +152,7 @@ Boca Raton, FL, 2011.
 
 \bibitem{Neal}
 R.M. Neal, et~al.,
-``Mcmc using hamiltonian dynamics,''
+``{MCMC} using hamiltonian dynamics,''
 Handbook of markov chain monte carlo,
 vol.2, no.11, p.2, 2011.
 
@@ -172,7 +165,7 @@ vol.76, no.1, pp.1--32, 2017.
 
 \bibitem{Luo}
 Y. Luo and H. Jiao,
-``Using the stan program for bayesian item response theory,''
+``Using the stan program for {B}ayesian item response theory,''
 Educational and psychological measurement,
 vol.78, pp.384--408, 2018.
 
@@ -201,6 +194,6 @@ vol.7, no.4, pp.457--472, 1992.
 
 \bibitem{RhatCarlin}
 A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, and D.B. Rubin,
-``Bayesian data analysis,'' 2013.
+``{B}ayesian data analysis,'' 2013.
 
 \end{thebibliography}

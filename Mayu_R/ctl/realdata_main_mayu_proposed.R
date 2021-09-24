@@ -6,32 +6,32 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-model = "mayu_proposed2_WBIC"
+model = "mayu_proposed_WBIC"
 
 source("models/ctl_util.R")
 
 setting1 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 3)
 setting2 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 5)
 setting3 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 10)
-data1 <- read_data(setting1, paste("data/mayu_data_0_t=3.csv", sep=""))
-data2 <-read_data(setting2, paste("data/mayu_data_0_t=5.csv", sep=""))
-data3 <-read_data(setting3, paste("data/mayu_data_0_t=10.csv", sep=""))
+data1 <- read_data(setting1, paste("data/mayu_data_1_t=3.csv", sep=""))
+data2 <-read_data(setting2, paste("data/mayu_data_1_t=5.csv", sep=""))
+data3 <-read_data(setting3, paste("data/mayu_data_1_t=10.csv", sep=""))
 #data4 <-read_data(setting, paste("data/mayu_data_3.csv", sep=""))
 
+if(data1$ItemID[1] == 0){
 data1$ItemID = data1$ItemID + 1
 data2$ItemID = data2$ItemID + 1
 data3$ItemID = data3$ItemID + 1
 #data4$ItemID = data4$ItemID + 1
-
+}
 
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit1 <- sampling(stan, data=data1, iter=1000, warmup=500, chains=3)
-summary(fit1)$summary[,"mean"]
 fit2 <- sampling(stan, data=data2, iter=1000, warmup=500, chains=3)
 fit3 <- sampling(stan, data=data3, iter=1000, warmup=500, chains=3)
 #fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
 
-source(paste("models/", "mayu_proposed2", ".R", sep=""))
+source(paste("models/", "mayu_proposed", ".R", sep=""))
 est_param1 <- get_estimates(fit1, setting1)
 D1 <- get_result_statistics_common(fit1, data1, setting1)
 write.csv(t(matrix(D1, nrow=2)), paste( "output/realdata/MCMC_mayu/proposed/", model, "t_3.csv", sep=""))
@@ -65,6 +65,10 @@ write.csv(t(matrix(est_param3$beta_rk, nrow=34)), paste( "output/realdata/parame
 wbic3 <- -mean(rowSums(extract(fit1)$log_lik))
 wbic5 <- -mean(rowSums(extract(fit2)$log_lik))
 wbic10 <- -mean(rowSums(extract(fit3)$log_lik))
+
+wbic3
+wbic5
+wbic10
 
 SD <- summary(fit1, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)
