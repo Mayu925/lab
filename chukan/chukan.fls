@@ -240,17 +240,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/makeidx.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/makeidx.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/makeidx.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/makeidx.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/enumerate.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/enumerate.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/enumerate.sty
@@ -273,6 +262,16 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/comment/comment.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
@@ -437,18 +436,18 @@ INPUT ./img/icc6.png
 INPUT ./img/icc6.png
 INPUT img/icc6.png
 INPUT extractbb -B cropbox -O img/icc6.png
-INPUT ./img/beta_rt_1.png
-INPUT ./img/beta_rt_1.png
-INPUT img/beta_rt_1.png
-INPUT extractbb -B cropbox -O img/beta_rt_1.png
-INPUT ./img/beta_rt_2.png
-INPUT ./img/beta_rt_2.png
-INPUT img/beta_rt_2.png
-INPUT extractbb -B cropbox -O img/beta_rt_2.png
-INPUT ./img/beta_rt_3.png
-INPUT ./img/beta_rt_3.png
-INPUT img/beta_rt_3.png
-INPUT extractbb -B cropbox -O img/beta_rt_3.png
+INPUT ./img/beta_rt_param1.png
+INPUT ./img/beta_rt_param1.png
+INPUT img/beta_rt_param1.png
+INPUT extractbb -B cropbox -O img/beta_rt_param1.png
+INPUT ./img/beta_rt_param2.png
+INPUT ./img/beta_rt_param2.png
+INPUT img/beta_rt_param2.png
+INPUT extractbb -B cropbox -O img/beta_rt_param2.png
+INPUT ./img/beta_rt_param3.png
+INPUT ./img/beta_rt_param3.png
+INPUT img/beta_rt_param3.png
+INPUT extractbb -B cropbox -O img/beta_rt_param3.png
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm

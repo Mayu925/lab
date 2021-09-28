@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  24 SEP 2021 13:26
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  26 SEP 2021 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -191,13 +191,6 @@ Package: tascmac 2020/01/15 v2.1 ascmac package (community edition)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip53
-\multirow@cntb=\count271
-\multirow@dima=\skip54
-\bigstrutjot=\dimen179
-)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks27
@@ -206,6 +199,13 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \CommentStream=\write3
 
 Excluding comment 'comment')
+(/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip53
+\multirow@cntb=\count271
+\multirow@dima=\skip54
+\bigstrutjot=\dimen179
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count272
 \lst@gtempboxa=\box79
@@ -309,81 +309,81 @@ LaTeX Warning: Label `sub@2' multiply defined.
 )
 \openout1 = `chukan.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 \c@lstlisting=\count288
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 50.
+(Font)              scaled to size 13.83836pt on input line 49.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 50.
+(Font)              scaled to size 13.83836pt on input line 49.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 52.
+(Font)              scaled to size 19.9311pt on input line 51.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 52.
+(Font)              scaled to size 19.9311pt on input line 51.
  [1
 
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 75.
+(Font)              scaled to size 9.60999pt on input line 74.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 75.
+(Font)              scaled to size 9.60999pt on input line 74.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 75.
+(Font)              scaled to size 6.72699pt on input line 74.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 75.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+(Font)              scaled to size 4.805pt on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
 
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 75.
+(Font)              scaled to size 6.72699pt on input line 74.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 75.
+(Font)              scaled to size 4.805pt on input line 74.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 75.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 75.
+(Font)              scaled to size 9.60999pt on input line 74.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 75.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 74.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 75.
+(Font)              scaled to size 9.60999pt on input line 74.
  [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 75.
+(Font)              scaled to size 23.90964pt on input line 74.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 75.
+(Font)              scaled to size 23.90964pt on input line 74.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 75.
+(Font)              scaled to size 23.90964pt on input line 74.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 75.
+(Font)              scaled to size 23.90964pt on input line 74.
 
 (./chukan.toc [2
 
@@ -394,18 +394,18 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
  [3]
 第1章
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 81.
+(Font)              scaled to size 19.9311pt on input line 80.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 19.9311pt on input line 81.
+(Font)              scaled to size 19.9311pt on input line 80.
 [1
 
 
 ] [2]
 第2章
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 114.
+(Font)              scaled to size 13.83836pt on input line 113.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 114.
+(Font)              scaled to size 13.83836pt on input line 113.
 [3
 
 ] [4] [5]
@@ -417,17 +417,17 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 File: img/timeid.png Graphic file (type bmp)
 <img/timeid.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 216.
+(Font)              scaled to size 8.64899pt on input line 215.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 216.
+(Font)              scaled to size 8.64899pt on input line 215.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 216.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 215.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 216.
+(Font)              scaled to size 8.64899pt on input line 215.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 216.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 215.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 216.
+(Font)              scaled to size 8.64899pt on input line 215.
 [8
 
 ] [9]
@@ -437,18 +437,18 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 308.
+               Default added (so using `tbp') on input line 307.
 
 File: img/icc1.png Graphic file (type bmp)
 <img/icc1.png>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 312.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 311.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 312.
+(Font)              scaled to size 7.68799pt on input line 311.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 312.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 311.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 312.
+(Font)              scaled to size 7.68799pt on input line 311.
 File: img/icc2.png Graphic file (type bmp)
 <img/icc2.png>
 File: img/icc3.png Graphic file (type bmp)
@@ -466,33 +466,33 @@ File: img/icc6.png Graphic file (type bmp)
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 415.
+               Default added (so using `tbp') on input line 414.
 
-File: img/beta_rt_1.png Graphic file (type bmp)
-<img/beta_rt_1.png>
+File: img/beta_rt_param1.png Graphic file (type bmp)
+<img/beta_rt_param1.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 418--419
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 417--418
  [][] 
  []
 
-File: img/beta_rt_2.png Graphic file (type bmp)
-<img/beta_rt_2.png>
+File: img/beta_rt_param2.png Graphic file (type bmp)
+<img/beta_rt_param2.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 423--424
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 422--423
  [][] 
  []
 
-File: img/beta_rt_3.png Graphic file (type bmp)
-<img/beta_rt_3.png>
+File: img/beta_rt_param3.png Graphic file (type bmp)
+<img/beta_rt_param3.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 428--429
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 427--428
  [][] 
  []
 
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 431.
+(Font)              scaled to size 5.76599pt on input line 430.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 431.
+(Font)              scaled to size 5.76599pt on input line 430.
 [15] [16]
 第7章
 
@@ -509,7 +509,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 651.
+               Default added (so using `tbp') on input line 650.
 
 File: img/beta_rt_r_2.png Graphic file (type bmp)
 <img/beta_rt_r_2.png>
@@ -550,11 +550,11 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  5762 strings out of 479062
- 84299 string characters out of 5866374
+ 84374 string characters out of 5866374
  495807 words of memory out of 5000000
  23785 multiletter control sequences out of 15000+600000
  424124 words of font info for 122 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  57i,11n,66p,972b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chukan.dvi (32 pages, 115668 bytes).
+Output written on chukan.dvi (32 pages, 115684 bytes).

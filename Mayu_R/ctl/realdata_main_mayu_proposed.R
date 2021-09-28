@@ -6,24 +6,23 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-model = "mayu_proposed_WBIC"
+model = "mayu_proposed4_WBIC"
 
 source("models/ctl_util.R")
 
 setting1 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 3)
 setting2 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 5)
 setting3 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 10)
-data1 <- read_data(setting1, paste("data/mayu_data_1_t=3.csv", sep=""))
-data2 <-read_data(setting2, paste("data/mayu_data_1_t=5.csv", sep=""))
-data3 <-read_data(setting3, paste("data/mayu_data_1_t=10.csv", sep=""))
+data1 <- read_data(setting1, paste("data/mayu_data_3_t=3.csv", sep=""))
+data2 <-read_data(setting2, paste("data/mayu_data_3_t=5.csv", sep=""))
+data3 <-read_data(setting3, paste("data/mayu_data_3_t=10.csv", sep=""))
 #data4 <-read_data(setting, paste("data/mayu_data_3.csv", sep=""))
 
-if(data1$ItemID[1] == 0){
-data1$ItemID = data1$ItemID + 1
-data2$ItemID = data2$ItemID + 1
-data3$ItemID = data3$ItemID + 1
+
+data1$ItemID = data1$ItemID -2
+data2$ItemID = data2$ItemID -2
+data3$ItemID = data3$ItemID -2
 #data4$ItemID = data4$ItemID + 1
-}
 
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit1 <- sampling(stan, data=data1, iter=1000, warmup=500, chains=3)
@@ -82,6 +81,20 @@ plot(est_param1$theta)
 plot(est_param1$alpha_r)
 est_param1$beta_rt
 for(r in 1:34){
-  plot(est_param1$beta_rt[3,], type="l", ylim=c(0,0.3), col=t)
+  if(r==19){
+    plot(est_param1$beta_rt[r,],xlab="TimeID",ylab="beta_rt" ,type="l",xlim=c(1, 3), xaxp=c(1, 3, 2), ylim=c(-0.4,0.5), col=4,lwd = 3)
+    par(new=T)
+  }
+  else if(r==14){
+    plot(est_param1$beta_rt[r,],xlab="TimeID", ylab="beta_rt",type="l", xlim=c(1, 3), xaxp=c(1, 3, 2), ylim=c(-0.4,0.5), col=2, lwd = 3)
+    par(new=T)
+  }
+  else if(r==3){
+  plot(est_param1$beta_rt[r,],xlab="TimeID", ylab="beta_rt",type="l", xlim=c(1, 3), xaxp=c(1, 3, 2),ylim=c(-0.4,0.5), col=3, lwd = 3)
   par(new=T)
+  }
+  else{
+  plot(est_param1$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 3), xaxp=c(1, 3, 2), ylim=c(-0.4,0.5), col=gray(0.8), lwd = 1)
+  par(new=T)
+  }
 }

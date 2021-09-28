@@ -13,17 +13,16 @@ model = "mayu_previous_WBIC"
 setting1 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 3)
 setting2 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 5)
 setting3 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 10)
-data1 <- read_data(setting1, paste("data/mayu_data_0_t=3.csv", sep=""))
-data2 <-read_data(setting2, paste("data/mayu_data_0_t=5.csv", sep=""))
-data3 <-read_data(setting3, paste("data/mayu_data_0_t=10.csv", sep=""))
+data1 <- read_data(setting1, paste("data/mayu_data_3_t=3.csv", sep=""))
+data2 <-read_data(setting2, paste("data/mayu_data_3_t=5.csv", sep=""))
+data3 <-read_data(setting3, paste("data/mayu_data_3_t=10.csv", sep=""))
 
-data1$ItemID = data1$ItemID + 1
-data2$ItemID = data2$ItemID + 1
-data3$ItemID = data3$ItemID + 1
+data1$ItemID = data1$ItemID - 2
+data2$ItemID = data2$ItemID - 2
+data3$ItemID = data3$ItemID - 2
 
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit1 <- sampling(stan, data=data1, iter=1000, warmup=500, chains=3)
-summary(fit1)$summary[,"mean"]
 fit2 <- sampling(stan, data=data2, iter=1000, warmup=500, chains=3)
 fit3 <- sampling(stan, data=data3, iter=1000, warmup=500, chains=3)
 #fit4 <- sampling(stan, data=data4, iter=1000, warmup=500, chains=3)
@@ -47,7 +46,9 @@ write.csv(t(matrix(est_param1$theta, nrow=34)), paste(dir, "output/realdata/para
 wbic3 <- -mean(rowSums(extract(fit1)$log_lik))
 wbic5 <- -mean(rowSums(extract(fit2)$log_lik))
 wbic10 <- -mean(rowSums(extract(fit3)$log_lik))
-
+wbic3
+wbic5
+wbic10
 SD <- summary(fit1, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)
 write.csv(SD, paste(dir, "output/realdata/SE/", model, "1.csv", sep=""))

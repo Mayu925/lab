@@ -26,7 +26,6 @@ for(loop in 1:5){
             true_param <-generate_true_param(setting)
             data <- generate_data(true_param, setting)
             fit <- sampling(stan, data=data, iter=3000, warmup=2000, chains=3, seed=1)
-            #wbic <- -mean(rowSums(extract(fit)$log_lik))
             est_param <- get_estimates(fit, setting)
             d <-  get_error(true_param, est_param)
             Rhat <- get_Rhat_stat(fit)
@@ -78,10 +77,11 @@ abline(coef = c(0,1))
 
 plot_beta_rt <- function(r){
   ylim <- c(min(true_param$beta_rt[r,])-0.5, max(true_param$beta_rt[r,])+0.5)
-  plot(true_param$beta_rt[r,], type="l", ylim=ylim, ylab="", main=paste("beta_rt(r = ", r, ")", sep=""))
+  plot(true_param$beta_rt[r,], xlab="TimeID", ylab="beta_rt" ,type="l",xlim=c(1, 5), xaxp=c(1,5, 4), ylim=ylim,  main=paste("beta_rt(r = ", r, ")", sep=""))
   par(new=T)
-  plot(est_param$beta_rt[r,], type="l", ylim=ylim, lty=2, ylab="")
+  plot(est_param$beta_rt[r,],xlab="TimeID", ylab="beta_rt",xlim=c(1, 5), xaxp=c(1, 5, 4),type="l", ylim=ylim, lty=2,)
 }
+
 for(r in 1:15){
   plot_beta_rt(r)
 }

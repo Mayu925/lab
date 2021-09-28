@@ -7,7 +7,6 @@
 \usepackage{wrapfig}
 \usepackage{ascmac}
 \usepackage{makeidx}
-\usepackage{multirow}
 \usepackage{enumerate}
 \usepackage{comment}
 \usepackage{multirow}
@@ -282,7 +281,7 @@ P_{jrtk}=\frac{\mathrm{exp}\sum{\alpha_r(\theta_{j}-\beta_{rt}-d_{rk})}}{\sum \m
 (e)は(a)と比較して，$\alpha_r$の値が大きくなっている．ICCを比べると，(a)よりも曲線の勾配が大きくなっている．これは，一貫性の高い評価者は，学習者の能力と相関した評点を与えるとともに，同等の能力の学習者には安定して同一の評点を与える傾向が強いことを表現している．
 
 (f)は(a)と比較して，$\alpha_r$の値が小さくなっている．ICCを比べると，(a)よりも曲線の勾配が小さくなっている．これは，一貫性の低い評価者は，評価にばらつきがあり，学習者の能力と評点の相関が小さくなることを示している．
-\begin{table*}[tb]
+\begin{table*}[t]
 \begin{center}
 \caption{図1で使用するパラメータ}
 \setlength{\tabcolsep}{5.pt}
@@ -373,7 +372,7 @@ Gibbs/MHより効率の良いMCMCアルゴリズムとして，ハミルトニ�
 \section{実験結果}
 実験結果を表\ref{parameters_recovery}に示す．
 
-表\ref{parameters_recovery}から，前パラメータのRMSEの平均値は$0.2\sim0.3$程度となり，パラメータ別の最大値でも0.41までに収まっていることがわかる．0.2や0.41という値は，標準正規分布に従うサンプルの99.73\%が含まれる範囲(-3$\sim$3)の3.3\%と6.8\%に相当し，十分に小さい値と解釈できる．また，関連研究と同様に，学習者数・評価者数の増加に伴い推定精度が改善する傾向も読み取れる.時間区分数の増加に伴って推定制度が改善する傾向は読み取れないが，これは時間区分数の増加はサンプル数が増えるわけではなく，データの中身が変化するだけであるからと考えられる．バイアスの平均については，いずれのパラメータも0に非常に近い値を示しており，系統的な過大(または過少)推定の傾向もないことが確認できる．また，MCMCの収束を示すGelman-Rubin の収束判定指標$ \hat{R} $\cite{RhatRubin,RhatCarlin}を確認したところ，すべての場合で一般的な収束判定基準値である1.1を下回っていた．
+表\ref{parameters_recovery}から，全パラメータのRMSEの平均値は$0.2\sim0.3$程度となり，パラメータ別の最大値でも0.41までに収まっていることがわかる．0.2や0.41という値は，標準正規分布に従うサンプルの99.73\%が含まれる範囲(-3$\sim$3)の3.3\%と6.8\%に相当し，十分に小さい値と解釈できる．また，関連研究と同様に，学習者数・評価者数の増加に伴い推定精度が改善する傾向も読み取れる.時間区分数の増加に伴って推定制度が改善する傾向は読み取れないが，これは時間区分数の増加はサンプル数が増えるわけではなく，データの中身が変化するだけであるからと考えられる．バイアスの平均については，いずれのパラメータも0に非常に近い値を示しており，系統的な過大(または過少)推定の傾向もないことが確認できる．また，MCMCの収束を示すGelman-Rubin の収束判定指標$ \hat{R} $\cite{RhatRubin,RhatCarlin}を確認したところ，すべての場合で一般的な収束判定基準値である1.1を下回っていた．
 
 また，$\beta_{rt}$のパターンごとの推定結果の例を図\ref{beta_rt_recovery}に示す．実線が作成したパラメータ真値，波線が推定したパラメータである．このグラフより，作成した真値にある程度従って，パラメータが推定されていることがわかる．
 
@@ -415,17 +414,17 @@ Gibbs/MHより効率の良いMCMCアルゴリズムとして，ハミルトニ�
 \begin{figure}[]
  \begin{minipage}[b]{0.3\linewidth}
   \centering
-  \includegraphics[keepaspectratio,scale=0.25]{img/beta_rt_1.png}
+  \includegraphics[keepaspectratio,scale=0.25]{img/beta_rt_param1.png}
   \subcaption{パターン1}\label{1}
  \end{minipage}
  \begin{minipage}[b]{0.3\linewidth}
   \centering
-  \includegraphics[keepaspectratio,scale=0.25]{img/beta_rt_2.png}
+  \includegraphics[keepaspectratio,scale=0.25]{img/beta_rt_param2.png}
   \subcaption{パターン2}\label{2}
  \end{minipage}
  \begin{minipage}[b]{0.3\linewidth}
   \centering
-  \includegraphics[keepaspectratio,scale=0.25]{img/beta_rt_3.png}
+  \includegraphics[keepaspectratio,scale=0.25]{img/beta_rt_param3.png}
   \subcaption{パターン3}\label{3}
  \end{minipage}\\
  \caption{$\beta_{rt}$の推定例}\label{beta_rt_recovery}
@@ -678,7 +677,7 @@ Gibbs/MHより効率の良いMCMCアルゴリズムとして，ハミルトニ�
 
 \section{情報量基準におけるモデル比較}
 
-本節では，情報量規準によるモデル比較により提案モデルの性能を評価する．ここでは， MCMCにより各モデルのパラメータを推定し，得られた推定値を用いて情報量規準を求めた．情報量規準にはMCMCのパラメータサンプルから算出できるWAIC(Widely Applicable Information Criterion)とWBIC(Widely Applicable Bayesian Information Criterion)を用いた．ここで，WAICは汎化誤差(まだ手に入れていないデータを予測した時の誤差)の近似であり，将来のデータの予測に優れたモデルを選択する規準である．他方で，WBICは周辺尤度の近似であり，データを生成した真のモデルを漸近的に選択できる基準である．どちらの場合も，値が小さい方が的したモデルであるということを示す．
+本節では，情報量規準によるモデル比較により提案モデルの性能を評価する．ここでは， MCMCにより各モデルのパラメータを推定し，得られた推定値を用いて情報量規準を求めた．情報量規準にはMCMCのパラメータサンプルから算出できるWAIC(Widely Applicable Information Criterion)とWBIC(Widely Applicable Bayesian Information Criterion)を用いた．ここで，WAICは汎化誤差(まだ手に入れていないデータを予測した時の誤差)の近似であり，将来のデータの予測に優れたモデルを選択する規準である．他方で，WBICは周辺尤度の近似であり，データを生成した真のモデルを漸近的に選択できる基準である．どちらの場合も，値が小さい方が適したモデルであるということを示す．
 
 実験結果を表\ref{WAIC}，\ref{WBIC}に示す．縦軸は使用したデータの時間区分であり，横軸は各モデルのWAIC，WBICの値である．
 
@@ -691,7 +690,7 @@ Gibbs/MHより効率の良いMCMCアルゴリズムとして，ハミルトニ�
 また，提案モデルと提案w/o $\alpha_r$の結果を比較すると，提案モデルの方がWAICの値が小さいことから，評価者の一貫性を考慮したことによって，提案モデルの性能が向上していることがわかる．
 以上より，提案モデルでは，既存モデルよりも時間区分における評価者特性の依存関係に加え，評価者の一貫性や時間区分ごとにおける特性を表現できるようになり，データへの当てはまりが最も高くなったと解釈できる．
 
-次に，表\ref{WBIC}から，各時間区分におけるのWBICの最小値を比較すると，提案モデル2や提案w/o$\alpha_r$など提案モデルより単純なモデルが最適なモデルとして選択されていることがわかる．一方で，既存モデルと比べると提案モデルが高い性能を示しており，$\beta_{rt}$にマルコフ性を導入したことの有効性は確認できる．
+次に，表\ref{WBIC}から，各時間区分におけるWBICの最小値を比較すると，提案モデル2や提案w/o$\alpha_r$など提案モデルより単純なモデルが最適なモデルとして選択されていることがわかる．一方で，既存モデルと比べると提案モデルが高い性能を示しており，$\beta_{rt}$にマルコフ性を導入したことの有効性は確認できる．
 
 \begin{table*}[tb]
 \begin{center}

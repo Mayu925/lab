@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex chukan"] 1632457223 "chukan.aux" "chukan.bbl" "chukan" 1632457587
+["bibtex chukan"] 1632457223 "chukan.aux" "chukan.bbl" "chukan" 1632721157
   "./chukan.bst" 1631535780 40776 7800bda83f5ba6daac2c7311600f8290 ""
-  "chukan.aux" 1632457585 8552 091a124b5fc5d44f1fb1b57b9275ebbe "latex"
+  "chukan.aux" 1632655762 8552 091a124b5fc5d44f1fb1b57b9275ebbe "latex"
   "chukan.bib" 1632376590 8538 77bd27b5cfb1ef50cfbcfbb29dcd2374 ""
   (generated)
   "chukan.bbl"
   "chukan.blg"
-["dvipdf"] 1632457585 "chukan.dvi" "chukan.pdf" "chukan" 1632457587
-  "chukan.dvi" 1632457585 115668 e4aa7a2df632bd41e57cc264e6382cb5 "latex"
+["dvipdf"] 1632655762 "chukan.dvi" "chukan.pdf" "chukan" 1632721157
+  "chukan.dvi" 1632655762 115684 db939aad8eda76c40c2db3a3714c7c95 "latex"
   (generated)
   "chukan.pdf"
-["latex"] 1632457582 "chukan.tex" "chukan.dvi" "chukan" 1632457587
+["latex"] 1632655759 "chukan.tex" "chukan.dvi" "chukan" 1632721157
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1463434352 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -92,13 +92,13 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/web2c/eptex/platex.fmt" 1631967250 2754448 ebe1a893e0db4c0d6d57b858fefb7e59 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "chukan.aux" 1632457585 8552 091a124b5fc5d44f1fb1b57b9275ebbe "latex"
-  "chukan.bbl" 1632457223 5424 5a00ade9928d925e230298a3d24df840 "bibtex chukan"
-  "chukan.tex" 1632457415 68324 8205c16d25edf49b2ee7f65425b48dc3 ""
-  "chukan.toc" 1632457585 2033 9e48c614fee9fb96418d20fde907fd0c "latex"
-  "img/beta_rt_1.png" 1631780665 21179 d6450a7a1a3401bfcb33d6a39b69831e ""
-  "img/beta_rt_2.png" 1631780680 20603 dfe0aa6ab1851fa9d1547bb1bd6d3b4c ""
-  "img/beta_rt_3.png" 1631782721 22938 5e5d01a44db4149ef09f4e6639cd7438 ""
+  "chukan.aux" 1632655762 8552 091a124b5fc5d44f1fb1b57b9275ebbe "latex"
+  "chukan.bbl" 1632467444 5424 5a00ade9928d925e230298a3d24df840 "bibtex chukan"
+  "chukan.tex" 1632655754 68313 0c53511ca3dc1f07d26dc9fbe36b9a6c ""
+  "chukan.toc" 1632655762 2033 9e48c614fee9fb96418d20fde907fd0c "latex"
+  "img/beta_rt_param1.png" 1632648982 21351 3f52ff886e6ed674a0cb27159890cfc9 ""
+  "img/beta_rt_param2.png" 1632653708 20037 7c35a8b0ee32d5db1dab07c32c18eca4 ""
+  "img/beta_rt_param3.png" 1632655104 21728 f6f29a56266f387b4ebe42db59c88b1c ""
   "img/beta_rt_r_2.png" 1631784473 25341 9969351870d0c6f1a02b823223f75d97 ""
   "img/beta_rt_r_3.png" 1631784484 25812 db35999a9e82a265a73f9678f17ce94a ""
   "img/icc1.png" 1632055463 65347 2b61f55195503970bee553917dd92baf ""
@@ -110,6 +110,6 @@
   "img/timeid.png" 1631521323 144499 f477fff93c08701827fbb07be481af4d ""
   (generated)
   "chukan.toc"
-  "chukan.dvi"
   "chukan.aux"
+  "chukan.dvi"
   "chukan.log"
