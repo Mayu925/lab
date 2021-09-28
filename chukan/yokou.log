@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  28 SEP 2021 12:48
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  28 SEP 2021 14:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -443,54 +443,54 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14.4> not available
 File: img/timeid.png Graphic file (type bmp)
 <img/timeid.png>
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <9> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 75.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 75.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <9> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 75.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 75.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 75.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 76.
  [1
 
 
 ]
-Overfull \hbox (39.03511pt too wide) in paragraph at lines 143--145
+Overfull \hbox (39.03511pt too wide) in paragraph at lines 144--146
  [][] 
  []
 
 File: img/beta_rt_param.png Graphic file (type bmp)
 <img/beta_rt_param.png>
 
-Overfull \hbox (8.96835pt too wide) in paragraph at lines 164--166
+Overfull \hbox (8.96835pt too wide) in paragraph at lines 165--167
 [][] 
  []
 
 File: img/beta_rt_data.png Graphic file (type bmp)
 <img/beta_rt_data.png>
 
-Overfull \hbox (8.96835pt too wide) in paragraph at lines 168--170
+Overfull \hbox (8.96835pt too wide) in paragraph at lines 169--171
 [][] 
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <10> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 177.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 178.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 177.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 178.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <10> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 177.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 178.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 177.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 178.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 177.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 178.
 
-Overfull \hbox (3.53326pt too wide) in paragraph at lines 185--204
+Overfull \hbox (3.53326pt too wide) in paragraph at lines 186--205
  [][] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 2
-12.
+13.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 ) (./yokou.bbl)
@@ -498,10 +498,10 @@ File: ts1txr.fd 2000/12/15 v3.1
 Here is how much of TeX's memory you used:
  6054 strings out of 479062
  89502 string characters out of 5866374
- 417151 words of memory out of 5000000
+ 418151 words of memory out of 5000000
  24080 multiletter control sequences out of 15000+600000
  437696 words of font info for 133 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  72i,14n,80p,617b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on yokou.dvi (2 pages, 23100 bytes).
+Output written on yokou.dvi (2 pages, 23208 bytes).

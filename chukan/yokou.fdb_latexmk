@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex yokou"] 1632645248 "yokou.aux" "yokou.bbl" "yokou" 1632800909
+["bibtex yokou"] 1632645248 "yokou.aux" "yokou.bbl" "yokou" 1632806199
   "./chukan.bst" 1631535780 40776 7800bda83f5ba6daac2c7311600f8290 ""
   "chukan.bib" 1632376590 8538 77bd27b5cfb1ef50cfbcfbb29dcd2374 ""
-  "yokou.aux" 1632800908 1351 c500d9983a1023c9a9302036ea9737cd "latex"
+  "yokou.aux" 1632806198 1351 c500d9983a1023c9a9302036ea9737cd "latex"
   (generated)
-  "yokou.blg"
   "yokou.bbl"
-["dvipdf"] 1632800908 "yokou.dvi" "yokou.pdf" "yokou" 1632800909
-  "yokou.dvi" 1632800908 23100 63cc4bcc6f8dd94a512b9d41cdb3c9c0 "latex"
+  "yokou.blg"
+["dvipdf"] 1632806198 "yokou.dvi" "yokou.pdf" "yokou" 1632806199
+  "yokou.dvi" 1632806198 23208 f582d112099931846ec2d75561da53e6 "latex"
   (generated)
   "yokou.pdf"
-["latex"] 1632800906 "yokou.tex" "yokou.dvi" "yokou" 1632800909
+["latex"] 1632806197 "yokou.tex" "yokou.dvi" "yokou" 1632806199
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1463434352 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm" 1463434352 1196 b274fc006918dea9e5263e2117f4bddb ""
@@ -87,10 +87,10 @@
   "img/beta_rt_data.png" 1632647440 32875 c058a660713ddd75285148c300dc8e12 ""
   "img/beta_rt_param.png" 1632642896 22327 ee7cb763ec555b544cf0265948ddae44 ""
   "img/timeid.png" 1631521323 144499 f477fff93c08701827fbb07be481af4d ""
-  "yokou.aux" 1632800908 1351 c500d9983a1023c9a9302036ea9737cd "latex"
+  "yokou.aux" 1632806198 1351 c500d9983a1023c9a9302036ea9737cd "latex"
   "yokou.bbl" 1632645248 462 ba14c892136fb536bc1dcd9e22a57f36 "bibtex yokou"
-  "yokou.tex" 1632657608 15841 4894c4917a2df237e0b799aedcf41020 ""
+  "yokou.tex" 1632806188 16056 153b690398a2af1c192ad13065f4b744 ""
   (generated)
-  "yokou.dvi"
-  "yokou.log"
   "yokou.aux"
+  "yokou.log"
+  "yokou.dvi"
