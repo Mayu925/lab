@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex yokou"] 1632645248 "yokou.aux" "yokou.bbl" "yokou" 1632806199
+["bibtex yokou"] 1632933694 "yokou.aux" "yokou.bbl" "yokou" 1632979998
   "./chukan.bst" 1631535780 40776 7800bda83f5ba6daac2c7311600f8290 ""
   "chukan.bib" 1632376590 8538 77bd27b5cfb1ef50cfbcfbb29dcd2374 ""
-  "yokou.aux" 1632806198 1351 c500d9983a1023c9a9302036ea9737cd "latex"
+  "yokou.aux" 1632979961 1351 c500d9983a1023c9a9302036ea9737cd "latex"
   (generated)
   "yokou.bbl"
   "yokou.blg"
-["dvipdf"] 1632806198 "yokou.dvi" "yokou.pdf" "yokou" 1632806199
-  "yokou.dvi" 1632806198 23208 f582d112099931846ec2d75561da53e6 "latex"
+["dvipdf"] 1632979962 "yokou.dvi" "yokou.pdf" "yokou" 1632979998
+  "yokou.dvi" 1632979961 24116 986db7e6ad22075c2b43528de1a5d594 "latex"
   (generated)
   "yokou.pdf"
-["latex"] 1632806197 "yokou.tex" "yokou.dvi" "yokou" 1632806199
+["latex"] 1632979960 "yokou.tex" "yokou.dvi" "yokou" 1632979998
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1463434352 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm" 1463434352 1196 b274fc006918dea9e5263e2117f4bddb ""
@@ -84,13 +84,13 @@
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "BoldGothic4fig.sty" 1632193362 504 95fef2fbf0955b5617114ebea9c765a3 ""
   "hcresume.cls" 1632193411 25666 cb2fcf399ac553608da478b9e94565c8 ""
-  "img/beta_rt_data.png" 1632647440 32875 c058a660713ddd75285148c300dc8e12 ""
-  "img/beta_rt_param.png" 1632642896 22327 ee7cb763ec555b544cf0265948ddae44 ""
+  "img/beta_rt_data.png" 1632816453 92589 255e7f7de15a913d315fd18f5a3eef20 ""
+  "img/beta_rt_param.png" 1632816496 31131 a6a95dabe0d4ab4d3a42e8d08349b58a ""
   "img/timeid.png" 1631521323 144499 f477fff93c08701827fbb07be481af4d ""
-  "yokou.aux" 1632806198 1351 c500d9983a1023c9a9302036ea9737cd "latex"
-  "yokou.bbl" 1632645248 462 ba14c892136fb536bc1dcd9e22a57f36 "bibtex yokou"
-  "yokou.tex" 1632806188 16056 153b690398a2af1c192ad13065f4b744 ""
+  "yokou.aux" 1632979961 1351 c500d9983a1023c9a9302036ea9737cd "latex"
+  "yokou.bbl" 1632933694 462 ba14c892136fb536bc1dcd9e22a57f36 "bibtex yokou"
+  "yokou.tex" 1632979933 16669 9211f595c4e06c80aeb7646d6a4919c5 ""
   (generated)
-  "yokou.aux"
   "yokou.log"
+  "yokou.aux"
   "yokou.dvi"

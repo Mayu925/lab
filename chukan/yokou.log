@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  28 SEP 2021 14:16
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  30 SEP 2021 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,95 +292,76 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \lst@framebox=\box80
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2020/03/24 1.8d listings configuration
-))
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen183
-\captionmargin@=\dimen184
-\captionwidth=\dimen185
-\caption@tempdima=\dimen186
-\caption@indent=\dimen187
-\caption@parindent=\dimen188
-\caption@hangindent=\dimen189
-Package caption Info: Unknown document class (or package),
-(caption)             standard defaults will be used.
-Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
-p \iftdir \sbox \@tempboxa {#1\hskip 1zw#2}\else \sbox \@tempboxa {\textbf {#1:
-} #2}\fi \ifdim \wd \@tempboxa >\hsize \iftdir #1\hskip 1zw#2\relax \par \else 
-\textbf {#1:} #2\relax \par \fi \else \global \@minipagefalse \hbox to\hsize {\
-hfil \box \@tempboxa \hfil } \fi \vskip \belowcaptionskip  on input line 1139.
+    Font shape `JT1/mc/bx/n' tried instead on input line 17.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 17.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 17.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 17.
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <17.28> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 17.
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 17.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
 )
-
-Package caption Warning: Unknown document class (or package),
-(caption)                standard defaults will be used.
-See the caption package documentation for explanation.
-
-\c@caption@flags=\count280
-\c@continuedfloat=\count281
-Package caption Info: listings package is loaded.
-Package caption Info: wrapfig package is loaded.
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
-\c@subfigure=\count282
-\c@subtable=\count283
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 17.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Trying to load font information for OT1+txr on input line 4
-4.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/ot1txr.fd
-File: ot1txr.fd 2000/12/15 v3.1
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 17.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
-File: l3backend-dvipdfmx.def 2021-08-04 L3 backend support: dvipdfmx
-
-(|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count284
-\l__color_backend_stack_int=\count285
-\g__color_backend_stack_int=\count286
-\g__graphics_track_int=\count287
-\l__pdf_internal_box=\box81
-\g__pdf_backend_object_int=\count288
-\g__pdf_backend_annotation_int=\count289
-\g__pdf_backend_link_int=\count290
-) (./yokou.aux)
-\openout1 = `yokou.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 44.
-LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-44.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/omltxmi.fd
-File: omltxmi.fd 2000/12/15 v3.1
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 17.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 44.
-LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-44.
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <14.4> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <14.4> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14.4> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 20.
+ [1
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/omstxsy.fd
-File: omstxsy.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 44.
-LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-44.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/omxtxex.fd
-File: omxtxex.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    ... okay on input line 44.
+]
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <10> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 82.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 82.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <10> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 82.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 82.
+LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 82.
+
+! Undefined control sequence.
+l.85   \bhline
+              {1pt}
+? 
+! Emergency stop.
+l.85   \bhline
+              {1pt}
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 2838 strings out of 479062
+ 36858 string characters out of 5866374
+ 356283 words of memory out of 5000000
+ 20940 multiletter control sequences out of 15000+600000
+ 422003 words of font info for 87 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 72i,8n,80p,731b,369s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on yokou.dvi (1 page, 12044 bytes).
+X Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 44.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 4
 4.
@@ -443,54 +424,54 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14.4> not available
 File: img/timeid.png Graphic file (type bmp)
 <img/timeid.png>
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <9> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 76.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 76.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <9> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 76.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 76.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 76.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 78.
  [1
 
 
 ]
-Overfull \hbox (39.03511pt too wide) in paragraph at lines 144--146
+Overfull \hbox (39.03511pt too wide) in paragraph at lines 147--149
  [][] 
  []
 
 File: img/beta_rt_param.png Graphic file (type bmp)
 <img/beta_rt_param.png>
 
-Overfull \hbox (8.96835pt too wide) in paragraph at lines 165--167
+Overfull \hbox (5.21431pt too wide) in paragraph at lines 167--169
 [][] 
  []
 
 File: img/beta_rt_data.png Graphic file (type bmp)
 <img/beta_rt_data.png>
 
-Overfull \hbox (8.96835pt too wide) in paragraph at lines 169--171
+Overfull \hbox (5.21431pt too wide) in paragraph at lines 171--173
 [][] 
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <10> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 178.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 178.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <10> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 178.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 178.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 178.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 205.
 
-Overfull \hbox (3.53326pt too wide) in paragraph at lines 186--205
+Overfull \hbox (3.53326pt too wide) in paragraph at lines 187--208
  [][] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 2
-13.
+14.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 ) (./yokou.bbl)
@@ -498,10 +479,10 @@ File: ts1txr.fd 2000/12/15 v3.1
 Here is how much of TeX's memory you used:
  6054 strings out of 479062
  89502 string characters out of 5866374
- 418151 words of memory out of 5000000
+ 420151 words of memory out of 5000000
  24080 multiletter control sequences out of 15000+600000
  437696 words of font info for 133 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 72i,14n,80p,617b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,14n,80p,643b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on yokou.dvi (2 pages, 23208 bytes).
+Output written on yokou.dvi (2 pages, 24116 bytes).
