@@ -61,7 +61,16 @@ prob <-function(param, k, x){
   }
   return(target/all_sum)
 }
-
+probpre <-function(param, k, x, t){
+  all_sum <- 0
+  tmp <- 0
+  for(m in 1:length(param$category_prm)){
+    tmp <- tmp + 1.7 * logit(param, param$category_prm[m], x, t)
+    if(m==k) target <- exp(tmp)
+    all_sum <- all_sum + exp(tmp)
+  }
+  return(target/all_sum)
+}
 gen_category_param <- function(N, K){
   category <- matrix(0, nrow=N, ncol=(K-1))
   for (k in 1:(K-1)){
