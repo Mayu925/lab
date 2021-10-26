@@ -29,16 +29,16 @@ for(loop in 1:2){
             est_param <- get_estimates(fit, setting)
             d <-  get_error(true_param, est_param)
             Rhat <- get_Rhat_stat(fit)
-            TH <- rbind(TH, c(j, r, k, 
+            TH <- rbind(TH, c(j, r, t, 
                             d$theta$RMSE, 
                             d$pai_0r$RMSE,
-                            d$pai_1r$RMSE,
+                            #d$pai_1r$RMSE,
                             #mean(d$beta_rt$RMSE), 
                             mean(d$beta_rk$RMSE),  
                             d$theta$BIAS, 
                             d$pai_0r$BIAS,
-                            d$pai_1r$BIAS,
-                            #mean(d$beta_rt$BIAS),å
+                            #d$pai_1r$BIAS,
+                            #mean(d$beta_rt$BIAS),
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))
     }

@@ -18,7 +18,7 @@ transformed data{
 parameters {
   vector[J] theta;
   vector[K-2] beta_rk;
-  vector[R] pai_1r;
+  //vector[R] pai_1r;
   vector[R] pai_0r;
 }
 transformed parameters{
@@ -32,13 +32,13 @@ transformed parameters{
 
 model{
   theta ~ normal(0, 1);
-  pai_1r ~ normal(0.0, 1.0);
+  //pai_1r ~ normal(0.0, 1.0);
   pai_0r ~ normal(0, 1);
   category_est  ~ normal(0, 1);
   
   for (n in 1:N){
     X[n] ~ categorical_logit(1.7*(c*(theta[ExamineeID[n]]-pai_0r[RaterID[n]]-
-    #pai_1r[RaterID[n]]*
+    //pai_1r[RaterID[n]]*
     TimeID[n])-category_prm));
   }
 }
@@ -48,7 +48,7 @@ generated quantities {
   vector[N] log_lik;
   for (n in 1:N){
     log_lik[n] = categorical_logit_log(X[n], 1.7*(c*(theta[ExamineeID[n]]-pai_0r[RaterID[n]]-
-    #pai_1r[RaterID[n]]*
+    //pai_1r[RaterID[n]]*
     TimeID[n])-category_prm));
   }
 }
