@@ -8,6 +8,7 @@ source("models/ctl_util_previous.R")
 model = "mayu_previous"
 
 source(paste("models/", model, ".R", sep=""))
+
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 loop=1
 j=30
@@ -32,12 +33,12 @@ for(loop in 1:2){
             TH <- rbind(TH, c(j, r, t, 
                             d$theta$RMSE, 
                             d$pai_0r$RMSE,
-                            #d$pai_1r$RMSE,
+                            d$pai_1r$RMSE,
                             #mean(d$beta_rt$RMSE), 
                             mean(d$beta_rk$RMSE),  
                             d$theta$BIAS, 
                             d$pai_0r$BIAS,
-                            #d$pai_1r$BIAS,
+                            d$pai_1r$BIAS,
                             #mean(d$beta_rt$BIAS),
                             mean(d$beta_rk$BIAS),
                             Rhat$meanRhat, Rhat$maxRhat))

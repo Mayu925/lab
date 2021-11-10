@@ -30,7 +30,12 @@ convert_category_estimates_previous <- function(category_prm, K){
     mat = t(data.frame(prm))
   return(mat)
 }
-
+convert_pai1r <- function(pai_1r, R){
+  prm = pai_1r[1:(R-1)]
+  prm = append(prm, -1*sum(prm))
+  mat = t(data.frame(prm))
+  return(mat)
+}
 convert_beta_rt <- function(beta_rt, T, R){
   for(r in 1:R){
     alrt = beta_rt[((r-1)*T+1):((r-1)*T+T)]
@@ -52,16 +57,26 @@ convert_beta_rt2 <- function(beta_rt,T){
 }
 
 
-prob <-function(param, k, x, t){
+prob <-function(setting, param, k, x, t){
   all_sum <- 0
   tmp <- 0
   for(m in 1:length(param$category_prm)){
-    tmp <- tmp + 1.7 * logit(param, param$category_prm[m], x, t)
+    tmp <- tmp + 1.7 * logit(setting, param, param$category_prm[m], x, t)
     if(m==k) target <- exp(tmp)
     all_sum <- all_sum + exp(tmp)
   }
   return(target/all_sum)
 }
+
+gen_pai <- function(R){
+  pai <- matrix(0, nrow=1, ncol=R)
+  for(r in 1:R-1){
+    pai[r] <- rnorm(1,0,1)
+  }
+  pai[R] <- -1*sum(pai[1:(R-1)])
+  return(pai)
+}
+
 gen_category_param <- function(N, K){
   category <- matrix(0, nrow=N, ncol=(K-1))
   for (k in 1:(K-1)){
@@ -187,7 +202,7 @@ generate_data <- function(param, setting){
           for (r in 1:setting$n_rater){
               prob <- c(1:setting$K)
               for (k in 1:(setting$K)){
-                prob[k] = prob(get_prm_list(param, i, r, t), k, param$theta[j], t)
+                prob[k] = prob(setting, get_prm_list(param, i, r, t), k, param$theta[j], t)
               }
               score = grep(1, rmultinom(1, 1, prob))
               U[row_idx,] <- c(j, i, r, t, score)
