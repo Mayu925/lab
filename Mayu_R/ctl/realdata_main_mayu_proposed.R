@@ -6,16 +6,16 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-model = "mayu_proposed4_WBIC"
+model = "mayu_proposed"
 
 source("models/ctl_util.R")
 
-setting1 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 3)
-setting2 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 5)
-setting3 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 10)
-data1 <- read_data(setting1, paste("data/mayu_data_3_t=3.csv", sep=""))
-data2 <-read_data(setting2, paste("data/mayu_data_3_t=5.csv", sep=""))
-data3 <-read_data(setting3, paste("data/mayu_data_3_t=10.csv", sep=""))
+setting1 <- list(K = 5, n_person = 134, n_rater = 6, n_time = 4)
+#setting2 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 5)
+#setting3 <- list(K = 5, n_person = 34, n_item = 1, n_rater = 34, n_time = 10)
+data1 <- read_data(setting1, paste("data/data_o_2-5-11.csv", sep=""))
+data1 <-read_data(setting1, paste("data/data_n_bias.csv", sep=""))
+data3 <-read_data(setting1, paste("data/data_bias.csv", sep=""))
 #data4 <-read_data(setting, paste("data/mayu_data_3.csv", sep=""))
 
 
@@ -33,7 +33,7 @@ fit3 <- sampling(stan, data=data3, iter=1000, warmup=500, chains=3)
 source(paste("models/", "mayu_proposed", ".R", sep=""))
 est_param1 <- get_estimates(fit1, setting1)
 D1 <- get_result_statistics_common(fit1, data1, setting1)
-write.csv(t(matrix(D1, nrow=2)), paste( "output/realdata/MCMC_mayu/proposed/", model, "t_3.csv", sep=""))
+write.csv(t(matrix(D1, nrow=2)), paste( "output/realdata/MCMC_mayu/proposed/", model, ".csv", sep=""))
 write.csv(t(matrix(est_param1$theta, nrow=34)), paste( "output/realdata/parameters/mayu/proposed/", model, "_theta_t_3.csv", sep=""))
 write.csv(t(matrix(est_param1$alpha_r, nrow=34)), paste( "output/realdata/parameters/mayu/proposed/", model, "_alpha_r_t_3.csv", sep=""))
 write.csv(t(matrix(est_param1$beta_rt, nrow=34)), paste( "output/realdata/parameters/mayu/proposed/", model, "_beta_rt_3.csv", sep=""))
@@ -80,21 +80,8 @@ sink()
 plot(est_param1$theta)
 plot(est_param1$alpha_r)
 est_param1$beta_rt
-for(r in 1:34){
-  if(r==19){
-    plot(est_param1$beta_rt[r,],xlab="TimeID",ylab="beta_rt" ,type="l",xlim=c(1, 3), xaxp=c(1, 3, 2), ylim=c(-0.4,0.5), col=4,lwd = 3)
-    par(new=T)
-  }
-  else if(r==14){
-    plot(est_param1$beta_rt[r,],xlab="TimeID", ylab="beta_rt",type="l", xlim=c(1, 3), xaxp=c(1, 3, 2), ylim=c(-0.4,0.5), col=2, lwd = 3)
-    par(new=T)
-  }
-  else if(r==3){
-  plot(est_param1$beta_rt[r,],xlab="TimeID", ylab="beta_rt",type="l", xlim=c(1, 3), xaxp=c(1, 3, 2),ylim=c(-0.4,0.5), col=3, lwd = 3)
+for(r in 1:10){
+  plot(est_param1$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 3, 2), ylim=c(-1,1), col=gray(0.8), lwd = 1)
   par(new=T)
   }
-  else{
-  plot(est_param1$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 3), xaxp=c(1, 3, 2), ylim=c(-0.4,0.5), col=gray(0.8), lwd = 1)
-  par(new=T)
-  }
-}
+
