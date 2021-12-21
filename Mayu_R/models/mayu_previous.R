@@ -1,4 +1,4 @@
-get_prm_list <- function(param, i, r, t){
+get_prm_list <- function(param, r, t){
   return(list(pai_1r = param$pai_1r[r], 
     pai_0r = param$pai_0r[r], category_prm = append(0, param$beta_rk)))
 }

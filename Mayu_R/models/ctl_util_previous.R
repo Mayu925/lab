@@ -179,8 +179,8 @@ generate_beta_rt_self <- function(R,T){
 }
 
 generate_data <- function(param, setting){
-  N <- setting$n_item * setting$n_person * setting$n_rater
-  U = matrix(0, nrow=N, ncol=5)
+  N <- setting$n_person * setting$n_rater
+  U = matrix(0, nrow=N, ncol=4)
   tsub = setting$n_person/setting$n_time
   if(setting$n_person%%setting$n_time != 0){
     tsub = trunc(setting$n_person/setting$n_time)
@@ -198,17 +198,16 @@ generate_data <- function(param, setting){
       tsub3 = setting$n_person
     }
       for (j in tsub2:tsub3){
-        for (i in 1:setting$n_item){
           for (r in 1:setting$n_rater){
               prob <- c(1:setting$K)
               for (k in 1:(setting$K)){
-                prob[k] = prob(setting, get_prm_list(param, i, r, t), k, param$theta[j], t)
+                prob[k] = prob(setting, get_prm_list(param, r, t), k, param$theta[j], t)
               }
               score = grep(1, rmultinom(1, 1, prob))
-              U[row_idx,] <- c(j, i, r, t, score)
+              U[row_idx,] <- c(j, r, t, score)
               row_idx = row_idx + 1
           }
-        }
+        
       
     }
   }

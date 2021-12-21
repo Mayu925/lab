@@ -17,8 +17,8 @@ data <-read_data(setting, paste("data/data_bias.csv", sep=""))
 setting <- list(K = 5, n_person = 134, n_rater = 11, n_time = 4)
 data <-read_data(setting, paste("data/data_n_bias.csv", sep=""))
 
-setting <- list(K = 5, n_person = 134, n_rater = 17, n_time = 4)
-data <- read_data(setting, paste("data/data_o_2-5-11.csv", sep=""))
+setting <- list(K = 5, n_person = 134, n_rater = 16, n_time = 4)
+data <- read_data(setting, paste("data/data_all.csv", sep=""))
 
 
 
@@ -28,7 +28,7 @@ fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3)
 source(paste( "models/", "mayu_previous", ".R", sep=""))
 est_param <- get_estimates(fit, setting)
 D <- get_result_statistics_common(fit, data, setting)
-write.csv(t(matrix(D1, nrow=2)), paste("output/realdata/MCMC_mayu/previous/", model, "t_3.csv", sep=""))
+write.csv(t(matrix(D, nrow=2)), paste("output/realdata/MCMC_mayu/previous/", model, ".csv", sep=""))
 #write.csv(t(matrix(est_param1, nrow=34)), paste("output/realdata/parameters/mayu/previous/", model, "t_3.csv", sep=""))
 
 wbic3 <- -mean(rowSums(extract(fit1)$log_lik))

@@ -16,8 +16,8 @@ data <-read_data(setting, paste("data/data_bias.csv", sep=""))
 setting <- list(K = 5, n_person = 134, n_rater = 11, n_time = 4)
 data <-read_data(setting, paste("data/data_n_bias.csv", sep=""))
 
-setting <- list(K = 5, n_person = 134, n_rater = 17, n_time = 4)
-data <- read_data(setting, paste("data/data_o_2-5-11.csv", sep=""))
+setting <- list(K = 5, n_person = 134, n_rater = 16, n_time = 4)
+data <- read_data(setting, paste("data/data_all.csv", sep=""))
 
 
 
@@ -28,10 +28,10 @@ source(paste("models/", "mayu_proposed", ".R", sep=""))
 est_param <- get_estimates(fit, setting)
 D <- get_result_statistics_common(fit, data, setting)
 write.csv(t(matrix(D, nrow=2)), paste( "output/realdata/MCMC_mayu/proposed/", model, ".csv", sep=""))
-write.csv(t(matrix(est_param$theta, nrow=34)), paste( "output/realdata/parameters/mayu/proposed/", model, "_theta.csv", sep=""))
-write.csv(t(matrix(est_param$alpha_r, nrow=34)), paste( "output/realdata/parameters/mayu/proposed/", model, "_alpha_r.csv", sep=""))
-write.csv(t(matrix(est_param$beta_rt, nrow=34)), paste( "output/realdata/parameters/mayu/proposed/", model, "_beta_r.csv", sep=""))
-write.csv(t(matrix(est_param$beta_rk, nrow=34)), paste( "output/realdata/parameters/mayu/proposed/", model, "_beta_rk.csv", sep=""))
+write.csv(t(matrix(est_param$theta, nrow=134)), paste( "output/realdata/parameters/mayu/proposed/", model, "_theta.csv", sep=""))
+write.csv(t(matrix(est_param$alpha_r, nrow=16)), paste( "output/realdata/parameters/mayu/proposed/", model, "_alpha_r.csv", sep=""))
+write.csv(t(matrix(est_param$beta_rt, nrow=16)), paste( "output/realdata/parameters/mayu/proposed/", model, "_beta_rt.csv", sep=""))
+write.csv(t(matrix(est_param$beta_rk, nrow=16)), paste( "output/realdata/parameters/mayu/proposed/", model, "_beta_rk.csv", sep=""))
 
 wbic <- -mean(rowSums(extract(fit)$log_lik))
 
@@ -47,8 +47,11 @@ sink()
 plot(est_param$theta)
 plot(est_param$alpha_r)
 est_param$beta_rt
-for(r in 1:setting$n_rater){
-  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.5,1), col=r, lwd = 1)
+for(r in 1:10){
+  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.5,1), col=rgb(0.8,0.8,0.8), lwd = 1)
   par(new=T)
   }
-
+for(r in 11:16){
+  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.5,1), col=r-10, lwd = 1)
+  par(new=T)
+}

@@ -17,13 +17,13 @@ r=10
 t=j
 k=5
 
-for(loop in 1:2){
+for(loop in 1:10){
   TH <- c()
-  for(j in c(60, 90)){
+  for(j in c(60, 90, 120)){
     for (t in c(3,5,10)){
     for(r in c(10, 15)){
             print(paste(loop, j, 1, r, t, k, sep=","))
-            setting <- list(K = k, n_person = j, n_item = 1, n_rater = r, n_time = t)
+            setting <- list(K = k, n_person = j, n_rater = r, n_time = t)
             true_param <-generate_true_param(setting)
             data <- generate_data(true_param, setting)
             fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3, seed=1)
@@ -45,17 +45,17 @@ for(loop in 1:2){
     }
     }    
   }
-  write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep=""), row.names = FALSE)
+  write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/loop2_", loop, ".csv", sep=""), row.names = FALSE)
 }
 
 TH[1,]
-TH <-as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
-for(loop in 1:2){
-  TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
+TH <-as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop2_", 1, ".csv", sep="")))
+for(loop in 2:10){
+  TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop2_", loop, ".csv", sep="")))
 }
-TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", 1, ".csv", sep="")))
-TH <- TH / 2
-write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
+#TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", 1, ".csv", sep="")))
+TH <- TH / 10
+write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/parameter_recovery_summary2.csv", sep=""), row.names = FALSE)
 
 # 結果のプロット用関数群
 plot(true_param$theta, est_param$theta, main="theta")
