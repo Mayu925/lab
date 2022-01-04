@@ -1,8 +1,8 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  26 SEP 2021 20:29
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  4 JAN 2022 12:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**chukan.tex -halt-on-error
+**chukan
 (./chukan.tex
 pLaTeX2e <2021-06-01>+2 (based on LaTeX2e <2021-06-01> patch level 1)
 L3 programming layer <2021-08-27>
@@ -294,18 +294,6 @@ LaTeX Warning: Label `3' multiply defined.
 
 LaTeX Warning: Label `sub@3' multiply defined.
 
-
-LaTeX Warning: Label `1' multiply defined.
-
-
-LaTeX Warning: Label `sub@1' multiply defined.
-
-
-LaTeX Warning: Label `2' multiply defined.
-
-
-LaTeX Warning: Label `sub@2' multiply defined.
-
 )
 \openout1 = `chukan.aux'.
 
@@ -466,95 +454,73 @@ File: img/icc6.png Graphic file (type bmp)
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 414.
+               Default added (so using `tbp') on input line 422.
 
-File: img/beta_rt_param1.png Graphic file (type bmp)
-<img/beta_rt_param1.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 417--418
+LaTeX Warning: File `img/beta_rt_param1_1.png' not found on input line 425.
+
+
+! LaTeX Error: Cannot determine size of graphic in img/beta_rt_param1_1.xbb (no
+ BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...tio,scale=0.25]{img/beta_rt_param1_1.png}
+                                                  
+? 
+File: img/beta_rt_param1_1.png Graphic file (type bmp)
+<img/beta_rt_param1_1.png>
+File: img/beta_rt_param_9.png Graphic file (type bmp)
+<img/beta_rt_param_9.png>
+
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 430--431
  [][] 
  []
 
-File: img/beta_rt_param2.png Graphic file (type bmp)
-<img/beta_rt_param2.png>
+File: img/beta_rt_param_15.png Graphic file (type bmp)
+<img/beta_rt_param_15.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 422--423
- [][] 
- []
-
-File: img/beta_rt_param3.png Graphic file (type bmp)
-<img/beta_rt_param3.png>
-
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 427--428
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 435--436
  [][] 
  []
 
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 430.
+(Font)              scaled to size 5.76599pt on input line 438.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 430.
+(Font)              scaled to size 5.76599pt on input line 438.
 [15] [16]
 第7章
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 650.
-
-File: img/beta_rt_r_2.png Graphic file (type bmp)
-<img/beta_rt_r_2.png>
-File: img/beta_rt_r_3.png Graphic file (type bmp)
-<img/beta_rt_r_3.png>
+File: img/beta_rt.png Graphic file (type bmp)
+<img/beta_rt.png>
 [17
 
-]
-
-LaTeX Warning: Text page 18 contains only floats.
-
-[18]
-
-LaTeX Warning: Text page 19 contains only floats.
-
-[19]
-
-LaTeX Warning: Text page 20 contains only floats.
-
-[20]
-
-LaTeX Warning: Text page 21 contains only floats.
-
-[21] [22] [23]
+] [18] [19]
 第8章
-[24
+[20
 
 ]
 付録A
-[25
+[21
 
-] [26] (./chukan.bbl [27
+] [22] (./chukan.bbl [23
 
-]) [28] (./chukan.aux)
+]) [24] (./chukan.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5762 strings out of 479062
- 84374 string characters out of 5866374
- 495807 words of memory out of 5000000
- 23785 multiletter control sequences out of 15000+600000
+ 5819 strings out of 479062
+ 85787 string characters out of 5866374
+ 441807 words of memory out of 5000000
+ 23821 multiletter control sequences out of 15000+600000
  424124 words of font info for 122 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 57i,11n,66p,972b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,11n,66p,953b,1800s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chukan.dvi (32 pages, 115684 bytes).
+Output written on chukan.dvi (28 pages, 96308 bytes).

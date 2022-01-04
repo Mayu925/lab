@@ -8,18 +8,17 @@ options(mc.cores = parallel::detectCores())
 
 source("models/ctl_util_previous.R")
 
-model = "mayu_previous"
+model = "mayu_previous_WBIC"
 
 
 setting <- list(K = 5, n_person = 134, n_rater = 6, n_time = 4)
 data <-read_data(setting, paste("data/data_bias.csv", sep=""))
 
-setting <- list(K = 5, n_person = 134, n_rater = 11, n_time = 4)
+setting <- list(K = 5, n_person = 134, n_rater = 10, n_time = 4)
 data <-read_data(setting, paste("data/data_n_bias.csv", sep=""))
 
 setting <- list(K = 5, n_person = 134, n_rater = 16, n_time = 4)
 data <- read_data(setting, paste("data/data_all.csv", sep=""))
-
 
 
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
@@ -31,12 +30,9 @@ D <- get_result_statistics_common(fit, data, setting)
 write.csv(t(matrix(D, nrow=2)), paste("output/realdata/MCMC_mayu/previous/", model, ".csv", sep=""))
 #write.csv(t(matrix(est_param1, nrow=34)), paste("output/realdata/parameters/mayu/previous/", model, "t_3.csv", sep=""))
 
-wbic3 <- -mean(rowSums(extract(fit1)$log_lik))
-wbic5 <- -mean(rowSums(extract(fit2)$log_lik))
-wbic10 <- -mean(rowSums(extract(fit3)$log_lik))
-wbic3
-wbic5
-wbic10
+wbic <- -mean(rowSums(extract(fit)$log_lik))
+wbic
+
 SD <- summary(fit1, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)
 write.csv(SD, paste(dir, "output/realdata/SE/", model, "1.csv", sep=""))

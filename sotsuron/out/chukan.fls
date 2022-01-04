@@ -1,0 +1,17 @@
+PWD /Users/hayashimayu/Desktop/lab/chukan
+INPUT /usr/local/texlive/2021/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt
+INPUT /Users/hayashimayu/Desktop/lab/chukan/chukan.tex
+OUTPUT out/chukan.log
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls
+INPUT /usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls

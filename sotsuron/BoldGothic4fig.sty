@@ -1,0 +1,16 @@
+%　図*:　の部分だけゴシックにする
+\makeatletter
+\long\def\@makecaption#1#2{% \@makecaption を再定義します
+  \vskip\abovecaptionskip
+  \iftdir\sbox\@tempboxa{#1\hskip1zw#2}%
+    \else\sbox\@tempboxa{\textbf{#1:} #2}% ここを変更する
+  \fi
+  \ifdim \wd\@tempboxa >\hsize% 
+    \iftdir #1\hskip1zw#2\relax\par
+      \else \textbf{#1:} #2\relax\par\fi% ここを変更する
+  \else
+    \global \@minipagefalse
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother

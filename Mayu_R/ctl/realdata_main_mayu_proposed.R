@@ -6,7 +6,7 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-model = "mayu_proposed"
+model = "mayu_proposed4_WBIC"
 
 source("models/ctl_util.R")
 
@@ -20,21 +20,21 @@ setting <- list(K = 5, n_person = 134, n_rater = 16, n_time = 4)
 data <- read_data(setting, paste("data/data_all.csv", sep=""))
 
 
-
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3)
 
-source(paste("models/", "mayu_proposed", ".R", sep=""))
+source(paste("models/", "mayu_proposed4", ".R", sep=""))
 est_param <- get_estimates(fit, setting)
 D <- get_result_statistics_common(fit, data, setting)
 write.csv(t(matrix(D, nrow=2)), paste( "output/realdata/MCMC_mayu/proposed/", model, ".csv", sep=""))
+
 write.csv(t(matrix(est_param$theta, nrow=134)), paste( "output/realdata/parameters/mayu/proposed/", model, "_theta.csv", sep=""))
 write.csv(t(matrix(est_param$alpha_r, nrow=16)), paste( "output/realdata/parameters/mayu/proposed/", model, "_alpha_r.csv", sep=""))
 write.csv(t(matrix(est_param$beta_rt, nrow=16)), paste( "output/realdata/parameters/mayu/proposed/", model, "_beta_rt.csv", sep=""))
 write.csv(t(matrix(est_param$beta_rk, nrow=16)), paste( "output/realdata/parameters/mayu/proposed/", model, "_beta_rk.csv", sep=""))
 
 wbic <- -mean(rowSums(extract(fit)$log_lik))
-
+wbic
 
 SD <- summary(fit, par="theta")$summary[,c("sd", "se_mean")]
 apply(SD, 2, mean)

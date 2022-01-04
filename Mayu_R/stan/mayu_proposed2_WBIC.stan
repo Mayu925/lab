@@ -1,12 +1,10 @@
 data{
   int <lower=0> J;//n_examinee
-  int <lower=0> I;//n_item
   int <lower=0> R;//n_rater
   int <lower=2> K;//n_score
   int <lower=0> T;//n_time
   int <lower=0> N;//n_samples
   int <lower=1, upper=J> ExamineeID [N];
-  int <lower=1, upper=I> ItemID [N];
   int <lower=1, upper=R> RaterID [N];
   int <lower=1, upper=K> X [N];//Score
   int <lower=1, upper=T> TimeID[N];

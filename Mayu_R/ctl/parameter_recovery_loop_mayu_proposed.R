@@ -48,11 +48,11 @@ for(loop in 1:10){
 TH[1,]
 TH <-as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", 1, ".csv", sep="")))
 
-for(loop in 1:5){
+for(loop in 2:10){
 
   TH <-TH + as.matrix(read.csv(paste("output/parameter_recovery/mayu/", model, "/loop_", loop, ".csv", sep="")))
 }
-TH <- TH / 6
+TH <- TH / 10
 write.csv(TH, paste("output/parameter_recovery/mayu/", model, "/parameter_recovery_summary.csv", sep=""), row.names = FALSE)
 
 # 結果のプロット用関数群
@@ -77,9 +77,9 @@ abline(coef = c(0,1))
 
 plot_beta_rt <- function(r){
   ylim <- c(min(true_param$beta_rt[r,])-0.5, max(true_param$beta_rt[r,])+0.5)
-  plot(true_param$beta_rt[r,], xlab="TimeID", ylab="beta_rt" ,type="l",xlim=c(1, 5), xaxp=c(1,5, 4), ylim=ylim,  main=paste("beta_rt(r = ", r, ")", sep=""))
+  plot(true_param$beta_rt[r,], xlab="TimeID", ylab="beta_rt" ,type="l",xlim=c(1, 10), xaxp=c(1,10, 9), ylim=ylim,  main=paste("beta_rt(r = ", r, ")", sep=""))
   par(new=T)
-  plot(est_param$beta_rt[r,],xlab="TimeID", ylab="beta_rt",xlim=c(1, 5), xaxp=c(1, 5, 4),type="l", ylim=ylim, lty=2,)
+  plot(est_param$beta_rt[r,],xlab="TimeID", ylab="beta_rt",xlim=c(1, 10), xaxp=c(1, 10, 9),type="l", ylim=ylim, lty=2,)
 }
 
 for(r in 1:15){
@@ -98,12 +98,14 @@ def <- list(xlim = 2, xlab = expression(paste("Ability ", theta)),
 par(mfrow=c(1,1))
 par(mar = c(3, 4.0, 2.1, 0.5))
 par(mgp = c(2.2, 0.8, 0))
-param1 <- list(alpha_r = 1.0, 
-              beta_rt = 0.0, 
-              category_prm = c(0,-1.0,0.0,0.5,1.0))
-param2 <- list(alpha_r = 1.0, 
-              beta_rt = 0.5, 
-              category_prm = c(0,-1.0,0.0,0.5,1.0))
+#r=14
+param1 <- list(alpha_r =0.681  , 
+              beta_rt = -0.09  , 
+              category_prm = c(0,-1.69 ,-0.71 ,0.42 ,1.97 ))
+#r=15
+param2 <- list(alpha_r = 1.156 , 
+              beta_rt = -0.22 , 
+              category_prm = c(0,0.19 ,-1.20 ,1.37 ,-0.36 ))
 param3 <- list(alpha_r = 1.0, 
               beta_rt = -0.5, 
               category_prm = c(0,-1.0,0.0,0.5,1.0))

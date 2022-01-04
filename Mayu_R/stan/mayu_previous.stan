@@ -41,7 +41,7 @@ model{
   category_est  ~ normal(0, 1);
   
   for (n in 1:N){
-    X[n] ~ categorical_logit(1.7*(c*(theta[ExamineeID[n]]-trans_pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*(TimeID[n]/T))-category_prm));
+    X[n] ~ categorical_logit(1.7*(c*(theta[ExamineeID[n]]-trans_pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*TimeID[n])-category_prm));
   }
 }
 
@@ -49,6 +49,6 @@ model{
 generated quantities {
   vector[N] log_lik;
   for (n in 1:N){
-    log_lik[n] = categorical_logit_log(X[n], 1.7*(c*(theta[ExamineeID[n]]-trans_pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*(TimeID[n]/T))-category_prm));
+    log_lik[n] = categorical_logit_log(X[n], 1.7*(c*(theta[ExamineeID[n]]-trans_pai_0r[RaterID[n]]-pai_1r[RaterID[n]]*TimeID[n])-category_prm));
   }
 }

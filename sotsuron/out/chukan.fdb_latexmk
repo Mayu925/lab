@@ -1,0 +1,18 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "out/chukan.xdv" "out/chukan.pdf" "out/chukan" 0
+  "out/chukan.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "out/chukan.pdf"
+["xelatex"] 1631964425 "/Users/hayashimayu/Desktop/lab/chukan/chukan.tex" "out/chukan.xdv" "chukan" 1631964426
+  "/Users/hayashimayu/Desktop/lab/chukan/chukan.tex" 1631964216 62457 9bde25b5f5f0a902693a0cf854b6bcc8 ""
+  "/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsbook.cls" 1625175385 63487 f75dd8a88adb893244d3b322b8a21e41 ""
+  "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1631893709 5130283 c4bbc194126f134ce6cde129a7ad8789 ""
+  "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "amsmath，amssymb.sty" 0 -1 0 ""
+  "chukan.tex" 1631964216 62457 9bde25b5f5f0a902693a0cf854b6bcc8 ""
+  "out/amsmath，amssymb.sty" 0 -1 0 ""
+  "out/chukan.aux" 1631964425 32 3985256e7290058c681f74d7a3565a19 ""
+  (generated)
+  "out/chukan.log"
+  "out/chukan.xdv"
