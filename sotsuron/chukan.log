@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  4 JAN 2022 12:56
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  11 JAN 2022 11:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -275,26 +275,7 @@ File: l3backend-dvips.def 2021-08-04 L3 backend support: dvips
 \g__pdf_backend_link_int=\count286
 \g__pdf_backend_link_sf_int=\count287
 )
-(./chukan.aux
-
-LaTeX Warning: Label `1' multiply defined.
-
-
-LaTeX Warning: Label `sub@1' multiply defined.
-
-
-LaTeX Warning: Label `2' multiply defined.
-
-
-LaTeX Warning: Label `sub@2' multiply defined.
-
-
-LaTeX Warning: Label `3' multiply defined.
-
-
-LaTeX Warning: Label `sub@3' multiply defined.
-
-)
+(./chukan.aux)
 \openout1 = `chukan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -340,7 +321,8 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 4.805pt on input line 74.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
@@ -391,9 +373,9 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ] [2]
 第2章
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 113.
+(Font)              scaled to size 13.83836pt on input line 115.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 113.
+(Font)              scaled to size 13.83836pt on input line 115.
 [3
 
 ] [4] [5]
@@ -405,17 +387,17 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 File: img/timeid.png Graphic file (type bmp)
 <img/timeid.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 215.
+(Font)              scaled to size 8.64899pt on input line 217.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 215.
+(Font)              scaled to size 8.64899pt on input line 217.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 215.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 217.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 215.
+(Font)              scaled to size 8.64899pt on input line 217.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 215.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 217.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 215.
+(Font)              scaled to size 8.64899pt on input line 217.
 [8
 
 ] [9]
@@ -425,18 +407,18 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 307.
+               Default added (so using `tbp') on input line 311.
 
 File: img/icc1.png Graphic file (type bmp)
 <img/icc1.png>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 311.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 315.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 311.
+(Font)              scaled to size 7.68799pt on input line 315.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 311.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 315.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 311.
+(Font)              scaled to size 7.68799pt on input line 315.
 File: img/icc2.png Graphic file (type bmp)
 <img/icc2.png>
 File: img/icc3.png Graphic file (type bmp)
@@ -454,70 +436,61 @@ File: img/icc6.png Graphic file (type bmp)
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 422.
+               Default added (so using `tbp') on input line 475.
 
 File: img/beta_rt_param_1.png Graphic file (type bmp)
 <img/beta_rt_param_1.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 425--426
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 478--479
  [][] 
  []
 
 File: img/beta_rt_param_9.png Graphic file (type bmp)
 <img/beta_rt_param_9.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 430--431
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 483--484
  [][] 
  []
 
 File: img/beta_rt_param_15.png Graphic file (type bmp)
 <img/beta_rt_param_15.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 435--436
+Overfull \hbox (14.79558pt too wide) in paragraph at lines 488--489
  [][] 
  []
 
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 438.
+(Font)              scaled to size 5.76599pt on input line 491.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 438.
-[15] [16]
+(Font)              scaled to size 5.76599pt on input line 491.
+[15] [16] [17]
 第7章
-
-LaTeX Warning: Reference `param' on page 17 undefined on input line 449.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: img/beta_rt.png Graphic file (type bmp)
 <img/beta_rt.png>
-[17
+File: img/ICC_r14.png Graphic file (type bmp)
+<img/ICC_r14.png>
+File: img/ICC_r15.png Graphic file (type bmp)
+<img/ICC_r15.png>
+[18
 
-] [18] [19]
+] [19] [20] [21]
 第8章
-[20
+[22
 
 ]
 付録A
-[21
+[23
 
-] [22] (./chukan.bbl [23
+] [24] (./chukan.bbl [25
 
-]) [24] (./chukan.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+]) [26] (./chukan.aux) ) 
 Here is how much of TeX's memory you used:
- 5761 strings out of 479062
- 84282 string characters out of 5866374
+ 5778 strings out of 479062
+ 84536 string characters out of 5866374
  442807 words of memory out of 5000000
- 23785 multiletter control sequences out of 15000+600000
+ 23800 multiletter control sequences out of 15000+600000
  424124 words of font info for 122 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 57i,11n,66p,953b,1800s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,11n,66p,953b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chukan.dvi (28 pages, 96316 bytes).
+Output written on chukan.dvi (30 pages, 105784 bytes).

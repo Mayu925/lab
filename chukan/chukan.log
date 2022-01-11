@@ -457,70 +457,152 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 422.
 
 
-LaTeX Warning: File `img/beta_rt_param1_1.png' not found on input line 425.
+LaTeX Warning: File `img/beta_rt_paraWarning: Citation `RashUsami' on page 7 undefined on input line 182.
 
 
-! LaTeX Error: Cannot determine size of graphic in img/beta_rt_param1_1.xbb (no
- BoundingBox).
+LaTeX Warning: Citation `IRTUtoUeno' on page 7 undefined on input line 182.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.425 ...tio,scale=0.25]{img/beta_rt_param1_1.png}
-                                                  
-? 
-File: img/beta_rt_param1_1.png Graphic file (type bmp)
-<img/beta_rt_param1_1.png>
-File: img/beta_rt_param_9.png Graphic file (type bmp)
-<img/beta_rt_param_9.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 430--431
- [][] 
- []
+LaTeX Warning: Citation `Patz' on page 7 undefined on input line 185.
 
-File: img/beta_rt_param_15.png Graphic file (type bmp)
-<img/beta_rt_param_15.png>
 
-Overfull \hbox (14.79558pt too wide) in paragraph at lines 435--436
- [][] 
- []
+LaTeX Warning: Citation `g-MFRM' on page 7 undefined on input line 198.
 
+[7]
+第4章
+File: img/timeid.png Graphic file (type bmp)
+<img/timeid.png>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 215.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 438.
+(Font)              scaled to size 8.64899pt on input line 215.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 215.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 215.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 215.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 438.
-[15] [16]
-第7章
+(Font)              scaled to size 8.64899pt on input line 215.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation `Wolfe' on page 8 undefined on input line 221.
 
-File: img/beta_rt.png Graphic file (type bmp)
-<img/beta_rt.png>
-[17
-
-] [18] [19]
-第8章
-[20
+[8
 
 ]
-付録A
-[21
 
-] [22] (./chukan.bbl [23
+LaTeX Warning: Citation `Raudenbush' on page 9 undefined on input line 226.
 
-]) [24] (./chukan.aux)
+[9]
+第5章
+[10
 
-LaTeX Warning: There were multiply-defined labels.
+]
 
- ) 
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 307.
+
+File: img/icc1.png Graphic file (type bmp)
+<img/icc1.png>
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 311.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 7.68799pt on input line 311.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 311.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 7.68799pt on input line 311.
+File: img/icc2.png Graphic file (type bmp)
+<img/icc2.png>
+File: img/icc3.png Graphic file (type bmp)
+<img/icc3.png>
+File: img/icc4.png Graphic file (type bmp)
+<img/icc4.png>
+File: img/icc5.png Graphic file (type bmp)
+<img/icc5.png>
+File: img/icc6.png Graphic file (type bmp)
+<img/icc6.png>
+
+LaTeX Warning: Citation `IRTUtoUeno' on page 11 undefined on input line 342.
+
+
+LaTeX Warning: Citation `norm' on page 11 undefined on input line 342.
+
+
+LaTeX Warning: Citation `IRTUtoUeno' on page 11 undefined on input line 344.
+
+
+LaTeX Warning: Citation `Patz' on page 11 undefined on input line 344.
+
+
+LaTeX Warning: Citation `BiasUsami' on page 11 undefined on input line 344.
+
+
+LaTeX Warning: Citation `Hoffman' on page 11 undefined on input line 344.
+
+
+LaTeX Warning: Citation `Giroami' on page 11 undefined on input line 344.
+
+[11]
+
+LaTeX Warning: Citation `Rosenthal' on page 12 undefined on input line 346.
+
+
+LaTeX Warning: Citation `Hoffman' on page 12 undefined on input line 346.
+
+
+LaTeX Warning: Citation `Neal' on page 12 undefined on input line 346.
+
+
+LaTeX Warning: Citation `Hoffman' on page 12 undefined on input line 346.
+
+
+LaTeX Warning: Citation `stan' on page 12 undefined on input line 346.
+
+
+LaTeX Warning: Citation `Luo' on page 12 undefined on input line 346.
+
+
+LaTeX Warning: Citation `Jiang' on page 12 undefined on input line 346.
+
+
+LaTeX Warning: Citation `Matsura' on page 12 undefined on input line 346.
+
+[12]
+
+LaTeX Warning: Citation `rstan' on page 13 undefined on input line 348.
+
+[13]
+第6章
+
+LaTeX Warning: Citation `RhatRubin' on page 14 undefined on input line 375.
+
+
+LaTeX Warning: Citation `RhatCarlin' on page 14 undefined on input line 375.
+
+[14
+
+]
+! Misplaced \omit.
+\@cline #1-#2\@nil ->\omit 
+                           \@multicnt #1\advance \@multispan \m@ne \ifnum \@...
+l.394 \cline{2-14}
+                  
+? 
+! Emergency stop.
+\@cline #1-#2\@nil ->\omit 
+                           \@multicnt #1\advance \@multispan \m@ne \ifnum \@...
+l.394 \cline{2-14}
+                  
+End of file on the terminal!
+
+ 
 Here is how much of TeX's memory you used:
- 5819 strings out of 479062
- 85787 string characters out of 5866374
- 441807 words of memory out of 5000000
- 23821 multiletter control sequences out of 15000+600000
- 424124 words of font info for 122 fonts, out of 8000000 for 9000
+ 5400 strings out of 479062
+ 81120 string characters out of 5866374
+ 397807 words of memory out of 5000000
+ 23445 multiletter control sequences out of 15000+600000
+ 419263 words of font info for 102 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 57i,11n,66p,953b,1800s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on chukan.dvi (28 pages, 96308 bytes).
+ 57i,11n,66p,1000b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on chukan.dvi (17 pages, 62984 bytes).

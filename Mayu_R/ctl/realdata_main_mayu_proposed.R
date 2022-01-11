@@ -6,7 +6,7 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-model = "mayu_proposed4_WBIC"
+model = "mayu_proposed2"
 
 source("models/ctl_util.R")
 
@@ -23,7 +23,8 @@ data <- read_data(setting, paste("data/data_all.csv", sep=""))
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3)
 
-source(paste("models/", "mayu_proposed4", ".R", sep=""))
+source(paste("models/", "mayu_proposed2", ".R", sep=""))
+
 est_param <- get_estimates(fit, setting)
 D <- get_result_statistics_common(fit, data, setting)
 write.csv(t(matrix(D, nrow=2)), paste( "output/realdata/MCMC_mayu/proposed/", model, ".csv", sep=""))
