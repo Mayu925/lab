@@ -6,7 +6,7 @@ library(psych)
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-model = "mayu_proposed2"
+model = "mayu_proposed"
 
 source("models/ctl_util.R")
 
@@ -23,7 +23,7 @@ data <- read_data(setting, paste("data/data_all.csv", sep=""))
 stan <- stan_model(file=paste("stan/", model, ".stan", sep=""))
 fit <- sampling(stan, data=data, iter=1000, warmup=500, chains=3)
 
-source(paste("models/", "mayu_proposed2", ".R", sep=""))
+source(paste("models/", "mayu_proposed", ".R", sep=""))
 
 est_param <- get_estimates(fit, setting)
 D <- get_result_statistics_common(fit, data, setting)
@@ -49,10 +49,15 @@ plot(est_param$theta)
 plot(est_param$alpha_r)
 est_param$beta_rt
 for(r in 1:10){
-  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.5,1), col=rgb(0.8,0.8,0.8), lwd = 1)
+  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,0.8), col=rgb(0.8,0.8,0.8), lwd = 1)
   par(new=T)
   }
-for(r in 11:16){
-  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.5,1), col=r-10, lwd = 1)
+
+for(r in 11){
+  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.5,1), col=2, lwd = 1)
+  par(new=T)
+}
+for(r in 12:16){
+  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.5,1), col=rgb(0.8,0.8,0.8), lwd = 1)
   par(new=T)
 }

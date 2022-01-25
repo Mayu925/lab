@@ -16,7 +16,7 @@ t=5
 r=15
 i=1
 
-for(loop in 1:10){
+for(loop in 1){
   TH <- c()
   for(j in c(60, 90, 120)){
       for(r in c(10, 15)){

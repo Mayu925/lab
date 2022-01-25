@@ -1,0 +1,116 @@
+%  gaiyo.sty
+% 
+% 平成１５年度版「卒業論文概要」スタイルファイル
+%  by 小藤 俊幸
+% 平成１８年度版「卒業論文概要」スタイルファイル
+%  今村 俊幸 改訂
+% 平成２５年度版「卒業論文概要」スタイルファイル
+%  保木 邦仁 改訂
+% 令和元年度版「卒業論文概要」スタイルファイル
+%  岡本 吉央 改訂
+%
+% \documentclass{jarticle}
+% \usepackage{gaiyo}
+% \nendo{修了年度}
+% \nyugaku_nendo{入学年度} 
+% \bango{学籍番号}
+% \name{氏名}
+% \daimoku{論文題目}
+% \begin{abstract}
+% 要旨を書く
+% \end{abstract}
+% \writeall
+% \end{document}
+%
+% または
+%
+% \documentclass{jarticle}
+% \usepackage{gaiyo}
+% \年度{修了年度}
+% \入学年度{入学年度} 
+% \学籍番号{学籍番号}
+% \氏名{氏名}
+% \題目{論文題目}
+% \begin{概要}
+% 要旨を書く
+% \end{概要}
+% \end{document}
+
+\topmargin = -10mm
+\oddsidemargin = 5mm
+\evensidemargin = 0mm
+\textheight = 240mm
+\textwidth = 150mm
+\unitlength = 1mm
+\pagestyle{empty}
+
+\def\writeall{
+  \begin{picture}(140, 230)
+%    \put(18,225){%
+    \put(0,225){%
+      \LARGE \bf%
+	     {{\@nendo}} %
+       {情報数理工学プログラム卒業論文概要}}
+%	     {情報数理工学コース卒業論文概要}}
+%	     {情報工学科卒業論文概要}}
+%	     {先端工学基礎課程卒業論文概要}}
+    \put(0,220){\line(1,0){140}}
+    \put(0,205){\line(1,0){140}}
+    \put(0,190){\line(1,0){140}}
+    \put(0,170){\line(1,0){140}}
+    \put(0,170){\line(0,1){50}}
+    \put(140,170){\line(0,1){50}}
+    \put(70,190){\line(0,1){30}}
+    \put(3,212){\bf \hbox to 20mm{\@nyugaku@nendo\hss} 入学}
+    \put(73,212){{\bf 学籍番号}\hspace{5mm}{\Large \@bango}}
+    \put(3,197){{\bf 指導教員} \hspace{5mm}{\Large \@kyoin}}
+    \put(73,197){{\bf 氏名}}
+    \put(90,196){\Large \@name}
+    \put(3,179){{\bf 題目}}
+    \put(15,179){\Large \@daimoku}
+    \put(0,162){\Large \bf 概要}
+    \put(0,0){\line(1,0){140}}
+    \put(0,160){\line(1,0){140}}
+    \put(0,0){\line(0,1){160}}
+    \put(140,0){\line(0,1){160}}
+    \put(2,5){\makebox(134,151)[t]
+      { \noindent
+	%  \begin{minipage}{133mm} 
+	%  \baselineskip = 15pt 
+	%  \parindent = 12pt
+	%  \large
+	%  \par
+	\yourabstract
+	%\end{minipage}}}
+    }}
+  \end{picture}
+}
+
+\def\nendo#1{\gdef\@nendo{#1}}
+\def\nyugaku_nendo#1{\gdef\@nyugaku@nendo{#1}}
+\def\bango#1{\gdef\@bango{#1}}
+\def\kyoin#1{\gdef\@kyoin{\parbox{47mm}{#1}}}
+\def\name#1{\gdef\@name{\parbox{47mm}{#1}}}
+\def\daimoku#1{\gdef\@daimoku{\parbox{1235mm}{#1}}}
+
+\newbox\abstbox
+\def\yourabstract{\usebox{\abstbox}}
+\def\abstract{%
+  \global\setbox\abstbox=\hbox\bgroup%
+  \begin{minipage}{133mm}
+    \baselineskip = 15pt 
+    \parindent = 12pt
+    \large
+    \par}
+\def\endabstract{%
+  \end{minipage}\egroup}
+
+\let\年度=\nendo
+\def\入学年度#1{\nyugaku_nendo{#1}}
+\let\学籍番号=\bango
+\let\指導教員=\kyoin
+\let\氏名=\name
+\let\題目=\daimoku
+\let\概要=\abstract
+\let\end概要=\endabstract
+

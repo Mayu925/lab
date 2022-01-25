@@ -172,7 +172,7 @@ generate_beta_rt_self <- function(R,T){
   for (r in (r3+1):R){
     const_beta_rt[r,1] <- rnorm(1, 0, 1);
     for(t in 2:T){
-    const_beta_rt[r,t] <- 1.1 * const_beta_rt[r,(t-1)];
+    const_beta_rt[r,t] <-rnorm(1, 0, 0.1) * (t-1) + const_beta_rt[r,1];
     }
   }
   return(const_beta_rt)
