@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  25 JAN 2022 15:33
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  26 JAN 2022 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,65 +448,53 @@ LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14.4> not available
 File: img/timeid.png Graphic file (type bmp)
 <img/timeid.png>
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <9> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 83.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 83.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <9> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 83.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 83.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 83.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 80.
  [1
 
 
 ]
-Overfull \hbox (33.70709pt too wide) in paragraph at lines 160--162
+Overfull \hbox (33.70709pt too wide) in paragraph at lines 151--153
  [][] 
  []
 
-File: img/beta_rt_data_img.png Graphic file (type bmp)
-<img/beta_rt_data_img.png>
+File: img/beta_rt_img_4.png Graphic file (type bmp)
+<img/beta_rt_img_4.png>
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <10> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 205.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 183.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 205.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 183.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <10> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 205.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 183.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 205.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 183.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 205.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 183.
 
-Overfull \hbox (3.92569pt too wide) in paragraph at lines 230--232
+Overfull \hbox (7.45895pt too wide) in paragraph at lines 213--216
  [][] 
  []
 
 
-Overfull \hbox (3.53326pt too wide) in paragraph at lines 216--233
+Overfull \hbox (7.45895pt too wide) in paragraph at lines 235--238
  [][] 
  []
 
-
-Overfull \hbox (3.92569pt too wide) in paragraph at lines 252--254
- [][] 
- []
-
-
-Overfull \hbox (3.53326pt too wide) in paragraph at lines 237--255
- [][] 
- []
-
-(./yokou.bbl [2]) [3
-
-] (./yokou.aux) ) 
+(./yokou.bbl) [2] (./yokou.aux) ) 
 Here is how much of TeX's memory you used:
- 6064 strings out of 479062
- 89674 string characters out of 5866374
+ 6065 strings out of 479062
+ 89665 string characters out of 5866374
  420846 words of memory out of 5000000
- 24091 multiletter control sequences out of 15000+600000
+ 24092 multiletter control sequences out of 15000+600000
  437353 words of font info for 132 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 72i,14n,80p,487b,554s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,14n,80p,508b,548s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on yokou.dvi (3 pages, 24932 bytes).
+Output written on yokou.dvi (2 pages, 25248 bytes).

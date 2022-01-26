@@ -186,6 +186,17 @@ Stan と R でベイズ統計モデリング: Wonderful R 2，
 S.D. Team, et~al.,
 ``Rstan: the r interface to stan. r package version 2.17. 3,'' 2018.
 
+\bibitem{UtoUeno}
+M. Uto and M. Ueno,
+``Empirical comparison of item response theory models with rater’s
+  parameters,'' 2018．
+
+\bibitem{YagiUto}
+八木嵩大，宇都雅輝，
+``パフォーマンス評価における多次元項目反応モデル,''
+電子情報通信学会論文誌D，
+vol.102，no.10，pp.708--720，2019．
+
 \bibitem{RhatRubin}
 A. Gelman, D.B. Rubin, et~al.,
 ``Inference from iterative simulation using multiple sequences,''

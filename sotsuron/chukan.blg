@@ -5,45 +5,45 @@ The style file: chukan.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: chukan.bib
-You've used 34 entries,
+You've used 36 entries,
             4010 wiz_defined-function locations,
-            1036 strings with 9609 characters,
-and the built_in function-call counts, 40325 in all, are:
-= -- 4700
-> -- 251
+            1047 strings with 9820 characters,
+and the built_in function-call counts, 41675 in all, are:
+= -- 4839
+> -- 265
 < -- 1
-+ -- 121
-- -- 71
-* -- 1927
-:= -- 4586
-add.period$ -- 34
-call.type$ -- 34
-change.case$ -- 28
++ -- 127
+- -- 75
+* -- 1990
+:= -- 4739
+add.period$ -- 36
+call.type$ -- 36
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 696
-empty$ -- 3615
-format.name$ -- 282
-if$ -- 10448
+cite$ -- 36
+duplicate$ -- 736
+empty$ -- 3753
+format.name$ -- 296
+if$ -- 10805
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 32
-newline$ -- 188
-num.names$ -- 34
-pop$ -- 378
+int.to.str$ -- 36
+missing$ -- 33
+newline$ -- 198
+num.names$ -- 36
+pop$ -- 403
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 2036
+skip$ -- 2110
 stack$ -- 0
-substring$ -- 8290
-swap$ -- 150
+substring$ -- 8491
+swap$ -- 159
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 289
-width$ -- 36
-write$ -- 289
-is.kanji.str$ -- 1739
+while$ -- 300
+width$ -- 38
+write$ -- 305
+is.kanji.str$ -- 1800

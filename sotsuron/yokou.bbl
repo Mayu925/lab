@@ -9,10 +9,15 @@ F.M. Lord,
 ``A multidimensional generalized many‐facet rasch model for rubric‐based
   performance assessment,'' 2021．
 
-\bibitem{Raudenbush}
-S.W. Raudenbush and A.S. Bryk,
-Hierarchical linear models: Applications and data analysis methods,
-vol.1,
-Sage Publications, 2002.
+\bibitem{UtoUeno}
+M. Uto and M. Ueno,
+``Empirical comparison of item response theory models with rater’s
+  parameters,'' 2018．
+
+\bibitem{YagiUto}
+八木嵩大，宇都雅輝，
+``パフォーマンス評価における多次元項目反応モデル,''
+電子情報通信学会論文誌D，
+vol.102，no.10，pp.708--720，2019．
 
 \end{thebibliography}

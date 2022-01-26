@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {6.2}実験結果}{15}{}%
 \contentsline {chapter}{\numberline {第7章}実データ実験}{19}{}%
 \contentsline {section}{\numberline {7.1}評価者特性}{19}{}%
-\contentsline {section}{\numberline {7.2}情報量基準におけるモデル比較}{20}{}%
+\contentsline {section}{\numberline {7.2}情報量基準におけるモデル比較}{21}{}%
 \contentsline {chapter}{\numberline {第8章}むすび}{23}{}%
 \contentsline {chapter}{\numberline {付録A}stanコード}{24}{}%
 \contentsline {chapter}{参考文献}{26}{}%
