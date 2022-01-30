@@ -1,52 +1,116 @@
-\documentclass[dvipdfmx, twocolumn, a4paper]{hcresume}
+\documentclass[twocolumn,10pt]{jsarticle} 
 
-\usepackage{epsfig}
-\usepackage{amsmath}
-\usepackage{graphics}
-\usepackage{graphicx}
-\usepackage{txfonts}
-\usepackage{color}
-\usepackage{BoldGothic4fig}
+\usepackage{multicol}
+\usepackage{amsmath,amssymb}
 \usepackage{bm}
-\usepackage{verbatim}
-\usepackage{wrapfig}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage{ascmac}
-\usepackage{makeidx}
-\usepackage{enumerate}
+\usepackage{algorithm,algorithmic}
 \usepackage{comment}
+\usepackage{setspace}
 \usepackage{multirow}
-\usepackage{listings}
-\usepackage{chngpage}
 
-\usepackage[hang,small,bf]{caption}
-\usepackage[subrefformat=parens]{subcaption}
+\bibliographystyle{junsrt}
 
-%
-\def\linesparpage#1{\baselineskip=\textheight
-   \divide\baselineskip by #1}
-\def\kcharparline#1{%
-   \ifx\xkanjiskip\undefined%
-   \jintercharskip 0mm plus 0.2mm minus 0.2mm
-   \else
-   \xkanjiskip 0mm plus 0.2mm minus 0.2mm
-   \fi
-   \settowidth{\textwidth}{}%
-   \multiply\textwidth by #1}
-%
-\newcommand\figref[1]{\textbf{図~\ref{fig:#1}}}
-\newcommand\tabref[1]{\textbf{表~\ref{tab:#1}}}
+\makeatletter
+\newcommand{\figcaption}[1]{\def\@captype{figure}\caption{#1}}
+\newcommand{\tblcaption}[1]{\def\@captype{table}\caption{#1}}
 \newcommand{\bhline}[1]{\noalign{\hrule height #1}}
+\makeatother
 
-\hcheader{MIプログラム 卒業論文}
-\title{\bf 評価者特性の時間変動を考慮した項目反応モデル}
-\author{1810519　林真由}
-\supervisor{指導教員 宇都 雅輝 准教授}
+\makeatletter
+\renewcommand{\@maketitle}{\newpage
+\begin{center}
+{\LARGE \@title \par} \vskip 1.5em {\large \lineskip .5em
+\begin{tabular}[t]{c}\@author
+\end{tabular}\par}
+\vskip 1em {\large \@date} \end{center}
+\par
+\vskip 1.5em}
+\makeatother
+
+\makeatletter
+\def\@listI{\leftmargin\leftmargini
+    \topsep  \z@
+    \parsep  \z@
+    \itemsep \z@}
+\let\@listi\@listI
+\@listi 
+\def\@listii{\leftmargin\leftmarginii
+    \labelwidth\leftmarginii\advance\labelwidth-\labelsep
+    \topsep  \z@
+    \parsep  \z@
+    \itemsep \z@}
+\def\@listiii{\leftmargin\leftmarginiii
+    \labelwidth\leftmarginiii\advance\labelwidth-\labelsep
+    \topsep  \z@
+    \parsep  \z@
+    \itemsep \z@}
+\makeatother
+
+\makeatletter
+\@dblfptop 0pt
+\makeatother
+
+\makeatletter
+
+\def\etitle#1{\def\@etitle{#1}}
+\def\eauthor#1{\def\@eauthor{#1}}
+\def\department#1{\def\@department{#1}}
+\def\edepartment#1{\def\@edepartment{#1}}
+\def\address#1{\def\@address{#1}}
+
+\usepackage[top=25truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\renewcommand{\baselinestretch}{0.95} 
+
+\def\@maketitle{
+\begin{center}
+{\fontsize{14pt}{0pt}\selectfont \bf \@title \par}% 論文のタイトル部分
+\vspace{3mm}
+{\fontsize{14pt}{0pt}\selectfont  \bf \@etitle \par}% 論文のタイトル部分
+\vspace{3mm}
+{\@author \par}% 氏名 
+{\@eauthor \par}% 氏名 
+{\@department \par}	% 所属部分
+{\@edepartment \par}	% 所属部分
+{Email: \@address \par}	% 所属部分
+\end{center}
+}
+\makeatother
+%
+\title{評価者特性の時間変動を考慮した項目反応モデル}
+\etitle{Item Response Theory Model Considering Rater Parameter Drift}
+\author{林真由$^{*1}$，宇都雅輝$^{*1}$}
+\eauthor{Mayu Hayashi$^{*1}$, Masaki Uto$^{*1}$}
+\department{$^{*1}$電気通信大学}
+\edepartment{$^{*1}$The University of Electro-Communications}
+\address{\{hayashi\_mayu, uto\}@ai.lab.uec.ac.jp}
+
+\pagestyle{empty} %ページ番号のスタイル
 
 \begin{document}
+
+\twocolumn[
 \maketitle
-\pagestyle{empty}
-\thispagestyle{empty}
-\section{はじめに}
+\vspace{2mm}
+\noindent
+{\bm あらまし： } 
+近年，ライティングスキルの育成手法の一つとしてライティングプロセスに基づく指導が注目されている．
+ライティングプロセスは「計画」，「文章化」，「推敲」などの作業の系列とみなすことができ，プロセスに基づく指導は一般にこれらの出現パタンに基づいて行われる．
+しかし，執筆者数が増加すると，指導者が全ての執筆者の執筆パタンを把握することは困難になる．
+そこで本研究では，キーストローク・ログデータを用いて，各執筆者の文章執筆パタンを推定できる機械学習手法を開発する．
+提案モデルは，隠れマルコフモデルにおける潜在状態を作業内容とみなし，作業内容の遷移確率に執筆者依存性と時間依存性を導入したモデルとして定式化する．
+また，本発表では，提案モデルの実データへの適用例と有効性評価について報告する．
+\vspace{1mm}
+\\ {\bf キーワード： }  ライティングプロセス，キーストローク・ログ，隠れマルコフモデル，MCMC
+\par
+\vspace{4mm}
+]
+\thispagestyle{empty} 
+
+\section{はじめに}\label{sec:intro}
+\vspace{-2mm}
+
 近年，大学入試や資格試験，教育評価などにおいて，パフォーマンス評価のニーズが高まっている．一方で，パフォーマンス評価では，多肢選択式試験のような客観式評価と異なり人間の評価者が採点を行うため，評価者の厳しさや一貫性などの特性差がバイアス要因となり，受検者の能力測定の信頼性が低下する問題が知られている．このような問題を解決する数理的なアプローチの一つとして，評価者の特性を考慮した項目反応理論（Item response theory:IRT）\cite{IRTLord}が近年注目されている．
 
 それらのIRTモデルを利用することで，評価者の特性差の影響を考慮した能力推定が可能となる．一方で，既存モデルのほとんどは評価者の特性が評価中に変化しないことを仮定している．しかし，多数の受検者を長時間かけて採点するような場合，評価者の特性が採点の過程で変化する評価者ドリフト(Rater Drift)と呼ばれる現象がしばしば生じる．評価者ドリフトを考慮したモデルも提案されているが，既存モデルには評価者特性の時間変化を直線的にしか表現できないという問題点がある．
@@ -54,7 +118,9 @@
 この問題を解決するために，本研究では，時間区分ごとの評価者の厳しさを推定できる新しいIRTモデルを提案する．
 提案モデルでは，既存モデルよりも柔軟に評価者ドリフトを表現でき，モデルの性能が改善すると考えられる．本研究では，シミュレーション実験と実データ実験を通して提案モデルの有効性を示す．
 
-\section{評価者特性を考慮した項目反応理論}
+\vspace{-2mm}
+\section{評価者特性を考慮した項目反応理論}\label{sec:features}
+\vspace{-1mm}
 本研究では高精度な能力推定を行うためにIRTを利用する．
 
 現在，評価者特性を最も柔軟に表現できるIRTモデルとして，一般化多相ラッシュモデルが知られている\cite{g-MFRM}．
@@ -82,7 +148,9 @@
 
 このモデルでは時間経過による評価者特性の変化を捉えることができるが，その変化は直線的にしか表現できない．
 この問題を解決するため，本研究では時間区分ごとの評価者の厳しさを推定できる新しいIRTモデルを提案する．
-\section{提案モデル}
+\vspace{-2mm}
+\section{提案モデル}\label{sec:proposal}
+\vspace{-1mm}
 提案モデルでは，評価者$r$が時間区分$t$で採点した受検者$j$のパフォーマンスにスコア$k$を与える確率$P_{jrtk}$を次式で定義する．
 \begin{equation}
   P_{jrtk}=\frac{\mathrm{exp}\sum^k_{m=1}{\alpha_r(\theta_{j}-\beta_{rt}-d_{rm})}}{\sum^K_{l=1} \mathrm{exp}\sum^l_{m=1}{\alpha_r(\theta_{j}-\beta_{rt}-d_{rm})}}
@@ -104,7 +172,9 @@
 また，提案モデルではモデルの識別性のために，$\theta_{j}\sim \mathrm{N}(0,1)$，$\prod_{r}\alpha_r=1$， $d_{r1}=0$， $\sum_{k=2}^{K}d_{rk}=0$を仮定する．
 
 提案モデルのパラメータ推定手法にはマルコフ連鎖モンテカルロ法（Markov chain Monte Carlo methods：MCMC）を用いる．パラメータの事前分布は$\theta_{j}$， $d_{rk}$， $\mathrm{log}\alpha_{r}$， $\beta_{rt}\sim \mathrm{N}(0，1^{2})$とした．本研究では，MCMCのバーンイン期間は1000とし，1000$\sim$2000時点までの1000サンプルを用いる．
+\vspace{-2mm}
 \section{シミュレーション実験}
+\vspace{-2mm}
 
 本節では，MCMCによる提案モデルのパラメータ推定精度をシミュレーション実験により評価する．実験手順は以下の通りである．
 (1)パラメータの真値を，前節に記載したパラメータの分布に従って生成する．
@@ -121,33 +191,34 @@
     \centering
     \caption{提案モデルのパラメータ・リカバリ実験の結果}
     \setlength{\tabcolsep}{5.pt}
-    \scalebox{0.8}{
-  \begin{tabular}{cccccccccccccc}  
-  \bhline{1pt}
-  \multirow{2}{*}{$J$} & \multirow{2}{*}{$R$} & \multirow{2}{*}{$T$}  && \multicolumn{4}{c}{RMSE} &&   \multicolumn{4}{c}{BIAS}  \\
-  \cline{5-8}\cline{10-13}
-    & & & & $\theta$ & $\alpha_r$ & $\beta_{rt}$ & $d_{rk}$ &  & $\theta$ & $\alpha_r$ & $\beta_{rt}$ & $d_{rk}$ \\
-  \bhline{1pt}
-  60 & 10 & 3  && 0.28 & 0.23 & 0.19 & 0.34 && -0.01 & 0.01 & -0.01 & 0.00 \\
-     &    & 5  && 0.29 & 0.26 & 0.25 & 0.37 && 0.00  & 0.02 & -0.03 & 0.00 \\
-     &    & 10 && 0.29 & 0.23 & 0.23 & 0.37 && 0.00  & 0.01 & 0.00  & 0.00 \\
-  \cline{2-14}
-     & 15 & 3  && 0.23 & 0.27 & 0.24 & 0.38 && 0.01  & 0.01 & 0.01  & 0.00 \\
-     &    & 5  && 0.22 & 0.22 & 0.23 & 0.36 && 0.00  & 0.01 & 0.02  & 0.00 \\
-     &    & 10 && 0.26 & 0.27 & 0.31 & 0.38 && -0.02 & 0.01 & -0.04 & 0.00 \\
-   \hline
-  120 & 10 & 3  && 0.26 & 0.19 & 0.15 & 0.27 && -0.01 & 0.01 & 0.00  & 0.00 \\
+    \scalebox{0.8}
+    {
+    \begin{tabular}{cccccccccccccc}  
+      \bhline{1pt}
+      \multirow{2}{*}{$J$} & \multirow{2}{*}{$R$} & \multirow{2}{*}{$T$}  && \multicolumn{4}{c}{RMSE} &&   \multicolumn{4}{c}{BIAS}  \\
+      \cline{5-8}\cline{10-13}
+      & & & & $\theta$ & $\alpha_r$ & $\beta_{rt}$ & $d_{rk}$ &  & $\theta$ & $\alpha_r$ & $\beta_{rt}$ & $d_{rk}$ \\
+      \bhline{1pt}
+      60 & 10 & 3  && 0.28 & 0.23 & 0.19 & 0.34 && -0.01 & 0.01 & -0.01 & 0.00 \\
+      &    & 5  && 0.29 & 0.26 & 0.25 & 0.37 && 0.00  & 0.02 & -0.03 & 0.00 \\
+      &    & 10 && 0.29 & 0.23 & 0.23 & 0.37 && 0.00  & 0.01 & 0.00  & 0.00 \\
+      \cline{2-14}
+      & 15 & 3  && 0.23 & 0.27 & 0.24 & 0.38 && 0.01  & 0.01 & 0.01  & 0.00 \\
+      &    & 5  && 0.22 & 0.22 & 0.23 & 0.36 && 0.00  & 0.01 & 0.02  & 0.00 \\
+      &    & 10 && 0.26 & 0.27 & 0.31 & 0.38 && -0.02 & 0.01 & -0.04 & 0.00 \\
+      \hline
+      120 & 10 & 3  && 0.26 & 0.19 & 0.15 & 0.27 && -0.01 & 0.01 & 0.00  & 0.00 \\
       &    & 5  && 0.28 & 0.21 & 0.18 & 0.32 && 0.00  & 0.01 & -0.01 & 0.00 \\
       &    & 10 && 0.28 & 0.20 & 0.25 & 0.29 && -0.01 & 0.00 & -0.03 & 0.00\\
-  \cline{2-14}
-  & 15 & 3  && 0.22 & 0.19 & 0.13 & 0.24 && 0.02 & 0.00 & 0.03 & 0.00 \\
-  &    & 5  && 0.23 & 0.17 & 0.18 & 0.31 && 0.02 & 0.02 & 0.05 & 0.00 \\
-  &    & 10 && 0.24 & 0.20 & 0.26 & 0.30 && 0.00 & 0.01 & 0.00 & 0.00 \\
-  \hline
-  \multicolumn{4}{c}{Avg.}   &  0.26 & 0.24 & 0.24 & 0.34 &  & 0.01 & 0.01 & 0.01 & 0.00 & \\
-  \bhline{1pt}
-  \end{tabular}
-  }
+      \cline{2-14}
+      & 15 & 3  && 0.22 & 0.19 & 0.13 & 0.24 && 0.02 & 0.00 & 0.03 & 0.00 \\
+      &    & 5  && 0.23 & 0.17 & 0.18 & 0.31 && 0.02 & 0.02 & 0.05 & 0.00 \\
+      &    & 10 && 0.24 & 0.20 & 0.26 & 0.30 && 0.00 & 0.01 & 0.00 & 0.00 \\
+      \hline
+      \multicolumn{4}{c}{Avg.}   &  0.26 & 0.24 & 0.24 & 0.34 &  & 0.01 & 0.01 & 0.01 & 0.00 & \\
+      \bhline{1pt}
+    \end{tabular}
+    }
     \label{parameters_recovery}
   \end{minipage}
 \end{table}
@@ -156,7 +227,9 @@
 
 以上の結果から， MCMCにより提案モデルのパラメータを適切に推定できることが確認できた．
 
+\vspace{-2mm}
 \section{実データ実験}
+\vspace{-2mm}
 \begin{figure}[b]
   \centering
  \includegraphics[width=8cm]{img/beta_rt_img_4.png}
@@ -196,8 +269,6 @@ WAIC（Widely Applicable Information Criterion）とWBIC（Widely Applicable Bay
 
 \begin{table}[tb]
   \centering
-  % \begin{minipage}[]{9cm}
-    \centering
     \caption{モデル比較の結果(全評価者のデータ)}
     \setlength{\tabcolsep}{1.pt}
     \scalebox{0.85}{
@@ -212,15 +283,11 @@ WAIC（Widely Applicable Information Criterion）とWBIC（Widely Applicable Bay
       \end{tabular}
     }
     \label{WAIC1}
-  % \end{minipage}
   \vskip3mm
 \end{table}
  
 \begin{table}[tb]
   \centering
-  % \begin{minipage}[]{9cm}
-    \centering
-    % \vskip5mm
     \caption{モデル比較の結果(指示ありの評価者を除外したデータ)}
     \setlength{\tabcolsep}{1.pt}
     \scalebox{0.85}{
@@ -235,13 +302,14 @@ WAIC（Widely Applicable Information Criterion）とWBIC（Widely Applicable Bay
     \end{tabular}
     }
     \label{WAIC2}
-  % \end{minipage}
 \end{table}
-\section{まとめと今後の課題}
+\vspace{-2mm}
+\section{まとめ}
+\vspace{-2mm}
 本研究では，評価者の厳しさパラメータの時間変化を推定できる新しいIRTモデルを提案した．また，シミュレーション実験と実データを用いた実験を通して，提案モデルの有効性を示した．
 なお，今回提案したモデルは課題数1の場合を想定しており，課題ごとの特性を考慮することが出来ていないため，今後の課題としては，課題パラメータを追加して課題ごとの特性を考慮したモデルを作ることが挙げられる．
-{\small
-\bibliographystyle{chukan}
-\bibliography{chukan}
-}
+\small
+\vspace{-2mm}
+\bibliography{mybib}
+
 \end{document}
