@@ -48,16 +48,17 @@ sink()
 plot(est_param$theta)
 plot(est_param$alpha_r)
 est_param$beta_rt
+par(mar = c(5.5, 6.0, 4.1, 2)) 
 for(r in 1:10){
-  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", cex.axis = 1.5,cex.lab=1.8,type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,0.8), col=rgb(0.7,0.7,0.7), lwd = 2)
+  plot(est_param$beta_rt[r,],xlab="",ylab=expression(beta[rt]), cex.axis = 1.5,cex.lab=1.8,type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,0.8), col=rgb(0.7,0.7,0.7), lwd = 2)
   par(new=T)
   }
 
 for(r in 11){
-  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", cex.axis = 1.5,cex.lab=1.8,type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,0.8), col=2, lwd = 2)
+  plot(est_param$beta_rt[r,],xlab="",ylab=expression(beta[rt]), cex.axis = 1.5,cex.lab=1.8,type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,0.8), col=2, lwd = 2)
   par(new=T)
 }
 for(r in 12:16){
-  plot(est_param$beta_rt[r,],xlab="TimeID",ylab="beta_rt", cex.axis = 1.5,cex.lab=1.8,type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,0.8), col=rgb(0.7,0.7,0.7), lwd = 2)
+  plot(est_param$beta_rt[r,],xlab="",ylab=expression(beta[rt]), cex.axis = 1.5,cex.lab=1.8,type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,0.8), col=rgb(0.7,0.7,0.7), lwd = 2)
   par(new=T)
 }

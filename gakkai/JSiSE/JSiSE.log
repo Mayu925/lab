@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  30 JAN 2022 23:34
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.euc) (TeX Live 2021) (preloaded format=platex 2021.9.18)  31 JAN 2022 02:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -378,71 +378,69 @@ LaTeX Font Info:    ... okay on input line 91.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.45398pt on input line 108.
+(Font)              scaled to size 13.45398pt on input line 105.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.45398pt on input line 108.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 108.
+(Font)         /m/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.45398pt on input line 108.
+(Font)              scaled to size 13.45398pt on input line 106.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 108.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.45398pt on input line 108.
+(Font)              scaled to size 13.45398pt on input line 106.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 108.
+(Font)              scaled to size 6.72699pt on input line 106.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 108.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 108
-.
+(Font)              scaled to size 4.805pt on input line 106.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 106.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 108
-.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Trying to load font information for U+msb on input line 106.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 108.
+(Font)              scaled to size 9.60999pt on input line 106.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 108.
+(Font)              scaled to size 6.72699pt on input line 106.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 108.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-08.
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+(Font)              scaled to size 4.805pt on input line 106.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 106.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 108.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 108.
+(Font)              scaled to size 9.60999pt on input line 106.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 108.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 106.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 108.
+(Font)              scaled to size 9.60999pt on input line 106.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 111.
+(Font)              scaled to size 11.53198pt on input line 109.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 111.
+(Font)              scaled to size 11.53198pt on input line 109.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 111.
+(Font)              scaled to size 11.53198pt on input line 109.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 111.
+(Font)              scaled to size 11.53198pt on input line 109.
+
+
+LaTeX Warning: Citation `IRTLord' on page 1 undefined on input line 111.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: img/timeid.png Graphic file (type bmp)
-<img/timeid.png>
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 145.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 145.
+
+
+LaTeX Warning: Citation `g-MFRM' on page 1 undefined on input line 121.
+
+
+LaTeX Warning: Reference `timeid' on page 1 undefined on input line 135.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -450,43 +448,44 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 160.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 160.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 160.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: File `img/timeid.png' not found on input line 139.
 
 
-Overfull \hbox (36.82396pt too wide) in paragraph at lines 221--223
- [][] 
- []
+! LaTeX Error: File `img/timeid.png' not found.
 
-File: img/beta_rt_img_4.png Graphic file (type bmp)
-<img/beta_rt_img_4.png>
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 ...ncludegraphics[width=8cm]{img/timeid.png}
+                                                  
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.139 ...ncludegraphics[width=8cm]{img/timeid.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Overfull \hbox (22.8534pt too wide) in paragraph at lines 284--286
- [][] 
- []
-
-
-Overfull \hbox (22.8534pt too wide) in paragraph at lines 303--305
- [][] 
- []
-
-(./JSiSE.bbl) [3] (./JSiSE.aux) ) 
+ 
 Here is how much of TeX's memory you used:
+ 3431 strings out of 479062
+ 46769 string characters out of 5866374
+ 375548 words of memory out of 5000000
+ 21483 multiletter control sequences out of 15000+600000
+ 415697 words of font info for 85 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 57i,5n,66p,536b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on JSiSE.dvi (1 page, 8664 bytes).
+ is how much of TeX's memory you used:
  3541 strings out of 479062
  47990 string characters out of 5866374
  392914 words of memory out of 5000000
  21577 multiletter control sequences out of 15000+600000
  421507 words of font info for 109 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 57i,14n,66p,508b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,14n,66p,695b,374s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on JSiSE.dvi (3 pages, 26464 bytes).
+Output written on JSiSE.dvi (4 pages, 27240 bytes).

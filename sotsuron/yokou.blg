@@ -1,0 +1,49 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: yokou.aux
+The style file: chukan.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: chukan.bib
+You've used 4 entries,
+            4010 wiz_defined-function locations,
+            854 strings with 5912 characters,
+and the built_in function-call counts, 3861 in all, are:
+= -- 460
+> -- 25
+< -- 0
++ -- 11
+- -- 7
+* -- 167
+:= -- 457
+add.period$ -- 4
+call.type$ -- 4
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 72
+empty$ -- 355
+format.name$ -- 28
+if$ -- 993
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 3
+newline$ -- 23
+num.names$ -- 4
+pop$ -- 52
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 218
+stack$ -- 0
+substring$ -- 738
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 28
+width$ -- 5
+write$ -- 34
+is.kanji.str$ -- 151
