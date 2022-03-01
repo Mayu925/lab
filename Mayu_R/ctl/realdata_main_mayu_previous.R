@@ -8,7 +8,7 @@ options(mc.cores = parallel::detectCores())
 
 source("models/ctl_util_previous.R")
 
-model = "mayu_previous_WBIC"
+model = "mayu_previous"
 
 
 setting <- list(K = 5, n_person = 134, n_rater = 6, n_time = 4)
@@ -43,12 +43,14 @@ pai_1rt <- matrix(nrow = setting$n_rater, ncol = 4)
 for(t in 1:4){
   for(r in 1:setting$n_rater){
     pai_1rt[r,t] = est_param$pai_1r[r]*(t/4)
+    pai_1rt[r,t] = est_param$pai_0r[r] + pai_1rt[r,t] 
   }
 }
 # 結果描画用
 plot(est_param$theta)
 plot(est_param$beta_rk)
-for(r in 1:setting1$n_rater){
-  plot(est_param1$pai_0r[r]+pai_1rt[r,],xlab="TimeID",ylab="pai_0r*pai_1r*t", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1,1), col=r, lwd = 1)
+
+for(r in 12:16){
+  plot(pai_1rt[r,],xlab="TimeID",ylab="pai_0r*pai_1r*t", type="l",xlim=c(1, 4), xaxp=c(1, 4, 3), ylim=c(-1.2,1.5), col=r, lwd = 1)
   par(new=T)
 }

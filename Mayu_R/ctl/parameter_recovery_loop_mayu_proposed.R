@@ -99,9 +99,10 @@ par(mfrow=c(1,1))
 par(mar = c(3, 4.0, 2.1, 0.5))
 par(mgp = c(2.2, 0.8, 0))
 #r=14
-param1 <- list(alpha_r =0.681  , 
-              beta_rt = -0.09  , 
-              category_prm = c(0,-1.69 ,-0.71 ,0.42 ,1.97 ))
+
+param1 <- list(alpha_r =1.14  , 
+              beta_rt = -0.14  , 
+              category_prm = c(0.00, -2.30, -0.28, 0.80, 1.78 ))
 #r=15
 param2 <- list(alpha_r = 1.156 , 
               beta_rt = -0.22 , 
